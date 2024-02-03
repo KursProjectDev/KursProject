@@ -448,8 +448,8 @@ body .home-page .process .pr-block .circle {
   transition: all ease 1s;
 }
 body .home-page .process .pr-block .circle:hover {
-  width: 364px;
-  height: 364px;
+  min-width: 364px;
+  min-height: 364px;
   background: #d0e2f3;
 }
 body .home-page .process .pr-block .text-data1 {
