@@ -115,7 +115,21 @@ footer {
   width: 100vw;
 }
 .c-box {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
+  background-color: $dark-blue;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  .separator {
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .c-box-line {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+  }
 }
