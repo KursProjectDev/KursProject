@@ -1,135 +1,298 @@
 * {
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  list-style-type: none;
-  text-decoration: none;
-  font-family: "Inter", sans-serif;
-  border: none;
-  outline: none;
-}
-$blue: #238af3;
-$dark-blue: #252774;
-.contacts {
-  width: 100%;
-  height: 100vh;
-}
-.c-main {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-.c-top {
-  width: 100%;
-  height: 25%;
-  font-size: 3em;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $dark-blue;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    border: none;
+    outline: none;
 }
 
-footer {
-  width: 100%;
-  height: 50vh;
-  background-color: $dark-blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white !important;
-  .f-main {
-    width: 80%;
+$blue: #238af3;
+$dark-blue: #252774;
+.main-body {
     height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 5%;
-    .f {
-      color: white !important;
-    }
-  }
-}
-.q-bg {
-  background-image: url(../img/Фон1.png);
-  height: 100vh;
-  .q-shadow {
-    display: flex;
-    height: 100%;
     flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.363);
-    .q-top {
-      width: 100%;
-      height: 15%;
-      display: flex;
-      justify-content: center;
-      align-items: self-end;
-      font-size: 64px;
-      font-weight: 600;
-      //letter-spacing: 0.02em;
-      color: white;
-      background: linear-gradient(180deg, #17161f 0%, rgba(21, 30, 47, 0) 100%);
+    // Главный
+    .top {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .t-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .t-logo {
+                display: flex;
+                width: 85vw;
+                padding: 10px 0;
+                align-items: center;
+                justify-content: space-between;
+                .number {
+                    color: $dark-blue;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .t-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $dark-blue;
+                    padding: 15px 20px;
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .navigator {
+                display: flex;
+                width: 60vw;
+                padding: 30px 0;
+                justify-content: space-between;
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $dark-blue;
+                    transition: all 0.3s;
+                }
+                p:hover {
+                    color: $blue;
+                }
+            }
+        }
+        .t-body {
+            background-color: #ffffffaf;
+            background: url(/img/Fons.svg); // Заменить
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed; // Фиксация изображения
+            .t-dark {
+                background: rgba(0, 0, 0, 0.438);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 100px 0 60px 0;
+                gap: 70px;
+                .t-text {
+                    width: 50vw;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 35px;
+                    text-align: center;
+                    .te1 {
+                        font-size: 54px;
+                        font-weight: 600;
+                    }
+                    .te2 {
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+                }
+                .buts {
+                    display: flex;
+                    width: 35vw;
+                    align-items: center;
+                    justify-content: space-between;
+                    .but-1 {
+                        background: $blue;
+                        padding: 20px 40px;
+                        p {
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+                    }
+                    .but-2 {
+                        padding: 20px 80px;
+                        outline: 3px solid #fff;
+                        outline-offset: -3px;
+                        transition: all 0.4s;
+                        p {
+                            color: #fff;
+                            transition: all 0.4s;
+                        }
+                    }
+                    .but-2:hover {
+                        outline: 3px solid $blue;
+                        outline-offset: -3px;
+                        p {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
     }
-    .q-main {
-      width: 75vw;
-      height: 85%;
-      display: flex;
-      align-items: center;
-      gap: 60px;
-      .q-left {
-        min-width: 437px;
-        min-height: 437px;
+    // О нас
+    .about {
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        background: #fff;
-        font-family: Josefin Sans;
-        border-radius: 500px;
-        font-weight: 400;
-        font-size: 205px;
-        color: $dark-blue;
-        p {
-          font-size: 20px;
-          font-family: Montserrat;
-          font-weight: 700;
-          color: $dark-blue;
+        padding: 130px 0;
+        .a-body {
+            display: flex;
+            justify-content: center;
+            .a-image {
+                img {
+                    width: 580px;
+                }
+            }
+            .a-block {
+                width: 18%;
+                display: flex;
+                flex-direction: column;
+                background: #f5f5f5;
+                gap: 25px;
+                padding: 45px;
+                position: relative;
+                top: 40px;
+                left: -40px;
+                .aboutus {
+                    font-size: 36px;
+                    color: #303030;
+                }
+                .a-text {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 25px; // Межстрочковый интервал
+                    color: #4e4e4e;
+                }
+                .a-button {
+                    width: 270px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #238af3;
+                }
+            }
         }
-      }
-      p {
-        font-family: Montserrat;
-        font-weight: 500;
-        font-size: 36px;
-      }
     }
-  }
-}
-.map {
-  height: 100%;
-  width: 100vw;
-}
-.c-box {
-  position: relative;
-  top: 0;
-  left: 0;
-  background-color: $dark-blue;
-  display: flex;
-  gap: 1em;
-  flex-direction: column;
-  .separator {
-    width: 100%;
-    font-size: 1.2em;
-    font-weight: 600;
-  }
-  .c-box-line {
-    display: flex;
-    align-items: center;
-    gap: 2%;
-  }
+    .contacts {
+        width: 100%;
+        height: 100vh;
+    }
+    .c-main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    .c-top {
+        width: 100%;
+        height: 25%;
+        font-size: 3em;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dark-blue;
+    }
+    footer {
+        width: 100%;
+        height: 50vh;
+        background-color: $dark-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white !important;
+        .f-main {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 5%;
+            .f {
+                color: white !important;
+            }
+        }
+    }
+    .q-bg {
+        background-image: url(../img/Фон1.png);
+        height: 100vh;
+        .q-shadow {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.363);
+            .q-top {
+                width: 100%;
+                height: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: self-end;
+                font-size: 64px;
+                font-weight: 600;
+                //letter-spacing: 0.02em;
+                color: white;
+                background: linear-gradient(180deg, #17161f 0%, rgba(21, 30, 47, 0) 100%);
+            }
+            .q-main {
+                width: 75vw;
+                height: 85%;
+                display: flex;
+                align-items: center;
+                gap: 60px;
+                .q-left {
+                    min-width: 437px;
+                    min-height: 437px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background: #fff;
+                    font-family: Josefin Sans;
+                    border-radius: 500px;
+                    font-weight: 400;
+                    font-size: 205px;
+                    color: $dark-blue;
+                    p {
+                        font-size: 20px;
+                        font-family: Montserrat;
+                        font-weight: 700;
+                        color: $dark-blue;
+                    }
+                }
+                p {
+                    font-family: Montserrat;
+                    font-weight: 500;
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+    .map {
+        height: 100%;
+        width: 100vw;
+    }
+    .c-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: $dark-blue;
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        .separator {
+            width: 100%;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        .c-box-line {
+            display: flex;
+            align-items: center;
+            gap: 2%;
+        }
+    }
 }
