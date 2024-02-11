@@ -11,6 +11,13 @@
 
 $blue: #238af3;
 $dark-blue: #252774;
+// Функции
+@media(prefers-reduced-motion: no-preference) {
+     :root {
+        scroll-behavior: smooth;
+    }
+}
+
 .main-body {
     height: 100%;
     display: flex;
@@ -169,6 +176,47 @@ $dark-blue: #252774;
                     align-items: center;
                     justify-content: center;
                     background: #238af3;
+                }
+            }
+        }
+    }
+    .aboutus-2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 50px 0;
+        justify-content: center;
+        align-items: center;
+        .about-2 {
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            .text-1 {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .t-1 {
+                    font-size: 44px;
+                    color: black;
+                }
+                .t-2 {
+                    font-size: 24px;
+                    color: #4e4e4e;
+                    ;
+                }
+            }
+            .text-2 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .t-3 {
+                    font-size: 18px;
+                    color: black;
+                }
+                .t-4 {
+                    font-size: 18px;
+                    color: black;
                 }
             }
         }
