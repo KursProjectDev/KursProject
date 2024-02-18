@@ -361,4 +361,14 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+.main-body .qna {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(37, 39, 116, 0.5);
+}
+.main-body .qna-form {
+  width: 30vw;
+  height: 50vh;
+  background-color: rgba(35, 138, 243, 0.5);
 }/*# sourceMappingURL=style.css.map */

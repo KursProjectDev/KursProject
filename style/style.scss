@@ -374,5 +374,13 @@ $dark-blue: #252774;
     }
   }
   .qna {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($dark-blue, 0.5);
+  }
+  .qna-form {
+    width: 30vw;
+    height: 50vh;
+    background-color: rgba($blue, 0.5);
   }
 }
