@@ -19,6 +19,7 @@ $dark-blue: #252774;
 }
 
 .main-body {
+  //background-color: black;
   color: #fff;
   height: 100%;
   display: flex;
@@ -324,6 +325,54 @@ $dark-blue: #252774;
       }
     }
   }
+  .slider {
+    width: 100%;
+    //max-width: 800px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .slide {
+      width: 100%;
+      //max-width: 800px;
+      height: 100vh;
+      position: absolute;
+      transition: all 0.5s;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 0%;
+      margin: 0%;
+    }
+    .btn {
+      background-color: red;
+      position: absolute;
+      width: 30%;
+      height: 100vh;
+      //padding: 10px;
+      border: none;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+      background-color: #fff;
+      font-size: 18px;
+    }
+    .btn:active {
+      transform: scale(1.1);
+    }
+    .btn-prev {
+      left: 1px;
+    }
+
+    .btn-next {
+      right: 1px;
+    }
+    #slide3 {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
   .catalogue {
     display: flex;
     flex-direction: column;
@@ -375,20 +424,24 @@ $dark-blue: #252774;
   }
   .qna {
     height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     background-color: rgba($dark-blue, 0.5);
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 100px;
     overflow: hidden;
-    .qna-left {
-    }
-    .qna-left-top {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
+  }
+  .qna-left {
+  }
+  .qna-left-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .qna-content {
+    width: 100%;
+    overflow: hidden;
   }
   .qna-form {
     width: 30vw;

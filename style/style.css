@@ -313,6 +313,51 @@
   font-weight: 500;
   font-size: 36px;
 }
+.main-body .slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.main-body .slider .slide {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  transition: all 0.5s;
+}
+.main-body .slider .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0%;
+  margin: 0%;
+}
+.main-body .slider .btn {
+  background-color: red;
+  position: absolute;
+  width: 30%;
+  height: 100vh;
+  border: none;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+.main-body .slider .btn:active {
+  transform: scale(1.1);
+}
+.main-body .slider .btn-prev {
+  left: 1px;
+}
+.main-body .slider .btn-next {
+  right: 1px;
+}
+.main-body .slider #slide3 {
+  width: 100vw;
+  height: 100vh;
+}
 .main-body .catalogue {
   display: flex;
   flex-direction: column;
@@ -364,7 +409,7 @@
 }
 .main-body .qna {
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   background-color: rgba(37, 39, 116, 0.5);
   display: flex;
   flex-direction: row;
@@ -372,10 +417,14 @@
   padding: 100px;
   overflow: hidden;
 }
-.main-body .qna .qna-left-top {
+.main-body .qna-left-top {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.main-body .qna-content {
+  width: 100%;
+  overflow: hidden;
 }
 .main-body .qna-form {
   width: 30vw;
