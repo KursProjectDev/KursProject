@@ -12,176 +12,380 @@
 $blue: #238af3;
 $dark-blue: #252774;
 // Функции
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
-
-.main-body {
-  //background-color: black;
-  color: #fff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  // Главный
-  .top {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    .t-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .t-logo {
-        display: flex;
-        width: 85vw;
-        padding: 10px 0;
-        align-items: center;
-        justify-content: space-between;
-        .number {
-          color: $dark-blue;
-          font-size: 20px;
-          font-weight: 600;
-        }
-        .t-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: $dark-blue;
-          padding: 15px 20px;
-          p {
-            font-size: 16px;
-            font-weight: 600;
-          }
-        }
-      }
-      .navigator {
-        display: flex;
-        width: 60vw;
-        padding: 30px 0;
-        justify-content: space-between;
-        p {
-          font-size: 16px;
-          font-weight: 600;
-          color: $dark-blue;
-          transition: all 0.3s;
-        }
-        p:hover {
-          color: $blue;
-        }
-      }
+@media(prefers-reduced-motion: no-preference) {
+     :root {
+        scroll-behavior: smooth;
     }
-    .t-body {
-      background-color: #ffffffaf;
-      background: url(/img/Fons.svg); // Заменить
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed; // Фиксация изображения
-      .t-dark {
-        background: rgba(0, 0, 0, 0.438);
+}
+//Анимация появления
+@keyframes framIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+//Анимация затухания
+@keyframes framOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.main-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // Главный
+    .top {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        .t-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .t-logo {
+                display: flex;
+                width: 85vw;
+                padding: 10px 0;
+                align-items: center;
+                justify-content: space-between;
+                .number {
+                    color: $dark-blue;
+                    font-size: 20px;
+                    font-weight: 600;
+                    transition: all 0.3s;
+                }
+                .number:hover {
+                    color: $blue;
+                }
+                .ent {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $dark-blue;
+                    padding: 15px 40px;
+                    transition: all 0.3s;
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+                .ent:hover {
+                    background: #238af3;
+                }
+                .t-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $dark-blue;
+                    padding: 15px 20px;
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .pop-up{
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.322);
+                justify-content: center;
+                align-items: center;
+                .wind{
+                    display: flex;
+                    flex-direction: column;
+                    background: #fff;
+                    padding: 40px;
+                    gap: 25px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 20px rgb(12, 12, 12);
+                    .t-but{
+                        display: flex;
+                        align-items: self-start;
+                        justify-content: space-between;
+                        gap: 60px;
+                        p{
+                            text-align: left;
+                            font-size: 24px;
+                            font-weight: 700;
+                            color: rgb(56, 56, 56);
+                        }
+                    }
+                    .poli{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        input{
+                            color: black;
+                            padding: 15px;
+                            border-radius: 3px;
+                            outline: 2px solid #d8d8d8;
+                            outline-offset: -2px;
+                        }
+                        .error{
+                            display: none;
+                            color: rgb(168, 168, 168);
+                            font-size: 14px;
+                            font-weight: 45 0;
+                        }
+                    }
+                    .ent-button{
+                        background: $dark-blue;
+                        padding: 15px;
+                        border-radius: 3px;
+                        transition: all 0.3s;
+                        text-align: center;
+                    }
+                    .ent-button:hover{
+                        background: $blue;
+                    }
+                    .reg-button{
+                        display: flex;
+                        justify-content: center;
+                        p{
+                            color: $dark-blue;
+                            font-weight: 600;
+                            transition: all 0.3s;
+                        }
+                    }
+                    .reg-button:active{
+                        p{
+                            color: $blue;
+                        }
+                    }
+                }
+                .regist{
+                    display: none;
+                    flex-direction: column;
+                    background: #fff;
+                    padding: 40px;
+                    gap: 25px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 20px rgb(12, 12, 12);
+                    .t-but{
+                        display: flex;
+                        align-items: self-start;
+                        justify-content: space-between;
+                        gap: 120px;
+                        p{
+                            text-align: left;
+                            font-size: 24px;
+                            font-weight: 700;
+                            color: rgb(56, 56, 56);
+                        }
+                    }
+                    .poli{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        .input{
+                            color: black;
+                            padding: 15px;
+                            border-radius: 3px;
+                            outline: 2px solid #d8d8d8;
+                            outline-offset: -2px;
+                        }
+                        .error{
+                            display: none;
+                            color: rgb(168, 168, 168);
+                            font-size: 14px;
+                            font-weight: 45 0;
+                        }
+                    }
+                    .password-input{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 15px;
+                        border-radius: 3px;
+                        outline: 2px solid #d8d8d8;
+                        outline-offset: -2px;
+                        .pass{
+                            color: black;
+                        }
+                        a{
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                    .reg-button{
+                        background: $dark-blue;
+                        padding: 15px;
+                        border-radius: 3px;
+                        transition: all 0.3s;
+                        text-align: center;
+                    }
+                    .reg-button:hover{
+                        background: $blue;
+                    }
+                    .ent-button{
+                        display: flex;
+                        justify-content: center;
+                        p{
+                            color: $dark-blue;
+                            font-weight: 600;
+                            transition: all 0.3s;
+                        }
+                    }
+                    .ent-button:active{
+                        p{
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+            .pop-up.openPop{
+                animation: framIn 0.4s ease-in-out;
+            }
+            .pop-up.closePop{
+                animation: framOut 0.4s ease-in-out;
+            }      
+            .navigator {
+                display: flex;
+                width: 60vw;
+                padding: 30px 0;
+                justify-content: space-between;
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $dark-blue;
+                    transition: all 0.3s;
+                }
+                p:hover {
+                    color: $blue;
+                }
+            }
+        }
+        .t-body {
+            background-color: #ffffffaf;
+            background: url(/img/Fons.svg); // Заменить
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed; // Фиксация изображения
+            .t-dark {
+                background: rgba(0, 0, 0, 0.438);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 100px 0 60px 0;
+                gap: 70px;
+                .t-text {
+                    width: 940px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 35px;
+                    text-align: center;
+                    .te1 {
+                        font-size: 54px;
+                        font-weight: 600;
+                    }
+                    .te2 {
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+                }
+                .buts {
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    .but-1 {
+                        background: $blue;
+                        padding: 20px 40px;
+                        transition: all 0.4s;
+                        p {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #fff;
+                            transition: all 0.4s;
+                        }
+                    }
+                    .but-1:hover {
+                        background: #fff;
+                        p {
+                            color: $blue;
+                        }
+                    }
+                    .but-2 {
+                        padding: 20px 70px;
+                        outline: 3px solid #fff;
+                        outline-offset: -3px;
+                        transition: all 0.4s;
+                        p {
+                            color: #fff;
+                            transition: all 0.4s;
+                        }
+                    }
+                    .but-2:hover {
+                        outline: 3px solid $blue;
+                        outline-offset: -3px;
+                        p {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // О нас
+    .about {
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        padding: 100px 0 60px 0;
-        gap: 70px;
-        .t-text {
-          width: 50vw;
-          display: flex;
-          flex-direction: column;
-          gap: 35px;
-          text-align: center;
-          .te1 {
-            font-size: 54px;
-            font-weight: 600;
-          }
-          .te2 {
-            font-size: 24px;
-            font-weight: 400;
-          }
+        padding: 130px 0;
+        .a-body {
+            width: 940px;
+            display: flex;
+            justify-content: center;
+            .a-image {
+                img {
+                    width: 540px;
+                }
+            }
+            .a-block {
+                position: relative;
+                top: 40px;
+                left: -40px;
+                z-index: 1;
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                background: #f5f5f5;
+                gap: 25px;
+                padding: 45px;
+                .aboutus {
+                    font-size: 36px;
+                    color: #303030;
+                }
+                .a-text {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 25px; // Межстрочковый интервал
+                    color: #4e4e4e;
+                }
+                .a-button {
+                    width: 270px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #238af3;
+                }
+            }
         }
-        .buts {
-          display: flex;
-          width: 35vw;
-          align-items: center;
-          justify-content: space-between;
-          .but-1 {
-            background: $blue;
-            padding: 20px 40px;
-            p {
-              font-size: 16px;
-              font-weight: 400;
-            }
-          }
-          .but-2 {
-            padding: 20px 80px;
-            outline: 3px solid #fff;
-            outline-offset: -3px;
-            transition: all 0.4s;
-            p {
-              color: #fff;
-              transition: all 0.4s;
-            }
-          }
-          .but-2:hover {
-            outline: 3px solid $blue;
-            outline-offset: -3px;
-            p {
-              color: $blue;
-            }
-          }
-        }
-      }
     }
-  }
-  // О нас
-  .about {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 130px 0;
-    .a-body {
-      display: flex;
-      justify-content: center;
-      .a-image {
-        img {
-          width: 580px;
-        }
-      }
-      .a-block {
-        width: 18%;
-        display: flex;
-        flex-direction: column;
-        background: #f5f5f5;
-        gap: 25px;
-        padding: 45px;
-        position: relative;
-        top: 40px;
-        left: -40px;
-        .aboutus {
-          font-size: 36px;
-          color: #303030;
-        }
-        .a-text {
-          font-size: 18px;
-          font-weight: 500;
-          line-height: 25px; // Межстрочковый интервал
-          color: #4e4e4e;
-        }
-        .a-button {
-          width: 270px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #238af3;
-        }
-      }
-    }
-  }
   .aboutus-2 {
     width: 100%;
     height: 100%;

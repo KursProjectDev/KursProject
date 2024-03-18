@@ -15,8 +15,23 @@
     scroll-behavior: smooth;
   }
 }
+@keyframes framIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes framOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .main-body {
-  color: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -42,6 +57,25 @@
   color: #252774;
   font-size: 20px;
   font-weight: 600;
+  transition: all 0.3s;
+}
+.main-body .top .t-header .t-logo .number:hover {
+  color: #238af3;
+}
+.main-body .top .t-header .t-logo .ent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #252774;
+  padding: 15px 40px;
+  transition: all 0.3s;
+}
+.main-body .top .t-header .t-logo .ent p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.main-body .top .t-header .t-logo .ent:hover {
+  background: #238af3;
 }
 .main-body .top .t-header .t-logo .t-button {
   display: flex;
@@ -53,6 +87,162 @@
 .main-body .top .t-header .t-logo .t-button p {
   font-size: 16px;
   font-weight: 600;
+}
+.main-body .top .t-header .pop-up {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.322);
+  justify-content: center;
+  align-items: center;
+}
+.main-body .top .t-header .pop-up .wind {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 40px;
+  gap: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgb(12, 12, 12);
+}
+.main-body .top .t-header .pop-up .wind .t-but {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+.main-body .top .t-header .pop-up .wind .t-but p {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(56, 56, 56);
+}
+.main-body .top .t-header .pop-up .wind .poli {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main-body .top .t-header .pop-up .wind .poli input {
+  color: black;
+  padding: 15px;
+  border-radius: 3px;
+  outline: 2px solid #d8d8d8;
+  outline-offset: -2px;
+}
+.main-body .top .t-header .pop-up .wind .poli .error {
+  display: none;
+  color: rgb(168, 168, 168);
+  font-size: 14px;
+  font-weight: 45 0;
+}
+.main-body .top .t-header .pop-up .wind .ent-button {
+  background: #252774;
+  padding: 15px;
+  border-radius: 3px;
+  transition: all 0.3s;
+  text-align: center;
+}
+.main-body .top .t-header .pop-up .wind .ent-button:hover {
+  background: #238af3;
+}
+.main-body .top .t-header .pop-up .wind .reg-button {
+  display: flex;
+  justify-content: center;
+}
+.main-body .top .t-header .pop-up .wind .reg-button p {
+  color: #252774;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.main-body .top .t-header .pop-up .wind .reg-button:active p {
+  color: #238af3;
+}
+.main-body .top .t-header .pop-up .regist {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 40px;
+  gap: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgb(12, 12, 12);
+}
+.main-body .top .t-header .pop-up .regist .t-but {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  gap: 120px;
+}
+.main-body .top .t-header .pop-up .regist .t-but p {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(56, 56, 56);
+}
+.main-body .top .t-header .pop-up .regist .poli {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main-body .top .t-header .pop-up .regist .poli .input {
+  color: black;
+  padding: 15px;
+  border-radius: 3px;
+  outline: 2px solid #d8d8d8;
+  outline-offset: -2px;
+}
+.main-body .top .t-header .pop-up .regist .poli .error {
+  display: none;
+  color: rgb(168, 168, 168);
+  font-size: 14px;
+  font-weight: 45 0;
+}
+.main-body .top .t-header .pop-up .regist .password-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 3px;
+  outline: 2px solid #d8d8d8;
+  outline-offset: -2px;
+}
+.main-body .top .t-header .pop-up .regist .password-input .pass {
+  color: black;
+}
+.main-body .top .t-header .pop-up .regist .password-input a {
+  display: flex;
+  align-items: center;
+}
+.main-body .top .t-header .pop-up .regist .reg-button {
+  background: #252774;
+  padding: 15px;
+  border-radius: 3px;
+  transition: all 0.3s;
+  text-align: center;
+}
+.main-body .top .t-header .pop-up .regist .reg-button:hover {
+  background: #238af3;
+}
+.main-body .top .t-header .pop-up .regist .ent-button {
+  display: flex;
+  justify-content: center;
+}
+.main-body .top .t-header .pop-up .regist .ent-button p {
+  color: #252774;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.main-body .top .t-header .pop-up .regist .ent-button:active p {
+  color: #238af3;
+}
+.main-body .top .t-header .pop-up.openPop {
+  animation: framIn 0.4s ease-in-out;
+}
+.main-body .top .t-header .pop-up.closePop {
+  animation: framOut 0.4s ease-in-out;
 }
 .main-body .top .t-header .navigator {
   display: flex;
@@ -86,7 +276,7 @@
   gap: 70px;
 }
 .main-body .top .t-body .t-dark .t-text {
-  width: 50vw;
+  width: 940px;
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -102,20 +292,28 @@
 }
 .main-body .top .t-body .t-dark .buts {
   display: flex;
-  width: 35vw;
   align-items: center;
-  justify-content: space-between;
+  gap: 40px;
 }
 .main-body .top .t-body .t-dark .buts .but-1 {
   background: #238af3;
   padding: 20px 40px;
+  transition: all 0.4s;
 }
 .main-body .top .t-body .t-dark .buts .but-1 p {
   font-size: 16px;
   font-weight: 400;
+  color: #fff;
+  transition: all 0.4s;
+}
+.main-body .top .t-body .t-dark .buts .but-1:hover {
+  background: #fff;
+}
+.main-body .top .t-body .t-dark .buts .but-1:hover p {
+  color: #238af3;
 }
 .main-body .top .t-body .t-dark .buts .but-2 {
-  padding: 20px 80px;
+  padding: 20px 70px;
   outline: 3px solid #fff;
   outline-offset: -3px;
   transition: all 0.4s;
@@ -140,22 +338,24 @@
   padding: 130px 0;
 }
 .main-body .about .a-body {
+  width: 940px;
   display: flex;
   justify-content: center;
 }
 .main-body .about .a-body .a-image img {
-  width: 580px;
+  width: 540px;
 }
 .main-body .about .a-body .a-block {
-  width: 18%;
+  position: relative;
+  top: 40px;
+  left: -40px;
+  z-index: 1;
+  width: 400px;
   display: flex;
   flex-direction: column;
   background: #f5f5f5;
   gap: 25px;
   padding: 45px;
-  position: relative;
-  top: 40px;
-  left: -40px;
 }
 .main-body .about .a-body .a-block .aboutus {
   font-size: 36px;
