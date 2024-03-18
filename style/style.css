@@ -338,12 +338,12 @@
   padding: 130px 0;
 }
 .main-body .about .a-body {
-  width: 940px;
+  width: 60vw;
   display: flex;
   justify-content: center;
 }
 .main-body .about .a-body .a-image img {
-  width: 540px;
+  width: 35vw;
 }
 .main-body .about .a-body .a-block {
   position: relative;
@@ -384,7 +384,7 @@
   align-items: center;
 }
 .main-body .aboutus-2 .about-2 {
-  width: 50vw;
+  width: 940px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -414,6 +414,33 @@
 .main-body .aboutus-2 .about-2 .text-2 .t-4 {
   font-size: 18px;
   color: black;
+}
+.main-body .new {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  background: #9c9c9c;
+  padding: 50px 0;
+  gap: 50px;
+}
+.main-body .new p {
+  color: black;
+  font-weight: 600;
+}
+.main-body .new .min-new {
+  color: #575757;
+}
+.main-body .new .new-top {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main-body .new .new-top .left-new {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .main-body .contacts {
   width: 100%;

@@ -346,12 +346,12 @@ $dark-blue: #252774;
         align-items: center;
         padding: 130px 0;
         .a-body {
-            width: 940px;
+            width: 60vw;
             display: flex;
             justify-content: center;
             .a-image {
                 img {
-                    width: 540px;
+                    width: 35vw;
                 }
             }
             .a-block {
@@ -394,7 +394,7 @@ $dark-blue: #252774;
     justify-content: center;
     align-items: center;
     .about-2 {
-      width: 50vw;
+      width: 940px;
       display: flex;
       flex-direction: column;
       gap: 50px;
@@ -423,6 +423,34 @@ $dark-blue: #252774;
           font-size: 18px;
           color: black;
         }
+      }
+    }
+  }
+  // Новости
+  .new{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    background: #9c9c9c;
+    padding: 50px 0;
+    gap: 50px;
+    p{
+      color: black;
+      font-weight: 600;
+    }
+    .min-new{
+      color: #575757;
+    }
+    .new-top{
+      width: 60vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .left-new{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
     }
   }
