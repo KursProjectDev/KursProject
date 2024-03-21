@@ -10,6 +10,11 @@
   outline: none;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
 @keyframes framIn {
   from {
     opacity: 0;
@@ -905,4 +910,4 @@
 
 .catalogue * {
   color: #252774;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
