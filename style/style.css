@@ -344,6 +344,20 @@
 .main-body .top .t-body .t-dark .buts .but-2:hover p {
   color: #238af3;
 }
+@media only screen and (max-width: 600px) {
+  .main-body .top .t-header .t-logo {
+    width: 100%; /* Измените ширину для маленьких экранов */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .main-body .top .t-header .navigator {
+    width: 100%; /* Измените ширину для маленьких экранов */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
 .main-body .about {
   width: 100%;
   height: 100%;

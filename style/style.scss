@@ -351,6 +351,20 @@ $Subtitle: 2em;
       }
     }
   }
+  @media only screen and (max-width: 600px) {
+    .top .t-header .t-logo {
+      width: 100%; /* Измените ширину для маленьких экранов */
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .top .t-header .navigator {
+      width: 100%; /* Измените ширину для маленьких экранов */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
   // О нас
   .about {
     width: 100%;
