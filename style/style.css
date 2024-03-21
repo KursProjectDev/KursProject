@@ -657,4 +657,101 @@
   width: 30vw;
   height: 50vh;
   background-color: rgba(35, 138, 243, 0.5);
+}
+
+.blockquestions {
+  background-color: rgba(128, 128, 128, 0.4); /* Серый цвет с прозрачностью 0.4 */
+}
+
+.quests {
+  background-color: rgba(255, 255, 255, 0.6); /* Белый цвет с прозрачностью 0.6 */
+}
+
+.questions {
+  background-color: rgba(0, 0, 0, 0.7); /* Черный цвет с прозрачностью 0.7 */
+}
+
+.quest {
+  background-color: rgba(192, 192, 192, 0.3); /* Серый цвет с прозрачностью 0.3 */
+}
+
+.q {
+  background-color: rgba(64, 64, 64, 0.8); /* Темно-серый цвет с прозрачностью 0.8 */
+}
+
+.questtext {
+  background-color: rgba(191, 191, 63, 0.5); /* Желтоватый цвет с прозрачностью 0.5 */
+}
+
+.questind {
+  background-color: rgba(63, 191, 191, 0.6); /* Бирюзовый цвет с прозрачностью 0.6 */
+}
+
+.bigblock {
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #252774;
+  padding: 10% 10%;
+}
+.bigblock .blockorder {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+}
+.bigblock .worlduor {
+  font-size: 2em;
+  font-weight: 600;
+}
+.bigblock .blockfororder {
+  min-width: 15vw;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  gap: 15px;
+  border: solid 3px #252774;
+}
+.bigblock .ordertext {
+  font-size: larger;
+  font-weight: 550;
+}
+.bigblock input[type=text] {
+  width: 92%;
+  padding: 3% 0% 3% 5%;
+  border-radius: 5px;
+}
+.bigblock .blockinput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 550;
+}
+.bigblock .blockbuttonorder {
+  border: none;
+  padding: 15px 0px;
+  font-size: large;
+  color: white;
+  background-color: #238af3;
+  margin: 5px;
+  cursor: pointer;
+}
+.bigblock .blockbuttonorder:hover {
+  border: solid 5px white;
+  margin: 0px;
+}
+.bigblock .blockminitextorder {
+  font-size: small;
+}
+.bigblock .blockquestions {
+  display: flex;
+  flex-direction: column;
+}
+.bigblock .quests {
+  font-size: 2em;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
