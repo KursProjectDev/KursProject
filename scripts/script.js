@@ -1,53 +1,83 @@
-// Select all slides
-const slides = document.querySelectorAll(".slide");
+// СКРОЛИНГ
+function smoothScroll(targetId) {
+    const target = document.getElementById(targetId);
+    const startPosition = window.scrollY;
+    const targetPosition = target.getBoundingClientRect().top + startPosition;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // Милисекунды
+    let start = null;
 
-// loop through slides and set each slides translateX property to index * 100% 
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
-// current slide counter
-let curSlide = 0;
-let maxSlide = slides.length - 1;
-// select next slide button
-const nextSlide = document.querySelector(".btn-next");
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
 
-nextSlide.addEventListener("click", function () {
-if (curSlide === maxSlide) {
-curSlide = 0;
-} else {
-curSlide ++;
+    function easeInOutCubic(t, b, c, d) {
+        // easeInOutCubic easing function
+        if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+        return c / 2 * ((t -= 2) * t * t + 2) + b;
+    }
+
+    window.requestAnimationFrame(step);
 }
-slides.forEach((slide, indx) => {
-slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-});
-});
-// select prev slide button
-const prevSlide = document.querySelector(".btn-prev");
+// СКРОЛЛ СТРЕЛКА 
+let lastScrollTop = 0;
 
-prevSlide.addEventListener("click", function () {
-if (curSlide === 0) {
-curSlide = maxSlide;
-} else {
-curSlide--;
+window.addEventListener("scroll", function() {
+    const currentScroll = window.scrollY;
+    const btn = document.querySelector('.scroll-btn');
+
+    if (currentScroll > lastScrollTop) {
+        // Скрол вниз
+        btn.classList.remove('show');
+    } else {
+        // Скрол вверх
+        if (currentScroll > 20) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Для мобильного и негативного скролинга
+}, false);
+
+function smoothScrollToTop() {
+    const startPosition = window.scrollY;
+    const distance = startPosition;
+    const duration = 1000; // Милисекунды
+    let start = null;
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        window.scrollTo(0, easeInOutCubic(progress, startPosition, -distance, duration));
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
+
+    function easeInOutCubic(t, b, c, d) {
+        if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+        return c / 2 * ((t -= 2) * t * t + 2) + b;
+    }
+
+    window.requestAnimationFrame(step);
 }
-
-slides.forEach((slide, indx) => {
-slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-});
-});
-// WIND
+    // WIND
 let formwind = document.getElementById('windform');
 let er_email = document.getElementById('er_email');
 let er_pass = document.getElementById('er_pass');
-// REG
+    // REG
 let formreg = document.getElementById('regform');
 let er_fio = document.getElementById('er_fio');
 let er_number = document.getElementById('er_number');
 let er_emailreg = document.getElementById('er_emailreg');
 let er_passreg = document.getElementById('er_passreg');
-
-// *Форма входа
-    // Ввойти в форму входа 
+// Ввойти в форму входа 
 // Открытие
 document.getElementById('open-end').addEventListener('click', function () {
     var popup = document.querySelector('.pop-up');
@@ -192,4 +222,40 @@ function ClearForm(){
         er_passreg.style.display = 'none';
     }
 }
+// Select all slides
+const slides = document.querySelectorAll(".slide");
 
+// loop through slides and set each slides translateX property to index * 100% 
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+// current slide counter
+let curSlide = 0;
+let maxSlide = slides.length - 1;
+// select next slide button
+const nextSlide = document.querySelector(".btn-next");
+
+nextSlide.addEventListener("click", function () {
+if (curSlide === maxSlide) {
+curSlide = 0;
+} else {
+curSlide ++;
+}
+slides.forEach((slide, indx) => {
+slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+});
+});
+// select prev slide button
+const prevSlide = document.querySelector(".btn-prev");
+
+prevSlide.addEventListener("click", function () {
+if (curSlide === 0) {
+curSlide = maxSlide;
+} else {
+curSlide--;
+}
+
+slides.forEach((slide, indx) => {
+slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+});
+});

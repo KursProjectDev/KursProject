@@ -10,11 +10,6 @@
   outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
 @keyframes framIn {
   from {
     opacity: 0;
@@ -35,6 +30,26 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+.main-body .scroll-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 10px 40px;
+  background-color: rgba(247, 247, 247, 0.7333333333);
+  color: #5a5c8d;
+  text-decoration: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 74px;
+}
+.main-body .scroll-btn.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 .main-body .top {
   display: flex;
@@ -420,16 +435,13 @@
   width: 100%;
   align-items: center;
   flex-direction: column;
-  background: #9c9c9c;
+  background: #f5f5f5;
   padding: 50px 0;
   gap: 50px;
 }
 .main-body .new p {
-  color: black;
-  font-weight: 600;
-}
-.main-body .new .min-new {
-  color: #575757;
+  color: #303030;
+  font-weight: 500;
 }
 .main-body .new .new-top {
   width: 60vw;
@@ -440,7 +452,76 @@
 .main-body .new .new-top .left-new {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+}
+.main-body .new .new-top .left-new .min-new {
+  color: #b4b4b4;
+}
+.main-body .new .new-top .left-new .max-new {
+  font-size: 32px;
+  font-weight: 700;
+}
+.main-body .new .new-top .right-new .min-new {
+  color: #b4b4b4;
+}
+.main-body .new .new-bottom {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+}
+.main-body .new .new-bottom .new-box {
+  height: 340px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px;
+  background: white;
+  border-radius: 4px;
+  border: solid 2px #e0e0e0;
+}
+.main-body .new .new-bottom .new-box .name-new {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+.main-body .new .new-bottom .new-box .name-new img {
+  height: 200px;
+}
+.main-body .new .new-bottom .new-box .name-new .text-new {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main-body .new .new-bottom .new-box .name-new .text-new .up-text-new {
+  font-weight: 750;
+  color: #252774;
+}
+.main-body .new .new-bottom .new-box .name-new .text-new .down-text-new {
+  color: #b4b4b4;
+  font-weight: 400;
+}
+.main-body .new .new-bottom .new-box .date-new {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-body .new .new-bottom .new-box .date-new .min-new {
+  font-weight: 700;
+  color: #252774;
+}
+.main-body .new .new-bottom .new-box .date-new .left-date-tx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.main-body .new .new-bottom .new-box .date-new .left-date-tx .text-date {
+  color: #d4d4d4;
+}
+.main-body .new .new-bottom .new-box .date-new .left-date-tx .stril {
+  color: #d4d4d4;
+  font-size: 26px;
 }
 .main-body .contacts {
   width: 100%;
@@ -657,4 +738,171 @@
   width: 30vw;
   height: 50vh;
   background-color: rgba(35, 138, 243, 0.5);
+}
+
+.blockquestions {
+  background-color: rgba(128, 128, 128, 0.4); /* Серый цвет с прозрачностью 0.4 */
+}
+
+.quests {
+  background-color: rgba(255, 255, 255, 0.6); /* Белый цвет с прозрачностью 0.6 */
+}
+
+.questions {
+  background-color: rgba(0, 0, 0, 0.7); /* Черный цвет с прозрачностью 0.7 */
+}
+
+.quest {
+  background-color: rgba(192, 192, 192, 0.3); /* Серый цвет с прозрачностью 0.3 */
+}
+
+.q {
+  background-color: rgba(64, 64, 64, 0.8); /* Темно-серый цвет с прозрачностью 0.8 */
+}
+
+.questtext {
+  background-color: rgba(191, 191, 63, 0.5); /* Желтоватый цвет с прозрачностью 0.5 */
+}
+
+.questind {
+  background-color: rgba(63, 191, 191, 0.6); /* Бирюзовый цвет с прозрачностью 0.6 */
+}
+
+.bigblock {
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #252774;
+  padding: 10% 10%;
+}
+.bigblock .blockorder {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+}
+.bigblock .worlduor {
+  font-size: 2em;
+  font-weight: 600;
+}
+.bigblock .blockfororder {
+  min-width: 15vw;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  gap: 15px;
+  border: solid 3px #252774;
+}
+.bigblock .ordertext {
+  font-size: larger;
+  font-weight: 550;
+}
+.bigblock input[type=text] {
+  width: 92%;
+  padding: 3% 0% 3% 5%;
+  border-radius: 5px;
+}
+.bigblock .blockinput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 550;
+}
+.bigblock .blockbuttonorder {
+  border: none;
+  padding: 15px 0px;
+  font-size: large;
+  color: white;
+  background-color: #238af3;
+  margin: 5px;
+  cursor: pointer;
+}
+.bigblock .blockbuttonorder:hover {
+  border: solid 5px white;
+  margin: 0px;
+}
+.bigblock .blockminitextorder {
+  font-size: small;
+}
+.bigblock .blockquestions {
+  display: flex;
+  flex-direction: column;
+}
+.bigblock .quests {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.Catalcont {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.Category {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.Cat1 {
+  background-color: rgb(0, 199, 106);
+  padding: 20px;
+}
+
+.ViewProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+  padding: 20px;
+}
+
+.BlockProdust {
+  background-color: cornflowerblue;
+  height: 250px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Namberprodust {
+  height: 12%;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgb(21, 211, 78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.Imageproduct {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+}
+
+.Proddescr {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Decrproduct {
+  display: flex;
+  justify-content: center;
+}
+
+.catalogue * {
+  color: #252774;
 }/*# sourceMappingURL=style.css.map */
