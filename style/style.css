@@ -754,4 +754,74 @@
 .bigblock .quests {
   font-size: 2em;
   font-weight: 600;
+}
+
+.Catalcont {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.Category {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.Cat1 {
+  background-color: rgb(0, 199, 106);
+  padding: 20px;
+}
+
+.ViewProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+  padding: 20px;
+}
+
+.BlockProdust {
+  background-color: cornflowerblue;
+  height: 250px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Namberprodust {
+  height: 12%;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgb(21, 211, 78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.Imageproduct {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+}
+
+.Proddescr {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Decrproduct {
+  display: flex;
+  justify-content: center;
+}
+
+.catalogue * {
+  color: #252774;
 }/*# sourceMappingURL=style.css.map */
