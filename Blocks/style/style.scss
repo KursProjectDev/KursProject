@@ -1,0 +1,38 @@
+.bigblocknews{
+    display: flex;
+    justify-content: center;
+}
+.newblock{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newscompany{
+    padding: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.cardsnews{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardnews{
+    background-color: antiquewhite;
+    padding: 20px;
+    width: 380px;
+    height: max-content;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.namenews{
+    padding: 20px 0px;
+}
+.morecardnews{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
