@@ -259,3 +259,26 @@ slides.forEach((slide, indx) => {
 slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
 });
 });
+const checkboxes = document.querySelectorAll('.q input[type="checkbox"]');
+const block = document.querySelector('.quest-hidden');
+// Loop through each one
+checkboxes.forEach(checkboxes => {
+
+  // Get adjacent image 
+  const image = checkboxes.nextElementSibling;
+
+  // Attach click handler
+  checkboxes.addEventListener('click', () => {
+    
+    if(checkboxes.checked) {
+        image.src = '/img/minus-icon.svg'; 
+        block.style.display = 'block';
+      }
+      // If unchecked, change back
+      else {
+        image.src = '/img/plus-icon.svg';
+        block.style.display = 'none'; 
+      }
+  });
+
+});

@@ -15,148 +15,218 @@
 
   <body>
     <div class="main-body">
-      <a class="scroll-btn" href="#" onclick="smoothScrollToTop()">🡑</a>
+      <a class="scroll-btn" href="#" onclick="smoothScrollToTop()">
+        <svg width="30" height="30" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L4 4.5L1 8" stroke="#a1a1a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
       <!-- Главное -->
       <div class="top">
         <div class="t-header">
-            <div class="t-logo">
-                <!-- Изменить на настоящий -->
-                <a href="#f-main" onclick="smoothScroll('f-main')">
-                    <p class="number">8 927 211 66 50</p>
+          <div class="t-logo">
+            <!-- Изменить на настоящий -->
+            <a href="#f-main" onclick="smoothScroll('f-main')">
+              <p class="number">8 927 211 66 50</p>
+            </a>
+            <img class="logo" src="/img/logo.svg" alt="" />
+            <img
+              class="logo"
+              src="/img/Effcologo.png"
+              alt=""
+              style="height: 90px"
+            />
+            <a class="ent" href="#entrance" id="open-end" type="button">
+              <p>ВОЙТИ</p>
+            </a>
+          </div>
+          <div class="pop-up">
+            <form action="" class="wind" id="windform">
+              <div class="t-but">
+                <p>Войти или создать <br />профиль</p>
+                <a href="#" class="clous-end"
+                  ><img src="/img/cross.svg" alt=""
+                /></a>
+              </div>
+              <div class="poli">
+                <input
+                  class="input"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email или телефон"
+                />
+                <p class="error" id="er_email"></p>
+              </div>
+              <div class="poli">
+                <input
+                  class="input"
+                  type="password"
+                  name="pass"
+                  id="pass"
+                  placeholder="Ваш пароль"
+                />
+                <p class="error" id="er_pass"></p>
+              </div>
+              <a href="#entrance" class="ent-button" id="endbut">
+                <p>Войти</p>
+              </a>
+              <div class="reg-button">
+                <a href="#registrarion" id="open-regist" type="button">
+                  <p>Регистрация</p>
                 </a>
-                <img class="logo" src="/img/logo.svg" alt="">
-                <a class="ent" href="#entrance" id="open-end" type="button">
-                    <p>ВОЙТИ</p>
+              </div>
+            </form>
+            <form action="" class="regist" id="regform">
+              <div class="t-but">
+                <p>Регистрация</p>
+                <a href="#" class="clous-end"
+                  ><img src="/img/cross.svg" alt=""
+                /></a>
+              </div>
+              <div class="poli">
+                <input
+                  class="input"
+                  type="text"
+                  name="FIO"
+                  id="FIO"
+                  placeholder="ФИО"
+                />
+                <p class="error" id="er_fio"></p>
+              </div>
+              <div class="poli">
+                <input
+                  class="input"
+                  type="text"
+                  name="number"
+                  id="number"
+                  placeholder="Номер телефона"
+                />
+                <p class="error" id="er_number"></p>
+              </div>
+              <div class="poli">
+                <input
+                  class="input"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+                <p class="error" id="er_emailreg"></p>
+              </div>
+              <div class="poli">
+                <div class="password-input">
+                  <input
+                    class="pass"
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    placeholder="Ваш пароль"
+                  />
+                  <a href="#registrarion"
+                    ><img class="eays" src="/img/eaysclouse.svg" alt=""
+                  /></a>
+                </div>
+                <p class="error" id="er_passreg"></p>
+              </div>
+
+              <a href="#entrance" class="reg-button" id="regbut">
+                <p>Зарегистрироваться</p>
+              </a>
+              <div class="ent-button">
+                <a href="#entrance" id="form-end">
+                  <p>Войти</p>
                 </a>
-            </div>
-            <div class="pop-up">
-                <form action="" class="wind" id="windform">
-                    <div class="t-but">
-                        <p>Войти или создать <br>профиль</p>
-                        <a href="#" class="clous-end"><img src="/img/cross.svg" alt=""></a>
-                    </div>
-                    <div class="poli">
-                        <input class="input" type="text" name="email" id="email" placeholder="Email или телефон">
-                        <p class="error" id="er_email"></p>
-                    </div>
-                    <div class="poli">
-                        <input class="input" type="password" name="pass" id="pass" placeholder="Ваш пароль">
-                        <p class="error" id="er_pass"></p>
-                    </div>
-                    <a href="#entrance" class="ent-button" id="endbut">
-                        <p>Войти</p>
-                    </a>
-                    <div class="reg-button">
-                        <a href="#registrarion" id="open-regist" type="button">
-                            <p>Регистрация</p>
-                        </a>
-                    </div>
-                </form>
-                <form action="" class="regist" id="regform">
-                    <div class="t-but">
-                        <p>Регистрация</p>
-                        <a href="#" class="clous-end"><img src="/img/cross.svg" alt=""></a>
-                    </div>
-                    <div class="poli">
-                        <input class="input" type="text" name="FIO" id="FIO" placeholder="ФИО">
-                        <p class="error" id="er_fio"></p>
-                    </div>
-                    <div class="poli">
-                        <input class="input" type="text" name="number" id="number" placeholder="Номер телефона">
-                        <p class="error" id="er_number"></p>
-                    </div>
-                    <div class="poli">
-                        <input class="input" type="text" name="email" id="email" placeholder="Email">
-                        <p class="error" id="er_emailreg"></p>
-                    </div>
-                    <div class="poli">
-                        <div class="password-input">
-                            <input class="pass" type="password" name="pass" id="pass" placeholder="Ваш пароль">
-                            <a href="#registrarion"><img class="eays" src="/img/eaysclouse.svg" alt=""></a>
-                        </div>
-                        <p class="error" id="er_passreg"></p>
-                    </div>
-                    
-                    <a href="#entrance" class="reg-button" id="regbut">
-                        <p>Зарегистрироваться</p>
-                    </a>
-                    <div class="ent-button">
-                        <a href="#entrance" id="form-end">
-                            <p>Войти</p>
-                        </a>
-                    </div>
-                </form>
-            </div>
-            <div class="navigator">
-                <a href="#top" onclick="smoothScroll('top')">
-                    <p>Главное</p>
-                </a>
-                <a href="#aboutus" onclick="smoothScroll('aboutus')">
-                    <p>О компании</p>
-                </a>
-                <a href="#new" onclick="smoothScroll('new')">
-                    <p>Новости</p>
-                </a>
-                <a href="#catalogue" onclick="smoothScroll('catalogue')">
-                    <p>Продукция</p>
-                </a>
-                <a href="#quality" onclick="smoothScroll('quality')">
-                    <p>Качество</p>
-                </a>
-                
-                <a href="#f-main" onclick="smoothScroll('f-main')">
-                    <p>Контакты</p>
-                </a>
-            </div>
+              </div>
+            </form>
+          </div>
+          <div class="navigator">
+            <a href="#top" onclick="smoothScroll('top')">
+              <p>Главное</p>
+            </a>
+            <a href="#aboutus" onclick="smoothScroll('aboutus')">
+              <p>О компании</p>
+            </a>
+            <a href="#new" onclick="smoothScroll('new')">
+              <p>Новости</p>
+            </a>
+            <a href="#catalogue" onclick="smoothScroll('catalogue')">
+              <p>Продукция</p>
+            </a>
+            <a href="#quality" onclick="smoothScroll('quality')">
+              <p>Качество</p>
+            </a>
+
+            <a href="#f-main" onclick="smoothScroll('f-main')">
+              <p>Контакты</p>
+            </a>
+          </div>
         </div>
         <a id="top"></a>
         <div class="t-body">
-            <div class="t-dark">
-                <div class="t-text">
-                    <p class="te1">Покрытия от коррозии и переработка краски</p>
-                    <p class="te2">Длительная защита от коррозии покрытием тонкого слоя Zinc-Aluminium Corundum</p>
-                </div>
-                <div class="buts">
-                    <a class="but-1" href="">
-                        <p>РАССЧИТАТЬ СТОИМОСТЬ</p>
-                    </a>
-                    <a class="but-2" href="">
-                        <p>ОСТАВИТЬ ЗАЯВКУ</p>
-                    </a>
-                </div>
+          <div class="t-dark">
+            <div class="t-text">
+              <p class="te1">Покрытия от коррозии и переработка краски</p>
+              <p class="te2">
+                Длительная защита от коррозии покрытием тонкого слоя
+                Zinc-Aluminium Corundum
+              </p>
             </div>
+            <div class="buts">
+              <a class="but-1" href="">
+                <p>РАССЧИТАТЬ СТОИМОСТЬ</p>
+              </a>
+              <a class="but-2" href="">
+                <p>ОСТАВИТЬ ЗАЯВКУ</p>
+              </a>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- О нас -->
-    <a id="aboutus"></a>
-    <div class="about">
+      </div>
+      <!-- О нас -->
+      <a id="aboutus"></a>
+      <div class="about">
         <div class="a-body">
-            <div class="a-image">
-                <img src="/img/ImgNEW-2.svg" alt="">
-            </div>
-            <div class="a-block">
-                <p class="aboutus">О НАШЕЙ КОМПАНИИ</p>
-                <p class="a-text">«ГРАНДПРОМ» - промышленно-коммерческое предприятие в Поволжском регионе. С 2014 года основания занимается развитием автомобильной промышленности в РФ. Клиентами предприятия являются практически все автосборочные предприятия расположенные
-                    в РФ.</p>
-                <a class="a-button" href="">
-                    <p>УЗНАТЬ ПОДРОБНЕЕ</p>
-                </a>
-            </div>
+          <div class="a-image">
+            <img src="/img/ImgNEW-2.svg" alt="" />
+          </div>
+          <div class="a-block">
+            <p class="aboutus">О НАШЕЙ КОМПАНИИ</p>
+            <p class="a-text">
+              «ГРАНДПРОМ» - промышленно-коммерческое предприятие в Поволжском
+              регионе. С 2014 года основания занимается развитием автомобильной
+              промышленности в РФ. Клиентами предприятия являются практически
+              все автосборочные предприятия расположенные в РФ.
+            </p>
+            <a class="a-button" href="">
+              <p>УЗНАТЬ ПОДРОБНЕЕ</p>
+            </a>
+          </div>
         </div>
-    </div>
-    <a></a>
-    <div class="aboutus-2">
+      </div>
+      <a></a>
+      <div class="aboutus-2">
         <div class="about-2">
-            <div class="text-1">
-                <p class="t-1">ЗДЕСЬ БУДЕТ ТОЖЕ ОПИСАНИЕ КОМПАНИИ</p>
-                <p class="t-2">Описание текста ниже в 2 предложениях</p>
-            </div>
-            <div class="text-2">
-                <p class="t-3">Если у вас есть возможность увидеть только один город в Италии, то пусть это будет Рим, великий, многогранный, одновременно шумный и уютный, узнаваемый и не до конца известный. Ехать на 2-3 дня сюда, если вы едете впервые и в город,
-                    и в страну, — не самая лучшая идея. Неделя — вот то количество времени, которое можно считать адекватным.</p>
-                <p class="t-4">Планируя свои дни в городе, пожалуйста, отведите достаточно времени на то, чтобы увидеть не только Колизей, Испанскую лестницу, площадь Навона и обалдеть от красоты и количества туристов, но и для того, чтобы познакомиться с другим,
-                    жилым, спокойным, но не менее красивым Римом.</p>
-            </div>
+          <div class="text-1">
+            <p class="t-1">ЗДЕСЬ БУДЕТ ТОЖЕ ОПИСАНИЕ КОМПАНИИ</p>
+            <p class="t-2">Описание текста ниже в 2 предложениях</p>
+          </div>
+          <div class="text-2">
+            <p class="t-3">
+              Если у вас есть возможность увидеть только один город в Италии, то
+              пусть это будет Рим, великий, многогранный, одновременно шумный и
+              уютный, узнаваемый и не до конца известный. Ехать на 2-3 дня сюда,
+              если вы едете впервые и в город, и в страну, — не самая лучшая
+              идея. Неделя — вот то количество времени, которое можно считать
+              адекватным.
+            </p>
+            <p class="t-4">
+              Планируя свои дни в городе, пожалуйста, отведите достаточно
+              времени на то, чтобы увидеть не только Колизей, Испанскую
+              лестницу, площадь Навона и обалдеть от красоты и количества
+              туристов, но и для того, чтобы познакомиться с другим, жилым,
+              спокойным, но не менее красивым Римом.
+            </p>
+          </div>
         </div>
     </div>
     <!-- Новости -->
@@ -323,12 +393,12 @@
       <!-- Качество -->
       <a id="quality"></a>
       <section class="slider">
-        <img class="slide" src="./img/quality1.png" alt="">
-        <img class="slide" src="./img/quality2.png" alt="">
-        <img class="slide" id="slide3" src="./img/quality3.png" alt="">
+        <img class="slide" src="./img/quality1.png" alt="" />
+        <img class="slide" src="./img/quality2.png" alt="" />
+        <img class="slide" id="slide3" src="./img/quality3.png" alt="" />
         <button class="btn btn-next"></button>
         <button class="btn btn-prev"></button>
-    </section>
+      </section>
       <!--
         <section class="q-bg">
         <div class="q-shadow">
@@ -369,94 +439,68 @@
           <div class="questions">
             <div class="quest">
               <div class="q">
-                <div class="questtext">
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla
-                </div>
-                <div class="questind">+</div>
+                <div class="questtext">"В чём польза цинкования?"</div>
+                <label class="likebox-grande">
+                  <input id="checkbox" class="likebox" type="checkbox" />
+                  <img class="hide-switch" src="./img/plus-icon.svg" alt="" />
+                </label>
               </div>
             </div>
-            <div class="quest">
-              <div class="q">
-                <div class="questtext">
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla
-                </div>
-                <div class="questind">+</div>
-              </div>
-            </div>
-            <div class="quest">
-              <div class="q">
-                <div class="questtext">
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla
-                </div>
-                <div class="questind">+</div>
-              </div>
-            </div>
-            <div class="quest">
-              <div class="q">
-                <div class="questtext">
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla
-                </div>
-                <div class="questind">+</div>
-              </div>
-            </div>
+            <div class="quest-hidden">Hidden text</div>
           </div>
         </div>
       </div>
       <a id="f-main"></a>
-      <section class="contacts">
+      <!--<section class="contacts">
         <div class="c-top">КОНТАКТЫ</div>
         <div class="c-main">
           <div class="map" id="map ">
-            <div class="c-box">
-              <div class="separator">По вопросам сотрудничества:</div>
-              <div class="c-box-line">
-                <div class="box-icon">
-                  <img src="./img/phone.png " alt=" " />
-                </div>
-                <div class="box-text">+7 960 841-81-88</div>
+          <div class="c-box">
+            <div class="separator">По вопросам сотрудничества:</div>
+            <div class="c-box-line">
+              <div class="box-icon">
+                <img src="./img/phone.png " alt=" " />
               </div>
-              <div class="c-box-line">
-                <div class="box-icon">
-                  <img src="./img/mail.png " alt=" " />
-                </div>
-                <div class="box-text">Grandprom.tlt@gmail.com</div>
+              <div class="box-text">+7 960 841-81-88</div>
+            </div>
+            <div class="c-box-line">
+              <div class="box-icon">
+                <img src="./img/mail.png " alt=" " />
               </div>
-              <div class="separator">По общим вопросам:</div>
-              <div class="c-box-line">
-                <div class="box-icon">
-                  <img src="./img/phone.png " alt=" " />
-                </div>
-                <div class="box-text">+7 927 211-66-50</div>
+              <div class="box-text">Grandprom.tlt@gmail.com</div>
+            </div>
+            <div class="separator">По общим вопросам:</div>
+            <div class="c-box-line">
+              <div class="box-icon">
+                <img src="./img/phone.png " alt=" " />
               </div>
-              <div class="c-box-line">
-                <div class="box-icon">
-                  <img src="./img/mail.png " alt=" " />
-                </div>
-                <div class="box-text">Grandprom.office@gmail.com</div>
+              <div class="box-text">+7 927 211-66-50</div>
+            </div>
+            <div class="c-box-line">
+              <div class="box-icon">
+                <img src="./img/mail.png " alt=" " />
               </div>
-              <div class="separator">Режим работы:</div>
-              <div class="c-box-line">
-                <div class="box-icon">
-                  <img src="./img/location.png " alt=" " />
-                </div>
-                <div class="box-text">
-                  Россия, Самарская область, г. Тольятти, ул.Ленинградская, 15
-                </div>
+              <div class="box-text">Grandprom.office@gmail.com</div>
+            </div>
+            <div class="separator">Режим работы:</div>
+            <div class="c-box-line">
+              <div class="box-icon">
+                <img src="./img/location.png " alt=" " />
               </div>
-              <div class="c-box-line">
-                <div class="box-icon">
-                  <img src="./img/clock.svg " alt=" " style="width: 3em" />
-                </div>
-                <div class="box-text-container">
-                  <div class="box-text">Пн-Пт: с 8.00 до 18.00</div>
-                  <div class="box-text">Сб-Вс: выходной</div>
-                </div>
+              <div class="box-text">
+                Россия, Самарская область, г. Тольятти, ул.Ленинградская, 15
               </div>
             </div>
+            <div class="c-box-line">
+              <div class="box-icon">
+                <img src="./img/clock.svg " alt=" " style="width: 3em" />
+              </div>
+              <div class="box-text-container">
+                <div class="box-text">Пн-Пт: с 8.00 до 18.00</div>
+                <div class="box-text">Сб-Вс: выходной</div>
+              </div>
+            </div>
+            /div>
             <script
               type="text/javascript "
               charset="utf-8 "
@@ -465,33 +509,98 @@
             ></script>
           </div>
         </div>
-      </section>
+      </section>-->
       <!-- Футер -->
+      <section class="contacts">
+        <div class="contacts-title">КОНТАКТЫ</div>
+        <div class="contacts-body">
+          <div class="separator">По вопросам сотрудничества:</div>
+          <div class="contacts-info-block">
+            <img class="cib-icon" src="/img/phone.png" alt="" />
+            <div class="cib-text">+7 960 841-81-88</div>
+          </div>
+          <div class="contacts-info-block">
+            <img class="cib-icon" src="/img/mail.png" alt="" />
+            <div class="cib-text">Grandprom.tlt@gmail.com</div>
+          </div>
+          <div class="separator">По общим вопросам:</div>
+          <div class="contacts-info-block">
+            <img class="cib-icon" src="/img/phone.png" alt="" />
+            <div class="cib-text">+7 927 211-66-50</div>
+          </div>
+          <div class="contacts-info-block">
+            <img class="cib-icon" src="/img/mail.png" alt="" />
+            <div class="cib-text">Grandprom.office@gmail.com</div>
+          </div>
+          <div class="contacts-info-block">
+            <img class="cib-icon" src="/img/location.png" alt="" />
+            <div class="cib-text">
+              Россия, Самарская область, г. Тольятти, ул.Ленинградская, 15
+            </div>
+          </div>
+          <div class="separator">Режим работы:</div>
+          <div class="contacts-info-block">
+            <img class="cib-icon" src="/img/clock.svg" alt="" />
+            <div class="cib-text">
+              <div class="box-text">Пн-Пт: с 8.00 до 18.00</div>
+              <div class="box-text">Сб-Вс: выходной</div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-map">
+          <script
+            type="text/javascript"
+            charset="utf-8"
+            async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49a617f2af511fa302d619d4000e1c5e997f5d4c26096fb70fac9f10b3eaa641&amp;width=100%25&amp;height=800&amp;lang=ru_RU&amp;scroll=false "
+          ></script>
+        </div>
+      </section>
       <footer>
         <div class="f-main">
           <div class="f">
             <ul class="f-list">
-              <li class="items"><a href="#top" onclick="smoothScroll('top')">Главная</a></li>
-              <li class="items"><a href="#aboutus" onclick="smoothScroll('aboutus')">О Компании</a></li>
-              <li class="items"><a href="#new" onclick="smoothScroll('new')">Новости</a></li>
+              <li class="items">
+                <a href="#top" onclick="smoothScroll('top')">Главная</a>
+              </li>
+              <li class="items">
+                <a href="#aboutus" onclick="smoothScroll('aboutus')"
+                  >О Компании</a
+                >
+              </li>
+              <li class="items">
+                <a href="#new" onclick="smoothScroll('new')">Новости</a>
+              </li>
             </ul>
           </div>
           <div class="f-mid">
             <ul class="f-list-mid">
               <li class="item"><a href=" ">©2024 ООО “ГРАНДПРОМ”</a></li>
+              <li class="item">
+                <a href=" ">EFFCO Finishes & Technologies Pvt Ltd</a>
+              </li>
               <li class="item"><a href=" ">Политика конфиденциальности</a></li>
             </ul>
           </div>
           <div class="f">
             <ul class="f-list">
-              <li class="items"><a href="#catalogue" onclick="smoothScroll('catalogue')">Продукция</a></li>
-              <li class="items"><a href="#quality" onclick="smoothScroll('quality')">Качество</a></li>
-              <li class="items"><a href="#f-main" onclick="smoothScroll('f-main')">Контакты</a></li>
+              <li class="items">
+                <a href="#catalogue" onclick="smoothScroll('catalogue')"
+                  >Продукция</a
+                >
+              </li>
+              <li class="items">
+                <a href="#quality" onclick="smoothScroll('quality')"
+                  >Качество</a
+                >
+              </li>
+              <li class="items">
+                <a href="#f-main" onclick="smoothScroll('f-main')">Контакты</a>
+              </li>
             </ul>
           </div>
         </div>
       </footer>
-      
     </div>
   </body>
   <script src="./scripts/script.js "></script>
