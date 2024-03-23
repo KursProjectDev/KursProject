@@ -37,6 +37,9 @@ $regular: 1.2em;
   flex-direction: column;
   overflow: hidden;
   .scroll-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: 60px;
     right: 60px;
@@ -53,8 +56,8 @@ $regular: 1.2em;
     font-size: 74px;
     box-shadow: 0 0 40px rgba(24, 12, 12, 0.192);
     svg {
-      transform: rotate(-90deg);
-    }
+        transform: rotate(-90deg);
+        }
   }
   .scroll-btn.show {
     opacity: 1;
@@ -471,90 +474,97 @@ $regular: 1.2em;
     padding: 50px 0;
     gap: 50px;
     p {
-      color: #303030;
-      font-weight: 500;
+        color: #303030;
+        font-weight: 500;
     }
     .new-top {
-      width: 60vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      .left-new {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        .min-new {
-          color: #b4b4b4;
-        }
-        .max-new {
-          font-size: 32px;
-          font-weight: 700;
-        }
-      }
-      .right-new {
-        .min-new {
-          color: #b4b4b4;
-        }
-      }
-    }
-    .new-bottom {
-      width: 60vw;
-      display: flex;
-      justify-content: space-between;
-      .new-box {
-        height: 340px;
+        width: 60vw;
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
-        padding: 40px;
-        background: white;
-        border-radius: 4px;
-        border: solid 2px #e0e0e0; // ИЗМЕНИТЬ ЦВЕТ
-        .name-new {
-          width: 280px;
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          img {
-            height: 200px;
-          }
-          .text-new {
+        align-items: flex-end;
+        .left-new {
             display: flex;
             flex-direction: column;
-            gap: 5px;
-            .up-text-new {
-              font-weight: 750;
-              color: $dark-blue;
+            gap: 15px;
+            .min-new {
+                color: #b4b4b4;
             }
-            .down-text-new {
-              color: #b4b4b4;
-              font-weight: 400;
+            .max-new {
+                font-size: 32px;
+                font-weight: 700;
             }
-          }
         }
-        .date-new {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          .min-new {
-            font-weight: 700;
-            color: $dark-blue;
-          }
-          .left-date-tx {
+        .right-new {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 5px;
-            .text-date {
-              color: #d4d4d4;
+            gap: 10px;
+            .min-new {
+                color: #b4b4b4;
             }
-            .stril {
-              color: #d4d4d4;
-              font-size: 26px;
-            }
-          }
         }
-      }
+    }
+    .new-bottom {
+        width: 60vw;
+        display: flex;
+        justify-content: space-between;
+        .new-box {
+            height: 340px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 40px;
+            background: white;
+            border-radius: 4px;
+            border: solid 2px #e0e0e0; // ИЗМЕНИТЬ ЦВЕТ
+            .name-new {
+                width: 280px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                img {
+                    height: 200px;
+                }
+                .text-new {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    .up-text-new {
+                        font-weight: 750;
+                        color: $dark-blue;
+                    }
+                    .down-text-new {
+                        color: #b4b4b4;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .date-new {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .min-new {
+                    font-weight: 700;
+                    color: $dark-blue;
+                }
+                .left-date-tx {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    .text-date {
+                        color: #d4d4d4;
+                    }
+                    .stril {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #d4d4d4;
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
     }
   }
   .contacts {
