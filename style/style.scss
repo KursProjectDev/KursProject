@@ -35,7 +35,8 @@ $regular: 1.2em;
   height: 100%;
   display: flex;
   flex-direction: column;
-  .scroll-btn{
+  overflow: hidden;
+  .scroll-btn {
     position: fixed;
     bottom: 60px;
     right: 60px;
@@ -469,38 +470,38 @@ $regular: 1.2em;
     background: #f5f5f5;
     padding: 50px 0;
     gap: 50px;
-    p{
+    p {
       color: #303030;
       font-weight: 500;
     }
-    .new-top{
+    .new-top {
       width: 60vw;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      .left-new{
+      .left-new {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        .min-new{
+        .min-new {
           color: #b4b4b4;
         }
-        .max-new{
+        .max-new {
           font-size: 32px;
           font-weight: 700;
         }
       }
-      .right-new{
-        .min-new{
+      .right-new {
+        .min-new {
           color: #b4b4b4;
         }
       }
     }
-    .new-bottom{
+    .new-bottom {
       width: 60vw;
       display: flex;
       justify-content: space-between;
-      .new-box{
+      .new-box {
         height: 340px;
         display: flex;
         justify-content: space-between;
@@ -509,50 +510,49 @@ $regular: 1.2em;
         background: white;
         border-radius: 4px;
         border: solid 2px #e0e0e0; // ИЗМЕНИТЬ ЦВЕТ
-        .name-new{
+        .name-new {
           width: 280px;
           display: flex;
           flex-direction: column;
           gap: 20px;
-          img{
+          img {
             height: 200px;
           }
-          .text-new{
+          .text-new {
             display: flex;
             flex-direction: column;
             gap: 5px;
-            .up-text-new{
+            .up-text-new {
               font-weight: 750;
               color: $dark-blue;
             }
-            .down-text-new{
+            .down-text-new {
               color: #b4b4b4;
               font-weight: 400;
             }
           }
         }
-        .date-new{
+        .date-new {
           display: flex;
-          align-items:center;
+          align-items: center;
           justify-content: space-between;
-          .min-new{
+          .min-new {
             font-weight: 700;
             color: $dark-blue;
           }
-          .left-date-tx{
+          .left-date-tx {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 5px;
-            .text-date{
+            .text-date {
               color: #d4d4d4;
             }
-            .stril{
-            color: #d4d4d4;
-            font-size: 26px;
+            .stril {
+              color: #d4d4d4;
+              font-size: 26px;
+            }
           }
-          }
-          
         }
       }
     }

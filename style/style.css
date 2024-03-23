@@ -30,6 +30,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
+=======
+  overflow: hidden;
+>>>>>>> c1f4058720cfbb6f53f99ce19c9e646075ee3894
   /*.map {
     top: -100px;
     max-height: 100vh;
