@@ -295,7 +295,7 @@ $regular: 1.2em;
         }
         .t-body {
             background-color: #ffffffaf;
-            background: url(/img/Fons.svg); // Заменить
+            background: url(/img/Fons.svg);
             background-position: center;
             background-size: cover;
             background-attachment: fixed; // Фиксация изображения
@@ -656,51 +656,23 @@ $regular: 1.2em;
         color: $dark-blue;
     }
     // Качество
-    .slider {
-        width: 100%;
-        //max-width: 800px;
+    .q-scroller{
         height: 100vh;
-        position: relative;
-        overflow: hidden;
-        .slide {
-            width: 100%;
-            //max-width: 800px;
-            height: 100vh;
-            position: absolute;
-            transition: all 0.5s;
-        }
-        .slide img {
-            width: 100%;
+        background: url(/img/Фон1.png);
+        background-position: center;
+        background-size: cover;
+        .q-slide{
             height: 100%;
-            object-fit: cover;
-            padding: 0%;
-            margin: 0%;
-        }
-        .btn {
-            background-color: red;
-            position: absolute;
-            width: 30%;
-            height: 100vh;
-            //padding: 10px;
-            border: none;
-            z-index: 1;
-            opacity: 0;
-            cursor: pointer;
-            background-color: #fff;
-            font-size: 18px;
-        }
-        .btn:active {
-            transform: scale(1.1);
-        }
-        .btn-prev {
-            left: 1px;
-        }
-        .btn-next {
-            right: 1px;
-        }
-        #slide3 {
-            width: 100vw;
-            height: 100vh;
+            .q-up{
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                height: 15%;
+                p{
+                    font-size: 56px;
+                    font-weight: 500;
+                }
+            }
         }
     }
     // Заявка

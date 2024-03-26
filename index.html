@@ -219,7 +219,7 @@
     </div>
     <!-- Новости -->
     <a id="new"></a>
-    <section class="new">
+    <div class="new">
       <div class="new-top">
           <div class="left-new">
               <p class="min-new">Новости</p>
@@ -296,10 +296,10 @@
               </div>
           </div>
       </div>
-    </section>
+    </div>
     <!-- Каталог -->
       <a id="catalogue"></a>
-      <section class="catalogue">
+      <div class="catalogue">
         <div class="Catalcont">
           <div class="Cattext">Каталог товаров</div>
           <div class="Category">
@@ -392,16 +392,23 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <!-- Качество -->
       <a id="quality"></a>
-      <section class="slider">
-        <img class="slide" src="./img/quality1.png" alt="" />
-        <img class="slide" src="./img/quality2.png" alt="" />
-        <img class="slide" id="slide3" src="./img/quality3.png" alt="" />
-        <button class="btn btn-next"></button>
-        <button class="btn btn-prev"></button>
-      </section>
+      <div class="q-scroller">
+        <section class="q-slide">
+          <div class="q-up">
+            <p>КАЧЕСТВО</p>
+          </div>
+          <div class="q-down">
+            <div class="q-cril"> 
+              <p class="q-max" id="q-numd">1</p>
+              <p class="q-min" id="q-name">Мы отличаемся</p>
+            </div>
+          </div>
+          <p class="q-info" id="q-info">Хорошим качеством холодного цинкования</p>
+        </section>
+      </div>
       <!-- Заявка -->
       <div class="bigblock">
         <div class="blockorder">
@@ -442,7 +449,7 @@
       </div>
       <!-- Контакты -->
       <a id="f-main"></a>
-      <section class="contacts">
+      <div class="contacts">
         <div class="contacts-title">КОНТАКТЫ</div>
         <div class="contacts-body">
           <div class="separator">По вопросам сотрудничества:</div>
@@ -486,7 +493,7 @@
             src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49a617f2af511fa302d619d4000e1c5e997f5d4c26096fb70fac9f10b3eaa641&amp;width=100vw25&amp;height=800&amp;lang=ru_RU&amp;scroll=false "
           ></script>
         </div>
-      </section>
+      </div>
       <!-- Футер -->
       <footer>
         <div class="f-main">
