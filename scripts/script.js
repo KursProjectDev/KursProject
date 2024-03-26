@@ -260,7 +260,6 @@ slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
 });
 });
 const checkboxes = document.querySelectorAll('.q input[type="checkbox"]');
-const block = document.querySelector('.quest-hidden');
 // Loop through each one
 checkboxes.forEach(checkboxes => {
 
@@ -272,13 +271,17 @@ checkboxes.forEach(checkboxes => {
     
     if(checkboxes.checked) {
         image.src = '/img/minus-icon.svg'; 
-        block.style.display = 'block';
       }
       // If unchecked, change back
       else {
         image.src = '/img/plus-icon.svg';
-        block.style.display = 'none'; 
       }
   });
-
 });
+const tabs = document.querySelectorAll('.tab');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tab.classList.toggle('open');
+  })
+})
