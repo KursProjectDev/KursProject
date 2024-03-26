@@ -707,7 +707,7 @@ $regular: 1.2em;
   // Заявка
   .bigblock {
     //width: 100%;
-    height: max-content;
+    height: 50vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -769,41 +769,48 @@ $regular: 1.2em;
     .blockminitextorder {
       font-size: small;
     }
-    .blockquestions {
-      display: flex;
-      flex-direction: column;
-    }
-    .quests {
-      font-size: $subtitle;
-      font-weight: 600;
-    }
-    .q {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      padding: 20px;
-    }
-    .questtext {
-      width: 100%;
-    }
-    .questtext,
-    .questind {
-      font-size: $regular;
-    }
   }
-  .likebox {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 0;
-    height: 0;
+  .blockquestions {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    overflow-y: scroll;
+    gap: 3vh;
   }
-  .likebox-grande {
-    padding: 5px;
-    z-index: 2;
-    img {
-      width: 30px;
-    }
+  .quests {
+    font-size: $subtitle;
+    font-weight: 600;
+    text-align: center;
+  }
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #ddd;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    transition: all 0.35s;
+  }
+
+  .tab-close {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
   }
 
   input[type="checkbox"] {

@@ -684,8 +684,7 @@
   height: 100vh;
 }
 .main-body .bigblock {
-  height: -moz-max-content;
-  height: max-content;
+  height: 50vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -748,41 +747,43 @@
 .main-body .bigblock .blockminitextorder {
   font-size: small;
 }
-.main-body .bigblock .blockquestions {
+.main-body .blockquestions {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  overflow-y: scroll;
+  gap: 3vh;
 }
-.main-body .bigblock .quests {
+.main-body .quests {
   font-size: 2em;
   font-weight: 600;
+  text-align: center;
 }
-.main-body .bigblock .q {
+.main-body .tabs {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
+  flex-wrap: wrap;
 }
-.main-body .bigblock .questtext {
+.main-body .tab {
   width: 100%;
+  overflow: hidden;
 }
-.main-body .bigblock .questtext,
-.main-body .bigblock .questind {
-  font-size: 1.2em;
+.main-body .tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #ddd;
+  font-weight: bold;
+  cursor: pointer;
 }
-.main-body .likebox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  width: 0;
-  height: 0;
+.main-body .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  transition: all 0.35s;
 }
-.main-body .likebox-grande {
-  padding: 5px;
-  z-index: 2;
-}
-.main-body .likebox-grande img {
-  width: 30px;
+.main-body .tab-close {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
 }
 .main-body input[type=checkbox] {
   display: none;
