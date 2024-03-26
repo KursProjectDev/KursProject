@@ -638,50 +638,24 @@
 .main-body .catalogue * {
   color: #252774;
 }
-.main-body .slider {
-  width: 100%;
+.main-body .q-scroller {
   height: 100vh;
-  position: relative;
-  overflow: hidden;
+  background: url(/img/Фон1.png);
+  background-position: center;
+  background-size: cover;
 }
-.main-body .slider .slide {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  transition: all 0.5s;
-}
-.main-body .slider .slide img {
-  width: 100%;
+.main-body .q-scroller .q-slide {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 0%;
-  margin: 0%;
 }
-.main-body .slider .btn {
-  background-color: red;
-  position: absolute;
-  width: 30%;
-  height: 100vh;
-  border: none;
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
+.main-body .q-scroller .q-slide .q-up {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 15%;
 }
-.main-body .slider .btn:active {
-  transform: scale(1.1);
-}
-.main-body .slider .btn-prev {
-  left: 1px;
-}
-.main-body .slider .btn-next {
-  right: 1px;
-}
-.main-body .slider #slide3 {
-  width: 100vw;
-  height: 100vh;
+.main-body .q-scroller .q-slide .q-up p {
+  font-size: 56px;
+  font-weight: 500;
 }
 .main-body .bigblock {
   height: -moz-max-content;
