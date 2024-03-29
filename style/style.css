@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   color: #fff;
+  font-size: 16px;
   list-style-type: none;
   text-decoration: none;
   font-family: "Inter", sans-serif;
@@ -61,7 +62,7 @@
 }
 .main-body .top {
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
 }
 .main-body .top .t-header {
@@ -284,34 +285,36 @@
 }
 .main-body .top .t-body {
   background-color: rgba(255, 255, 255, 0.6862745098);
-  background: url(/img/Fons.svg);
+  background: url(/img/Bolder.svg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 .main-body .top .t-body .t-dark {
+  height: 100vh;
   background: rgba(0, 0, 0, 0.438);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 100px 0 60px 0;
-  gap: 70px;
+  gap: 50px;
 }
 .main-body .top .t-body .t-dark .t-text {
-  width: 940px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 35px;
   text-align: center;
 }
 .main-body .top .t-body .t-dark .t-text .te1 {
-  font-size: 54px;
+  width: 1300px;
+  font-size: 96px;
   font-weight: 600;
   font-family: Montserrat;
 }
 .main-body .top .t-body .t-dark .t-text .te2 {
-  font-size: 24px;
+  width: 930px;
+  font-size: 32px;
   font-weight: 400;
   font-family: Montserrat;
 }
@@ -322,11 +325,11 @@
 }
 .main-body .top .t-body .t-dark .buts .but-1 {
   background: #238af3;
-  padding: 20px 40px;
+  padding: 20px 90px;
   transition: all 0.4s;
 }
 .main-body .top .t-body .t-dark .buts .but-1 p {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 400;
   color: #fff;
   transition: all 0.4s;
@@ -338,18 +341,19 @@
   color: #238af3;
 }
 .main-body .top .t-body .t-dark .buts .but-2 {
-  padding: 20px 70px;
-  outline: 3px solid #fff;
-  outline-offset: -3px;
+  padding: 20px 90px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
   transition: all 0.4s;
 }
 .main-body .top .t-body .t-dark .buts .but-2 p {
+  font-size: 22px;
   color: #fff;
   transition: all 0.4s;
 }
 .main-body .top .t-body .t-dark .buts .but-2:hover {
-  outline: 3px solid #238af3;
-  outline-offset: -3px;
+  outline: 2px solid #238af3;
+  outline-offset: -2px;
 }
 .main-body .top .t-body .t-dark .buts .but-2:hover p {
   color: #238af3;
@@ -372,19 +376,17 @@
 }
 .main-body .about {
   width: 100%;
-  height: 100%;
+  height: 930px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 130px 0;
 }
 .main-body .about .a-body {
-  width: 60vw;
   display: flex;
   justify-content: center;
 }
 .main-body .about .a-body .a-image img {
-  width: 35vw;
+  width: 750px;
 }
 .main-body .about .a-body .a-block {
   position: relative;
@@ -404,18 +406,20 @@
   font-family: Montserrat;
 }
 .main-body .about .a-body .a-block .a-text {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 25px;
   color: #4e4e4e;
 }
 .main-body .about .a-body .a-block .a-button {
-  width: 270px;
-  height: 40px;
+  padding: 20px 90px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #238af3;
+}
+.main-body .about .a-body .a-block .a-button P {
+  font-size: 24px;
 }
 .main-body .aboutus-2 {
   width: 100%;
@@ -798,7 +802,7 @@
 
 .contacts * {
   color: white;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
