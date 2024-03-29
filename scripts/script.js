@@ -222,61 +222,35 @@ function ClearForm(){
         er_passreg.style.display = 'none';
     }
 }
-// Select all slides
-const slides = document.querySelectorAll(".slide");
 
-// loop through slides and set each slides translateX property to index * 100% 
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
-// current slide counter
-let curSlide = 0;
-let maxSlide = slides.length - 1;
-// select next slide button
-const nextSlide = document.querySelector(".btn-next");
+// Get all tab checkboxes
+const tabChecks = document.querySelectorAll('.tab-check');
 
-nextSlide.addEventListener("click", function () {
-if (curSlide === maxSlide) {
-curSlide = 0;
-} else {
-curSlide ++;
-}
-slides.forEach((slide, indx) => {
-slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-});
-});
-// select prev slide button
-const prevSlide = document.querySelector(".btn-prev");
-
-prevSlide.addEventListener("click", function () {
-if (curSlide === 0) {
-curSlide = maxSlide;
-} else {
-curSlide--;
-}
-
-slides.forEach((slide, indx) => {
-slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-});
-});
-const checkboxes = document.querySelectorAll('.q input[type="checkbox"]');
 // Loop through each one
-checkboxes.forEach(checkboxes => {
+tabChecks.forEach(tabCheck => {
 
-  // Get adjacent image 
-  const image = checkboxes.nextElementSibling;
+  // Add click event listener
+  tabCheck.addEventListener('click', () => {
 
-  // Attach click handler
-  checkboxes.addEventListener('click', () => {
-    
-    if(checkboxes.checked) {
-        image.src = '/img/minus-icon.svg'; 
-      }
-      // If unchecked, change back
-      else {
-        image.src = '/img/plus-icon.svg';
-      }
+    // If checked
+    if(tabCheck.checked) {
+
+      // Get the .check-img inside this tab 
+      const checkImg = tabCheck.closest('.tab').querySelector('.check-img');
+
+      // Do something with the checkImg
+      checkImg.src = '/img/minus-icon.svg';
+
+    }
+    else{
+        const checkImg = tabCheck.closest('.tab').querySelector('.check-img');
+
+        // Do something with the checkImg
+        checkImg.src = '/img/plus-icon.svg';
+    }
+
   });
+
 });
 const tabs = document.querySelectorAll('.tab');
 
@@ -285,3 +259,35 @@ tabs.forEach(tab => {
     tab.classList.toggle('open');
   })
 })
+
+const cat1 = document.getElementById('cat1');
+const cat2 = document.getElementById('cat2');
+cat1.checked = true;
+const equipment = document.querySelector('.equipment');
+const equipment2 = document.querySelector('.equipment2');
+
+function toggleDisplay() {
+  if (cat1.checked) {
+    console.log('cat1');
+    equipment.style.display = 'block';
+    equipment2.style.display = 'none';
+    equipment.style.width = '100%';
+    equipment.style.display = 'flex';
+    equipment.style.flexDirection = 'column';
+    equipment.style.justifyContent = 'space-around';
+  } else if (cat2.checked) {
+    console.log('cat2');
+    equipment.style.display = 'none';
+    equipment2.style.display = 'block';
+    equipment2.style.width = '100%';
+    equipment2.style.display = 'flex';
+    equipment2.style.flexDirection = 'column';
+    equipment2.style.justifyContent = 'space-around';
+  }
+}
+
+cat1.addEventListener('change', toggleDisplay);
+cat2.addEventListener('change', toggleDisplay);
+
+// Call on initial page load
+toggleDisplay(); 
