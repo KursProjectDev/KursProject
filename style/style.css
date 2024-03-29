@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   color: #fff;
+  font-size: 16px;
   list-style-type: none;
   text-decoration: none;
   font-family: "Inter", sans-serif;
@@ -62,7 +63,7 @@
 }
 .main-body .top {
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
 }
 .main-body .top .t-header {
@@ -91,7 +92,7 @@
   align-items: center;
   justify-content: center;
   background: #252774;
-  padding: 15px 40px;
+  padding: 15px 60px;
   transition: all 0.3s;
 }
 .main-body .top .t-header .t-logo .ent p {
@@ -285,34 +286,36 @@
 }
 .main-body .top .t-body {
   background-color: rgba(255, 255, 255, 0.6862745098);
-  background: url(/img/Fons.svg);
+  background: url(/img/Bolder.svg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 .main-body .top .t-body .t-dark {
+  height: 100vh;
   background: rgba(0, 0, 0, 0.438);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 100px 0 60px 0;
-  gap: 70px;
+  gap: 50px;
 }
 .main-body .top .t-body .t-dark .t-text {
-  width: 940px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 35px;
   text-align: center;
 }
 .main-body .top .t-body .t-dark .t-text .te1 {
-  font-size: 54px;
+  width: 1300px;
+  font-size: 96px;
   font-weight: 600;
   font-family: Montserrat;
 }
 .main-body .top .t-body .t-dark .t-text .te2 {
-  font-size: 24px;
+  width: 930px;
+  font-size: 32px;
   font-weight: 400;
   font-family: Montserrat;
 }
@@ -323,11 +326,11 @@
 }
 .main-body .top .t-body .t-dark .buts .but-1 {
   background: #238af3;
-  padding: 20px 40px;
+  padding: 20px 90px;
   transition: all 0.4s;
 }
 .main-body .top .t-body .t-dark .buts .but-1 p {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 400;
   color: #fff;
   transition: all 0.4s;
@@ -339,18 +342,19 @@
   color: #238af3;
 }
 .main-body .top .t-body .t-dark .buts .but-2 {
-  padding: 20px 70px;
-  outline: 3px solid #fff;
-  outline-offset: -3px;
+  padding: 20px 90px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
   transition: all 0.4s;
 }
 .main-body .top .t-body .t-dark .buts .but-2 p {
+  font-size: 22px;
   color: #fff;
   transition: all 0.4s;
 }
 .main-body .top .t-body .t-dark .buts .but-2:hover {
-  outline: 3px solid #238af3;
-  outline-offset: -3px;
+  outline: 2px solid #238af3;
+  outline-offset: -2px;
 }
 .main-body .top .t-body .t-dark .buts .but-2:hover p {
   color: #238af3;
@@ -373,61 +377,65 @@
 }
 .main-body .about {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 130px 0;
 }
 .main-body .about .a-body {
-  width: 60vw;
   display: flex;
   justify-content: center;
 }
 .main-body .about .a-body .a-image img {
-  width: 35vw;
+  width: 40vw;
 }
 .main-body .about .a-body .a-block {
+  width: 25%;
   position: relative;
   top: 40px;
   left: -40px;
   z-index: 1;
-  width: 400px;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-direction: column;
   background: #f5f5f5;
   gap: 25px;
   padding: 45px;
 }
 .main-body .about .a-body .a-block .aboutus {
+  width: 40%;
   font-size: 36px;
   color: #303030;
   font-family: Montserrat;
 }
 .main-body .about .a-body .a-block .a-text {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 25px;
+  width: 82%;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
   color: #4e4e4e;
 }
 .main-body .about .a-body .a-block .a-button {
-  width: 270px;
-  height: 40px;
+  padding: 15px 65px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #238af3;
 }
+.main-body .about .a-body .a-block .a-button P {
+  font-size: 24px;
+}
 .main-body .aboutus-2 {
   width: 100%;
-  height: 100%;
+  height: 70vh;
   display: flex;
-  padding: 50px 0;
+  padding: 60px 0;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .main-body .aboutus-2 .about-2 {
-  width: 940px;
+  width: 1100px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -438,12 +446,14 @@
   gap: 10px;
 }
 .main-body .aboutus-2 .about-2 .text-1 .t-1 {
-  font-size: 44px;
+  width: 70%;
+  font-family: Montserrat;
+  font-size: 36px;
   color: black;
 }
 .main-body .aboutus-2 .about-2 .text-1 .t-2 {
   font-size: 24px;
-  color: #4e4e4e;
+  color: #A8A8A8;
 }
 .main-body .aboutus-2 .about-2 .text-2 {
   display: flex;
@@ -461,6 +471,7 @@
 .main-body .new {
   display: flex;
   width: 100%;
+  height: 80vh;
   align-items: center;
   flex-direction: column;
   background: #f5f5f5;
@@ -472,7 +483,7 @@
   font-weight: 500;
 }
 .main-body .new .new-top {
-  width: 60vw;
+  width: 70vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -487,7 +498,7 @@
 }
 .main-body .new .new-top .left-new .max-new {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 0;
 }
 .main-body .new .new-top .right-new {
   display: flex;
@@ -499,28 +510,26 @@
   color: #b4b4b4;
 }
 .main-body .new .new-bottom {
-  width: 60vw;
+  width: 70vw;
   display: flex;
   justify-content: space-between;
+  gap: 35px;
 }
 .main-body .new .new-bottom .new-box {
-  height: 340px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 40px;
   background: white;
+  padding: 40px;
   border-radius: 4px;
-  border: solid 2px #e0e0e0;
+  border: solid 3px #e0e0e0;
 }
 .main-body .new .new-bottom .new-box .name-new {
-  width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
-.main-body .new .new-bottom .new-box .name-new img {
-  height: 200px;
+.main-body .new .new-bottom .new-box .name-new .n-img {
+  background-color: rgba(255, 255, 255, 0.6862745098);
 }
 .main-body .new .new-bottom .new-box .name-new .text-new {
   display: flex;
@@ -673,7 +682,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   gap: 3vh;
 }
 .main-body .quests {
@@ -724,7 +733,7 @@
 
 .contacts * {
   color: white;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
