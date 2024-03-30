@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Главная</title>
+  </head>
+
+  <body>
+    <div class="t-header">
+      <div class="t-logo">
+        <a href="tel:8 927 211 66 50">
+          <p class="number">8 927 211 66 50</p>
+        </a>
+        <img class="logo" src="/img/logo.svg" alt="" />
+        <img
+          class="logo"
+          style="height: 80px"
+          src="/img/Effcologo.png"
+          alt=""
+        />
+        <a class="ent" href="#entrance" id="open-end" type="button">
+          <p>ВОЙТИ</p>
+        </a>
+      </div>
+      <div class="pop-up">
+        <form action="" class="wind" id="windform">
+          <div class="t-but">
+            <p>Войти или создать <br />профиль</p>
+            <a href="#" class="clous-end"
+              ><img src="/img/cross.svg" alt=""
+            /></a>
+          </div>
+          <div class="poli">
+            <input
+              class="input"
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email или телефон"
+            />
+            <p class="error" id="er_email"></p>
+          </div>
+          <div class="poli">
+            <input
+              class="input"
+              type="password"
+              name="pass"
+              id="pass"
+              placeholder="Ваш пароль"
+            />
+            <p class="error" id="er_pass"></p>
+          </div>
+          <a href="#entrance" class="ent-button" id="endbut">
+            <p>Войти</p>
+          </a>
+          <div class="reg-button">
+            <a href="#registrarion" id="open-regist" type="button">
+              <p>Регистрация</p>
+            </a>
+          </div>
+        </form>
+        <form action="" class="regist" id="regform">
+          <div class="t-but">
+            <p>Регистрация</p>
+            <a href="#" class="clous-end"
+              ><img src="/img/cross.svg" alt=""
+            /></a>
+          </div>
+          <div class="poli">
+            <input
+              class="input"
+              type="text"
+              name="FIO"
+              id="FIO"
+              placeholder="ФИО"
+            />
+            <p class="error" id="er_fio"></p>
+          </div>
+          <div class="poli">
+            <input
+              class="input"
+              type="text"
+              name="number"
+              id="number"
+              placeholder="Номер телефона"
+            />
+            <p class="error" id="er_number"></p>
+          </div>
+          <div class="poli">
+            <input
+              class="input"
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+            <p class="error" id="er_emailreg"></p>
+          </div>
+          <div class="poli">
+            <div class="password-input">
+              <input
+                class="pass"
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Ваш пароль"
+              />
+              <a href="#registrarion"
+                ><img class="eays" src="/img/eaysclouse.svg" alt=""
+              /></a>
+            </div>
+            <p class="error" id="er_passreg"></p>
+          </div>
+
+          <a href="#entrance" class="reg-button" id="regbut">
+            <p>Зарегистрироваться</p>
+          </a>
+          <div class="ent-button">
+            <a href="#entrance" id="form-end">
+              <p>Войти</p>
+            </a>
+          </div>
+        </form>
+      </div>
+      <div class="navigator">
+        <a href="#top" onclick="smoothScroll('top')">
+          <p>Главное</p>
+        </a>
+        <a href="#aboutus" onclick="smoothScroll('aboutus')">
+          <p>О нас</p>
+        </a>
+        <a href="#new" onclick="smoothScroll('new')">
+          <p>Новости</p>
+        </a>
+        <a href="#catalogue" onclick="smoothScroll('catalogue')">
+          <p>Каталог</p>
+        </a>
+        <a href="#quality" onclick="smoothScroll('quality')">
+          <p>Преимущество</p>
+        </a>
+        <a href="#f-main" onclick="smoothScroll('f-main')">
+          <p>Контакты</p>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,48 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="/Blocks/style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Главная</title>
+    <title>Contacts+map</title>
   </head>
-
   <body>
-    <a id="f-main"></a>
-    <div class="contacts">
+    <section class="contacts">
       <div class="contacts-title">КОНТАКТЫ</div>
       <div class="contacts-body">
         <div class="separator">По вопросам сотрудничества:</div>
         <div class="contacts-info-block">
           <img class="cib-icon" src="/img/phone.png" alt="" />
-          <div class="cib-text">
-            <a href="tel:+7 960 841-81-88">+7 960 841-81-88</a>
-          </div>
+          <div class="cib-text">+7 960 841-81-88</div>
         </div>
         <div class="contacts-info-block">
           <img class="cib-icon" src="/img/mail.png" alt="" />
-          <div class="cib-text">
-            <a href="mailto:Grandprom.tlt@gmail.com">Grandprom.tlt@gmail.com</a>
-          </div>
+          <div class="cib-text">Grandprom.tlt@gmail.com</div>
         </div>
         <div class="separator">По общим вопросам:</div>
         <div class="contacts-info-block">
           <img class="cib-icon" src="/img/phone.png" alt="" />
-          <div class="cib-text">
-            <a href="tel:+7 927 211-66-50">+7 927 211-66-50</a>
-          </div>
+          <div class="cib-text">+7 927 211-66-50</div>
         </div>
         <div class="contacts-info-block">
           <img class="cib-icon" src="/img/mail.png" alt="" />
-          <div class="cib-text">
-            <a href="mailto:Grandprom.office@gmail.com"
-              >Grandprom.office@gmail.com</a
-            >
-          </div>
+          <div class="cib-text">Grandprom.office@gmail.com</div>
         </div>
         <div class="contacts-info-block">
           <img class="cib-icon" src="/img/location.png" alt="" />
@@ -66,9 +54,52 @@
           type="text/javascript"
           charset="utf-8"
           async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49a617f2af511fa302d619d4000e1c5e997f5d4c26096fb70fac9f10b3eaa641&amp;width=100vw25&amp;height=800&amp;lang=ru_RU&amp;scroll=false "
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49a617f2af511fa302d619d4000e1c5e997f5d4c26096fb70fac9f10b3eaa641&amp;width=100%25&amp;height=800&amp;lang=ru_RU&amp;scroll=false "
         ></script>
       </div>
-    </div>
+    </section>
+    <footer>
+      <div class="f-main">
+        <div class="f">
+          <ul class="f-list">
+            <li class="items">
+              <a href="#top" onclick="smoothScroll('top')">Главная</a>
+            </li>
+            <li class="items">
+              <a href="#aboutus" onclick="smoothScroll('aboutus')"
+                >О Компании</a
+              >
+            </li>
+            <li class="items">
+              <a href="#new" onclick="smoothScroll('new')">Новости</a>
+            </li>
+          </ul>
+        </div>
+        <div class="f-mid">
+          <ul class="f-list-mid">
+            <li class="item"><a href=" ">©2024 ООО “ГРАНДПРОМ”</a></li>
+            <li class="item">
+              <a href=" ">EFFCO Finishes & Technologies Pvt Ltd</a>
+            </li>
+            <li class="item"><a href=" ">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        <div class="f">
+          <ul class="f-list">
+            <li class="items">
+              <a href="#catalogue" onclick="smoothScroll('catalogue')"
+                >Продукция</a
+              >
+            </li>
+            <li class="items">
+              <a href="#quality" onclick="smoothScroll('quality')">Качество</a>
+            </li>
+            <li class="items">
+              <a href="#f-main" onclick="smoothScroll('f-main')">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
