@@ -491,13 +491,14 @@
 .main-body .new .new-top .left-new {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
 .main-body .new .new-top .left-new .min-new {
-  color: #b4b4b4;
+  font-size: 20px;
+  color: #858585;
 }
 .main-body .new .new-top .left-new .max-new {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 0;
 }
 .main-body .new .new-top .right-new {
@@ -507,7 +508,8 @@
   gap: 10px;
 }
 .main-body .new .new-top .right-new .min-new {
-  color: #b4b4b4;
+  font-size: 20px;
+  color: #858585;
 }
 .main-body .new .new-bottom {
   width: 70vw;
@@ -520,6 +522,7 @@
   justify-content: space-between;
   flex-direction: column;
   background: white;
+  gap: 25px;
   padding: 40px;
   border-radius: 4px;
   border: solid 3px #e0e0e0;
@@ -527,21 +530,39 @@
 .main-body .new .new-bottom .new-box .name-new {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 .main-body .new .new-bottom .new-box .name-new .n-img {
-  background-color: rgba(255, 255, 255, 0.6862745098);
+  background-color: rgba(204, 204, 204, 0.7254901961);
+  width: 100%;
+  height: 300px;
+}
+.main-body .new .new-bottom .new-box .name-new #n-img_one {
+  background: url(/img/ImgNEW-1.svg);
+  background-position: center;
+  background-size: cover;
+}
+.main-body .new .new-bottom .new-box .name-new #n-img_two {
+  background: url(/img/ImgNEW-2.svg);
+  background-position: center;
+  background-size: cover;
+}
+.main-body .new .new-bottom .new-box .name-new #n-img_tree {
+  background: url(/img/ImgNEW-3.svg);
+  background-position: center;
+  background-size: cover;
 }
 .main-body .new .new-bottom .new-box .name-new .text-new {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
 }
 .main-body .new .new-bottom .new-box .name-new .text-new .up-text-new {
   font-weight: 750;
-  color: #252774;
+  color: #303030;
 }
 .main-body .new .new-bottom .new-box .name-new .text-new .down-text-new {
-  color: #b4b4b4;
+  color: #858585;
   font-weight: 400;
 }
 .main-body .new .new-bottom .new-box .date-new {
@@ -551,7 +572,7 @@
 }
 .main-body .new .new-bottom .new-box .date-new .min-new {
   font-weight: 700;
-  color: #252774;
+  color: #303030;
 }
 .main-body .new .new-bottom .new-box .date-new .left-date-tx {
   display: flex;
@@ -560,13 +581,12 @@
   gap: 5px;
 }
 .main-body .new .new-bottom .new-box .date-new .left-date-tx .text-date {
-  color: #d4d4d4;
+  color: #858585;
 }
 .main-body .new .new-bottom .new-box .date-new .left-date-tx .stril {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #d4d4d4;
   font-size: 26px;
 }
 .main-body .slider {
