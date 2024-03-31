@@ -411,9 +411,10 @@
 }
 .main-body .about .a-body .a-block .a-text {
   width: 82%;
+  height: 100%;
   font-size: 24px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 27px;
   color: #4e4e4e;
 }
 .main-body .about .a-body .a-block .a-button {
@@ -589,51 +590,6 @@
   justify-content: space-between;
   font-size: 26px;
 }
-.main-body .slider {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-.main-body .slider .slide {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  transition: all 0.5s;
-}
-.main-body .slider .slide img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 0%;
-  margin: 0%;
-}
-.main-body .slider .btn {
-  background-color: red;
-  position: absolute;
-  width: 30%;
-  height: 100vh;
-  border: none;
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
-  background-color: #fff;
-  font-size: 18px;
-}
-.main-body .slider .btn:active {
-  transform: scale(1.1);
-}
-.main-body .slider .btn-prev {
-  left: 1px;
-}
-.main-body .slider .btn-next {
-  right: 1px;
-}
-.main-body .slider #slide3 {
-  width: 100vw;
-  height: 100vh;
-}
 .main-body .bigblock {
   height: 50vh;
   display: flex;
@@ -749,6 +705,66 @@
 .main-body input[type=checkbox]:checked ~ .tab-content {
   max-height: 100vh;
   padding: 1em;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.slider .slide {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  transition: all 0.5s;
+}
+.slider .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0%;
+  margin: 0%;
+}
+.slider .btn {
+  background-color: red;
+  position: absolute;
+  width: 30%;
+  height: 100vh;
+  border: none;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+.slider .btn:active {
+  transform: scale(1.1);
+}
+.slider .btn-prev {
+  left: 1px;
+}
+.slider .btn-next {
+  right: 1px;
+}
+.slider #slide3 {
+  width: 100vw;
+  height: 100vh;
+}
+
+.q-scroller {
+  display: flex;
+  width: 100%;
+  height: 300vh;
+  flex-direction: column;
+  background: url(/img/fon_quality.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.q-scroller .q-slide {
+  width: 100%;
 }
 
 .contacts * {
