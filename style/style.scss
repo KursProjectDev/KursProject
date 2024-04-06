@@ -299,7 +299,7 @@ $regular: 1.2em;
     }
     .t-body {
       background-color: #ffffffaf;
-      background: url(/img/Bolder.svg); // Заменить
+      background: url(img/Bolder.svg); // Заменить
       background-position: center;
       background-size: cover;
       background-attachment: fixed; // Фиксация изображения
@@ -554,17 +554,17 @@ $regular: 1.2em;
                     height: 300px;
                 }
                 #n-img_one {
-                    background: url(/img/ImgNEW-1.svg);
+                    background: url(img/ImgNEW-1.svg);
                     background-position: center;
                     background-size: cover;
                 }
                 #n-img_two {
-                    background: url(/img/ImgNEW-2.svg);
+                    background: url(img/ImgNEW-2.svg);
                     background-position: center;
                     background-size: cover;
                 }
                 #n-img_tree {
-                    background: url(/img/ImgNEW-3.svg);
+                    background: url(img/ImgNEW-3.svg);
                     background-position: center;
                     background-size: cover;
                 }
@@ -742,7 +742,7 @@ $regular: 1.2em;
   width: 100%;
   height: 300vh;
   flex-direction: column;
-  background: url(/img/fon_quality.png);
+  background: url(img/fon_quality.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
