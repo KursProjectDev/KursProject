@@ -95,6 +95,9 @@ let er_number = document.getElementById('er_number');
 let er_emailreg = document.getElementById('er_emailreg');
 let er_passreg = document.getElementById('er_passreg');
 let er_repepassreg = document.getElementById('er_repepassreg');
+// Для пароля
+var clickEays = document.getElementById('Eaysclick');
+var imgEays = document.getElementById('openEays');
 // Ввойти в форму входа 
 // Открытие
 document.getElementById('open-end').addEventListener('click', function () {
@@ -120,6 +123,16 @@ document.getElementById('form-end').addEventListener('click', function() {
         formreg.style.display = 'none';
         formwind.style.display = 'flex';
         ClearForm();
+});
+    // КДК
+clickEays.addEventListener('click', function(){
+    if(formreg.pass.type == 'password'){
+        formreg.pass.type = 'text';
+        imgEays.src = 'img/Eyse.svg'
+    } else{
+        formreg.pass.type = 'password';
+        imgEays.src = 'img/eaysclouse.svg'
+    }
 });
 // Закрытие
 const closeBtn = document.querySelectorAll('.clous-end')
@@ -153,6 +166,7 @@ document.getElementById('clous-ent').addEventListener('click', function () {
     document.body.style.overflow = 'auto';
 });
 */
+
 // Проверка на запониность
 document.getElementById('endbut').addEventListener('click', function (){
     // Вход
