@@ -67,6 +67,23 @@ function smoothScrollToTop() {
 
     window.requestAnimationFrame(step);
 }
+window.addEventListener('scroll', function() {
+    var trig = document.getElementById('q-block');
+    var rect = trig.getBoundingClientRect();
+    var fixbox = document.querySelector('.q-slide');
+    var textnum = document.getElementById('q-number');
+    
+    if (rect.top <= 0 && rect.bottom >= window.innerHeight){ // Порабоать над условием
+        fixbox.style.position = 'fixed';
+        fixbox.style.top = 0;
+        textnum.textContent = "2";
+    } else {
+        fixbox.style.position = 'absolute';
+        fixbox.style.bottom = 0;
+        textnum.textContent = "1";
+    }
+});
+
     // WIND
 let formwind = document.getElementById('windform');
 let er_email = document.getElementById('er_email');
