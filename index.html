@@ -44,43 +44,49 @@
               <p>ВОЙТИ</p>
             </a>
           </div>
+          <!-- Блок входа и регистрации -->
           <div class="pop-up">
+            <!-- Вход -->
             <form action="" class="wind" id="windform">
               <div class="t-but">
                 <p>Войти в систему<br/></p>
-                <a href="#" class="clous-end"
-                  ><img src="img/cross.svg" alt=""
-                /></a>
+                <a href="#" class="clous-end"><img src="img/cross.svg" alt=""/></a>
               </div>
-              <div class="poli">
-                <input
-                  class="input"
-                  type="text"
-                  name="email"
-                  id="email"
-                  placeholder="Email или телефон"
-                />
-                <p class="error" id="er_email"></p>
-              </div>
-              <div class="poli">
-                <input
-                  class="input"
-                  type="password"
-                  name="pass"
-                  id="pass"
-                  placeholder="Ваш пароль"
-                />
-                <p class="error" id="er_pass"></p>
-              </div>
-              <a href="#entrance" class="ent-button" id="endbut">
-                <p>Войти</p>
-              </a>
-              <div class="reg-button">
-                <a href="#registrarion" id="open-regist" type="button">
-                  <p>Регистрация</p>
+              <div class="bottomform">
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Введите Email или телефон"
+                  />
+                  <p class="error" id="er_email"></p>
+                </div>
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    placeholder="Введите ваш пароль"
+                  />
+                  <p class="error" id="er_pass"></p>
+                </div>
+                <p class="forgot">
+                <a class="forgot" id="forgform" href="">Забыли пароль?</a> Ничего страшного мы поможем его<br>востановить!
+                </p>
+                <a href="#entrance" class="ent-button" id="endbut">
+                  <p>Войти</p>
                 </a>
+                <div class="reg-button">
+                  <a href="#registrarion" id="open-regist" type="button">
+                    <p>Регистрация</p>
+                  </a>
+                </div>
               </div>
             </form>
+            <!-- Регистрация -->
             <form action="" class="regist" id="regform">
               <div class="t-but">
                 <p>Регистрация</p>
@@ -88,59 +94,72 @@
                   ><img src="img/cross.svg" alt=""
                 /></a>
               </div>
-              <div class="poli">
-                <input
-                  class="input"
-                  type="text"
-                  name="FIO"
-                  id="FIO"
-                  placeholder="ФИО"
-                />
-                <p class="error" id="er_fio"></p>
-              </div>
-              <div class="poli">
-                <input
-                  class="input"
-                  type="text"
-                  name="number"
-                  id="number"
-                  placeholder="Номер телефона"
-                />
-                <p class="error" id="er_number"></p>
-              </div>
-              <div class="poli">
-                <input
-                  class="input"
-                  type="text"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                />
-                <p class="error" id="er_emailreg"></p>
-              </div>
-              <div class="poli">
-                <div class="password-input">
+              <div class="collom">
+                <div class="poli">
                   <input
-                    class="pass"
-                    type="password"
-                    name="pass"
-                    id="pass"
-                    placeholder="Ваш пароль"
+                    class="input"
+                    type="text"
+                    name="FIO"
+                    id="FIO"
+                    placeholder="Введите ФИО"
                   />
-                  <a href="#registrarion"
-                    ><img class="eays" src="img/eaysclouse.svg" alt=""
-                  /></a>
+                  <p class="error" id="er_fio"></p>
                 </div>
-                <p class="error" id="er_passreg"></p>
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="text"
+                    name="number"
+                    id="number"
+                    placeholder="Введите номер телефона"
+                  />
+                  <p class="error" id="er_number"></p>
+                </div>
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Введите Email"
+                  />
+                  <p class="error" id="er_emailreg"></p>
+                </div>
+                <div class="poli">
+                  <div class="password-input">
+                    <input
+                      class="pass"
+                      type="password"
+                      name="pass"
+                      id="pass"
+                      placeholder="Введите пароль"
+                    />
+                    <a href="#registrarion"
+                      ><img class="eays" src="img/eaysclouse.svg" alt=""
+                    /></a>
+                  </div>
+                  <p class="error" id="er_passreg"></p>
+                </div>
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="password"
+                    name="repepass"
+                    id="repepass"
+                    placeholder="Повторите ваш пароля"
+                  />
+                  <p class="error" id="er_repepassreg"></p>
+                </div>
               </div>
-
-              <a href="#entrance" class="reg-button" id="regbut">
-                <p>Зарегистрироваться</p>
-              </a>
-              <div class="ent-button">
-                <a href="#entrance" id="form-end">
-                  <p>Войти</p>
+              <div class="bottomform">
+                <a href="#entrance" class="reg-button" id="regbut">
+                  <p>Зарегистрироваться</p>
                 </a>
+                <div class="ent-button">
+                  <a href="#entrance" id="form-end">
+                    <p>Войти</p>
+                  </a>
+                </div>
               </div>
             </form>
           </div>
@@ -159,6 +178,9 @@
             </a>
             <a href="#quality" onclick="smoothScroll('quality')">
               <p>Преимущество</p>
+            </a>
+            <a href="#entrance" id="open-end">
+              <p>Закладки</p>
             </a>
             <a href="#f-main" onclick="smoothScroll('f-main')">
               <p>Контакты</p>

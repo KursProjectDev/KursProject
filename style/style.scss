@@ -56,7 +56,6 @@ $regular: 1.2em;
     transition: opacity 0.3s ease;
     padding: 40px 40px;
     background-color: #f7f7f7bb;
-    color: #5a5c8d;
     text-decoration: none;
     border-radius: 100px;
     cursor: pointer;
@@ -121,6 +120,7 @@ $regular: 1.2em;
           }
         }
       }
+      // Блоки входа и регистрации
       .pop-up {
         display: none;
         position: fixed;
@@ -132,82 +132,92 @@ $regular: 1.2em;
         background: rgba(0, 0, 0, 0.322);
         justify-content: center;
         align-items: center;
+        // Блок войти
         .wind {
           display: flex;
           flex-direction: column;
           background: #fff;
-          padding: 40px;
-          gap: 25px;
-          border-radius: 5px;
+          padding: 45px;
+          gap: 65px;
           box-shadow: 0 0 20px rgb(12, 12, 12);
           .t-but {
             display: flex;
-            align-items: self-start;
+            align-items: center;
             justify-content: space-between;
-            gap: 60px;
             p {
               text-align: left;
-              font-size: 24px;
+              font-size: 28px;
               font-weight: 700;
               color: rgb(56, 56, 56);
             }
           }
-          .poli {
+          .bottomform{
             display: flex;
             flex-direction: column;
-            gap: 5px;
-            input {
-              color: black;
-              padding: 15px;
-              border-radius: 3px;
-              outline: 2px solid #d8d8d8;
-              outline-offset: -2px;
+            gap: 25px;
+            .poli {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              input {
+                color: black;
+                padding: 15px;
+                outline: 2px solid #d8d8d8;
+                outline-offset: -2px;
+              }
+              .error {
+                display: none;
+                color: rgb(168, 168, 168);
+                font-size: 14px;
+                font-weight: 45 0;
+              }
             }
-            .error {
-              display: none;
-              color: rgb(168, 168, 168);
+            .forgot{
               font-size: 14px;
-              font-weight: 45 0;
+              color: #A8A8A8;
+              #forgform{
+                color: $dark-blue;
+                font-weight: 500;
+              }
             }
-          }
-          .ent-button {
-            background: $dark-blue;
-            padding: 15px;
-            border-radius: 3px;
-            transition: all 0.3s;
-            text-align: center;
-          }
-          .ent-button:hover {
-            background: $blue;
-          }
-          .reg-button {
-            display: flex;
-            justify-content: center;
-            p {
-              color: $dark-blue;
-              font-weight: 600;
+            .ent-button {
+              background: $dark-blue;
+              padding: 15px;
               transition: all 0.3s;
+              text-align: center;
             }
-          }
-          .reg-button:active {
-            p {
-              color: $blue;
+            .ent-button:hover {
+              background: $blue;
+            }
+            .reg-button {
+              display: flex;
+              justify-content: center;
+              p {
+                color: $dark-blue;
+                font-weight: 600;
+                transition: all 0.3s;
+              }
+            }
+            .reg-button:active {
+              p {
+                color: $blue;
+              }
             }
           }
         }
+         // Блок регистрации
         .regist {
           display: none;
           flex-direction: column;
           background: #fff;
-          padding: 40px;
-          gap: 25px;
-          border-radius: 5px;
+          padding: 45px;
+          gap: 65px;
           box-shadow: 0 0 20px rgb(12, 12, 12);
           .t-but {
             display: flex;
-            align-items: self-start;
+            align-items: center;
             justify-content: space-between;
-            gap: 120px;
+            gap: 150px;
             p {
               text-align: left;
               font-size: 24px;
@@ -215,62 +225,69 @@ $regular: 1.2em;
               color: rgb(56, 56, 56);
             }
           }
-          .poli {
+          .collom {
             display: flex;
             flex-direction: column;
-            gap: 5px;
-            .input {
-              color: black;
+            gap: 25px;
+            .poli {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              .input {
+                color: black;
+                padding: 15px;
+                outline: 2px solid #d8d8d8;
+                outline-offset: -2px;
+              }
+              .error {
+                display: none;
+                color: rgb(168, 168, 168);
+                font-size: 14px;
+                font-weight: 45 0;
+              }
+            }
+            .password-input {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
               padding: 15px;
-              border-radius: 3px;
               outline: 2px solid #d8d8d8;
               outline-offset: -2px;
-            }
-            .error {
-              display: none;
-              color: rgb(168, 168, 168);
-              font-size: 14px;
-              font-weight: 45 0;
+              .pass {
+                color: black;
+              }
+              a {
+                display: flex;
+                align-items: center;
+              }
             }
           }
-          .password-input {
+          .bottomform {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            border-radius: 3px;
-            outline: 2px solid #d8d8d8;
-            outline-offset: -2px;
-            .pass {
-              color: black;
-            }
-            a {
-              display: flex;
-              align-items: center;
-            }
-          }
-          .reg-button {
-            background: $dark-blue;
-            padding: 15px;
-            border-radius: 3px;
-            transition: all 0.3s;
-            text-align: center;
-          }
-          .reg-button:hover {
-            background: $blue;
-          }
-          .ent-button {
-            display: flex;
-            justify-content: center;
-            p {
-              color: $dark-blue;
-              font-weight: 600;
+            flex-direction: column;
+            gap: 25px;
+            .reg-button {
+              background: $dark-blue;
+              padding: 15px;
               transition: all 0.3s;
+              text-align: center;
             }
-          }
-          .ent-button:active {
-            p {
-              color: $blue;
+            .reg-button:hover {
+              background: $blue;
+            }
+            .ent-button {
+              display: flex;
+              justify-content: center;
+              p {
+                color: $dark-blue;
+                font-weight: 600;
+                transition: all 0.3s;
+              }
+            }
+            .ent-button:active {
+              p {
+                color: $blue;
+              }
             }
           }
         }

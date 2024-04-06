@@ -84,7 +84,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-    // WIND
+     // WIND
 let formwind = document.getElementById('windform');
 let er_email = document.getElementById('er_email');
 let er_pass = document.getElementById('er_pass');
@@ -94,6 +94,7 @@ let er_fio = document.getElementById('er_fio');
 let er_number = document.getElementById('er_number');
 let er_emailreg = document.getElementById('er_emailreg');
 let er_passreg = document.getElementById('er_passreg');
+let er_repepassreg = document.getElementById('er_repepassreg');
 // Ввойти в форму входа 
 // Открытие
 document.getElementById('open-end').addEventListener('click', function () {
@@ -217,6 +218,25 @@ document.getElementById('regbut').addEventListener('click', function (){
     {
         er_passreg.innerHTML = "";
         er_passreg.style.display = "";
+    }
+        // Поле repepass
+    if (formreg.repepass.value == ""){
+        er_repepassreg.innerHTML = "Поле повтора пароля не заполненно";
+        er_repepassreg.style.display = "block";
+    }
+    else
+    {
+        er_repepassreg.innerHTML = "";
+        er_repepassreg.style.display = "";
+        if (formreg.repepass.value != formreg.pass.value){
+            er_repepassreg.innerHTML = "Пароли не совпадают";
+            er_repepassreg.style.display = "block";
+        }
+        else
+        {
+            er_repepassreg.innerHTML = "";
+            er_repepassreg.style.display = "";
+        }
     }
 });
 function ClearForm(){

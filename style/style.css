@@ -47,7 +47,6 @@
   transition: opacity 0.3s ease;
   padding: 40px 40px;
   background-color: rgba(247, 247, 247, 0.7333333333);
-  color: #5a5c8d;
   text-decoration: none;
   border-radius: 100px;
   cursor: pointer;
@@ -129,77 +128,85 @@
   display: flex;
   flex-direction: column;
   background: #fff;
-  padding: 40px;
-  gap: 25px;
-  border-radius: 5px;
+  padding: 45px;
+  gap: 65px;
   box-shadow: 0 0 20px rgb(12, 12, 12);
 }
 .main-body .top .t-header .pop-up .wind .t-but {
   display: flex;
-  align-items: self-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 60px;
 }
 .main-body .top .t-header .pop-up .wind .t-but p {
   text-align: left;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: rgb(56, 56, 56);
 }
-.main-body .top .t-header .pop-up .wind .poli {
+.main-body .top .t-header .pop-up .wind .bottomform {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.main-body .top .t-header .pop-up .wind .bottomform .poli {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.main-body .top .t-header .pop-up .wind .poli input {
+.main-body .top .t-header .pop-up .wind .bottomform .poli input {
   color: black;
   padding: 15px;
-  border-radius: 3px;
   outline: 2px solid #d8d8d8;
   outline-offset: -2px;
 }
-.main-body .top .t-header .pop-up .wind .poli .error {
+.main-body .top .t-header .pop-up .wind .bottomform .poli .error {
   display: none;
   color: rgb(168, 168, 168);
   font-size: 14px;
   font-weight: 45 0;
 }
-.main-body .top .t-header .pop-up .wind .ent-button {
+.main-body .top .t-header .pop-up .wind .bottomform .forgot {
+  font-size: 14px;
+  color: #A8A8A8;
+}
+.main-body .top .t-header .pop-up .wind .bottomform .forgot #forgform {
+  color: #252774;
+  font-weight: 500;
+}
+.main-body .top .t-header .pop-up .wind .bottomform .ent-button {
   background: #252774;
   padding: 15px;
-  border-radius: 3px;
   transition: all 0.3s;
   text-align: center;
 }
-.main-body .top .t-header .pop-up .wind .ent-button:hover {
+.main-body .top .t-header .pop-up .wind .bottomform .ent-button:hover {
   background: #238af3;
 }
-.main-body .top .t-header .pop-up .wind .reg-button {
+.main-body .top .t-header .pop-up .wind .bottomform .reg-button {
   display: flex;
   justify-content: center;
 }
-.main-body .top .t-header .pop-up .wind .reg-button p {
+.main-body .top .t-header .pop-up .wind .bottomform .reg-button p {
   color: #252774;
   font-weight: 600;
   transition: all 0.3s;
 }
-.main-body .top .t-header .pop-up .wind .reg-button:active p {
+.main-body .top .t-header .pop-up .wind .bottomform .reg-button:active p {
   color: #238af3;
 }
 .main-body .top .t-header .pop-up .regist {
   display: none;
   flex-direction: column;
   background: #fff;
-  padding: 40px;
-  gap: 25px;
-  border-radius: 5px;
+  padding: 45px;
+  gap: 65px;
   box-shadow: 0 0 20px rgb(12, 12, 12);
 }
 .main-body .top .t-header .pop-up .regist .t-but {
   display: flex;
-  align-items: self-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 120px;
+  gap: 150px;
 }
 .main-body .top .t-header .pop-up .regist .t-but p {
   text-align: left;
@@ -207,60 +214,67 @@
   font-weight: 700;
   color: rgb(56, 56, 56);
 }
-.main-body .top .t-header .pop-up .regist .poli {
+.main-body .top .t-header .pop-up .regist .collom {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.main-body .top .t-header .pop-up .regist .collom .poli {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.main-body .top .t-header .pop-up .regist .poli .input {
+.main-body .top .t-header .pop-up .regist .collom .poli .input {
   color: black;
   padding: 15px;
-  border-radius: 3px;
   outline: 2px solid #d8d8d8;
   outline-offset: -2px;
 }
-.main-body .top .t-header .pop-up .regist .poli .error {
+.main-body .top .t-header .pop-up .regist .collom .poli .error {
   display: none;
   color: rgb(168, 168, 168);
   font-size: 14px;
   font-weight: 45 0;
 }
-.main-body .top .t-header .pop-up .regist .password-input {
+.main-body .top .t-header .pop-up .regist .collom .password-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  border-radius: 3px;
   outline: 2px solid #d8d8d8;
   outline-offset: -2px;
 }
-.main-body .top .t-header .pop-up .regist .password-input .pass {
+.main-body .top .t-header .pop-up .regist .collom .password-input .pass {
   color: black;
 }
-.main-body .top .t-header .pop-up .regist .password-input a {
+.main-body .top .t-header .pop-up .regist .collom .password-input a {
   display: flex;
   align-items: center;
 }
-.main-body .top .t-header .pop-up .regist .reg-button {
+.main-body .top .t-header .pop-up .regist .bottomform {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.main-body .top .t-header .pop-up .regist .bottomform .reg-button {
   background: #252774;
   padding: 15px;
-  border-radius: 3px;
   transition: all 0.3s;
   text-align: center;
 }
-.main-body .top .t-header .pop-up .regist .reg-button:hover {
+.main-body .top .t-header .pop-up .regist .bottomform .reg-button:hover {
   background: #238af3;
 }
-.main-body .top .t-header .pop-up .regist .ent-button {
+.main-body .top .t-header .pop-up .regist .bottomform .ent-button {
   display: flex;
   justify-content: center;
 }
-.main-body .top .t-header .pop-up .regist .ent-button p {
+.main-body .top .t-header .pop-up .regist .bottomform .ent-button p {
   color: #252774;
   font-weight: 600;
   transition: all 0.3s;
 }
-.main-body .top .t-header .pop-up .regist .ent-button:active p {
+.main-body .top .t-header .pop-up .regist .bottomform .ent-button:active p {
   color: #238af3;
 }
 .main-body .top .t-header .pop-up.openPop {
