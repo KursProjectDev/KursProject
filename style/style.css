@@ -286,7 +286,7 @@
 }
 .main-body .top .t-body {
   background-color: rgba(255, 255, 255, 0.6862745098);
-  background: url(img/Bolder.svg);
+  background: url(/img/Bolder.svg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
