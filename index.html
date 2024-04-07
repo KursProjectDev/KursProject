@@ -174,11 +174,11 @@
             <a href="#catalogue" onclick="smoothScroll('catalogue')">
               <p>Каталог</p>
             </a>
-            <a href="#quality" onclick="smoothScroll('quality')">
-              <p>Преимущество</p>
-            </a>
             <a href="#entrance" id="open-end">
               <p>Закладки</p>
+            </a>
+            <a href="#quality" onclick="smoothScroll('quality')">
+              <p>Преимущество</p>
             </a>
             <a href="#f-main" onclick="smoothScroll('f-main')">
               <p>Контакты</p>
@@ -196,7 +196,7 @@
               </p>
             </div>
             <div class="buts">
-              <a class="but-1" href="">
+              <a class="but-1" href="#bigblock" onclick="smoothScroll('bigblock')">
                 <p>Оставить заявку</p>
               </a>
               <a class="but-2" href="#f-main" onclick="smoothScroll('f-main')">
@@ -252,18 +252,19 @@
             <p class="max-new">События компании</p>
           </div>
           <a href="Blocks/index.html">
-            <div class="right-new">
+            <div id="morenews" class="right-new">
               <p class="min-new">Все новости</p>
               <svg
                 width="8"
                 height="10"
+                id="stril-icon"
                 viewBox="0 0 5 9"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M1 1L4 4.5L1 8"
-                  stroke="#858585"
+                  stroke=""
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -285,25 +286,24 @@
             </div>
             <div class="date-new">
               <p class="min-new">7 марта 2023</p>
-              <a class="left-date-tx" href="">
+              <a id="arrowblock" class="left-date-tx" href="">
                 <p class="text-date">Подробнее</p>
-                <p class="stril">
-                  <svg
+                <svg
                     width="8"
                     height="10"
+                    id="detalarrow"
                     viewBox="0 0 5 9"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M1 1L4 4.5L1 8"
-                      stroke="#858585"
+                      stroke=""
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
-                </p>
+                </svg>
               </a>
             </div>
           </div>
@@ -319,25 +319,24 @@
             </div>
             <div class="date-new">
               <p class="min-new">7 марта 2023</p>
-              <a class="left-date-tx" href="">
+              <a id="arrowblock" class="left-date-tx" href="">
                 <p class="text-date">Подробнее</p>
-                <p class="stril">
-                  <svg
+                <svg
                     width="8"
                     height="10"
+                    id="detalarrow"
                     viewBox="0 0 5 9"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M1 1L4 4.5L1 8"
-                      stroke="#858585"
+                      stroke=""
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
-                </p>
+                </svg>
               </a>
             </div>
           </div>
@@ -353,25 +352,24 @@
             </div>
             <div class="date-new">
               <p class="min-new">7 марта 2023</p>
-              <a class="left-date-tx" href="">
+              <a id="arrowblock" class="left-date-tx" href="">
                 <p class="text-date">Подробнее</p>
-                <p class="stril">
-                  <svg
+                <svg
                     width="8"
                     height="10"
+                    id="detalarrow"
                     viewBox="0 0 5 9"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M1 1L4 4.5L1 8"
-                      stroke="#858585"
+                      stroke=""
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
-                </p>
+                </svg>
               </a>
             </div>
           </div>
@@ -382,157 +380,481 @@
       <section class="catalogue">
         <div class="cat-block">
           <div class="cat-title-block">
-            <a href="" class="cat-title">КАТАЛОГ ТОВАРОВ</a>
+            <a href="" class="cat-title">Каталог товаров</a>
             <div class="cat-cat">
               <div class="cat">
                 <input type="radio" name="cat-check" id="cat1" />
-                <label class="cat-label" for="cat1">Оборудование</label>
+                <label class="cat-label" id="cat-but1" for="cat1">СТАНКИ</label>
               </div>
               <div class="cat">
-                <input type="radio" name="cat-check" id="cat2" />
-                <label class="cat-label" for="cat2">Оборудование2</label>
+                <input type="radio" name="cat-check" id="cat2"/>
+                <label class="cat-label" id="cat-but2" for="cat2">ПОКРЫТИЕ</label>
               </div>
             </div>
           </div>
           <div class="cat-content-block">
             <div class="ci-line equipment">
+              <!-- Первая -->
               <div class="ci-line">
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                <a href="" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
+                    <path id="star" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
+                    </svg>                      
                   </div>
-                  <div class="ci-info">aaaaa aaaaaa</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
                   </div>
-                  <div class="ci-info">aaaaa aaaaaa</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1"  data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
                   </div>
-                  <div class="ci-info">aaaaa aaaaaa</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
                   </div>
-                  <div class="ci-info">aaaaa aaaaaa</div>
-                </a>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
               </div>
+              <!-- Вторая -->
               <div class="ci-line">
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
                   </div>
-                  <div class="ci-info">aaaaa aaaaaa</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
                   </div>
-                  <div class="ci-info">aaaaa aaaaaa</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
                   </div>
-                  <div class="ci-info">aaaaa aaaaaa</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
                   </div>
-                  <div class="ci-info">aaaaa aaaaaa</div>
-                </a>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+              </div>
+              <!-- Треться -->
+              <div class="ci-line">
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
               </div>
             </div>
             <div class="ci-line equipment2">
+              <!-- Первый -->
               <div class="ci-line">
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
                   </div>
-                  <div class="ci-info">,ббббб</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
                   </div>
-                  <div class="ci-info">,ббббб</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
                   </div>
-                  <div class="ci-info">,ббббб</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
                   </div>
-                  <div class="ci-info">,ббббб</div>
-                </a>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
               </div>
               <div class="ci-line">
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
                   </div>
-                  <div class="ci-info">,ббббб</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
                   </div>
-                  <div class="ci-info">,ббббб</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
                   </div>
-                  <div class="ci-info">,ббббб</div>
-                </a>
-                <a href="" class="cat-item"
-                  ><div class="ci-title">DS250</div>
-                  <img src="img/DS200.png" alt="" class="item-img" />
-                  <div class="ci-name">
-                    Штифт - нагель с фаской и углублением
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
                   </div>
-                  <div class="ci-info">,ббббб</div>
-                </a>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+              </div>
+              <div class="ci-line">
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
+                <a href="" class="cat-item">
+                  <div class="ci-title">
+                    <svg width="31" height="31" id="ico-star" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="0.5" y="0.360352" width="30" height="30" fill="url(#pattern0_2571_113)"/>
+                    <defs>
+                    <pattern id="pattern0_2571_113" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2571_113" transform="scale(0.02)"/>
+                    </pattern>
+                    <image id="image0_2571_113" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADP0lEQVR4nO2aXYiVRRjHR7OPG/sSNLUbIYo+9EJFhEBvBAVvklAIM4KsiwrUGxfxQkiC8ELxokAQ/ADvRBEloY+LItIi8KIPckEXijzv/P7P2T2La4mZI6Nn4bTs2X3f7Z133wP94YFzc2ae38y8M8/zzDj3vybXwMDAI8AF4MsQwgzXqwJekxSiAatcrwr4bBRE0hHXizKzp4HbHSAjZvao6zUBezogRpfXVtdLCiHMkHRlHJBvXS/JzNaMhRg1M3vB9YqAE91AgH2uFzQ4OPiYpBvdQCRlIYQHXd0l6b0JIEbtFVd3SfphMhDgjKuzsixbnGM2IsjfwHxXV0k6mAekbTtdHRVCeEj3lRfkci0DSWBTAYh75r1/2dVNks4XBZF0uFInh4aGHo9BoJk9b2Yr4sntvX/Ve/+mmb0P7B4TIOa165L6JL1rZm+Y2YZ2VLBc0nNmtjB3oAm8DRwHTgGfx+0T+BX4AxiegnNJDGgBvwO/AN+3fT0JHAU2xiUxMt1OlmBXnPd+XaStgTNTninv/dp7y8t7/wzw83Q7peLWH7/bf30rkmYDp2vgXMhpn8ZNaKKEqA/4p8ZL6Q7wUQhhZp6dbGNNN4G/JL3uiijLsiWSrtZoJn6TtMxNRcPDw3OAL6YbQtLXjUZjrvsvCiHMimtyGiEOlZpRStos6c8KAW4Cb7kUApa212pqiGtmttKllKQFMdZJBcH9thckheiAOZBwNva7qgT8lHBGfqwEwnv/VDxdE5/c85ODxASogo99S3KQmISlBgGOJYVoB5XXKpiRRtIKS7PZfKkCiBCt2Wy+mAwE2F4VCLAtGYikcwWduSXpw2jt30VgzqWsJF4v4MilzrA71oWB7wr8f6S/v//h0kGA1TkdiIFlXwjhgXEGY6akd/IOCCmutCXtzdH5V8Czk7XVaDQWjbm67mYflA4CXJxg5IbiSBfdMtspddfCN3ChVIhYrZigJHo2ljan2naWZfO6HbLA7Var9URpILEmO05HjVj/LasPYH2XXKe8azrgkzFB3fFWq/WkS3ORerCzHAV8XFoHkr5pN3y5iscxwKrYV+mPDGLDZrYrPlty1T6R2hG3/ar6rIXuAim5gWWXSTMkAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
+                      <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="25" viewBox="0 0 31 25">
+                      <image id="Слой_1" data-name="Слой 1" width="31" height="25" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAACg0lEQVRIiWJ89erVD0ZGRnYGegMGBgYAAAAA//9iYmBg2M/AwPCf7nYzMDAAAAAA//9iYmRkzGdgYLhAd5sZGBgAAAAA//9iEhUVvcXAwFD7////L3S1mYGBAQAAAP//AgU7g4iIyG4GBoZJ/////0Y3mxkYGAAAAAD//wJbzsjI+IuRkXEKIyPjFrrZzMDAAAAAAP//YkTm3L9/X4Cbm/ssIyOjIshNNLWZgYEBAAAA//8C+xwGFBUVP/z//7+OkZHxNa0tZmBgYAAAAAD//0KxHAQYGRk3/v//fwrNbWZgYAAAAAD//8KwXExM7MvLly87GRgYDtI0/zMwMAAAAAD//8IZr0+fPjVkZ2ef8///fyOa2MzAwAAAAAD//8KbqF69euXFyMg4g4GBQZbqNjMwMAAAAAD//8IIdmTw6NGj3f///79PC4sZGBgYAAAAAP//YsElceXKFTZRUVFHRkZGTZrYzMDAAAAAAP//wmm5uLi4HiMjY/P///9FaWIzAwMDAAAA///CGuz///9n/v//f8n///+NaWUxAwMDAwAAAP//YkYXAAU3MzNzCQMDA6i2o10px8DAAAAAAP//wvC5pKRk4L9//wppaSkYMDAwAAAAAP//QvHZq1evJBgYGA4zMjIq07xsZ2BgAAAAAP//gvv8y5cv4oyMjL2MjIwq9LCYgYGBAQAAAP//Alu+atUq5h8/fsQzMDD40cNSMGBgYAAAAAD//wL78NWrVx6MjIwrGRgY+OhmMwMDAwAAAP//Yvrw4YMyIyNjC70tZmBgYAAAAAD//2L68+fPbAYGBppVHjgBAwMDAAAA//9i+vfvnyW9EhgKYGBgAAAAAP//AwBhp22GVjjeKgAAAABJRU5ErkJggg=="/>
+                    </svg>
+                  </div>
+                </a> 
               </div>
             </div>
           </div>
@@ -560,6 +882,7 @@
             </div>
         </section>
     </div>
+    <a id="bigblock"></a>
       <!-- Заявка -->
       <div class="bigblock">
         <div class="blockorder">
@@ -746,12 +1069,7 @@
           </div>
         </div>
         <div class="contacts-map">
-          <script
-            type="text/javascript"
-            charset="utf-8"
-            async
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49a617f2af511fa302d619d4000e1c5e997f5d4c26096fb70fac9f10b3eaa641&amp;width=100vw25&amp;height=800&amp;lang=ru_RU&amp;scroll=false "
-          ></script>
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad4999f91e13814a985930c00c22b66078abad8ed0bd10c6fb83b5569450a821a&amp;width=100vw25&amp;height=800&amp;lang=ru_RU&amp;scroll=false"></script>
         </div>
       </div>
       <!-- Футер -->

@@ -100,17 +100,19 @@ var clickEays = document.getElementById('Eaysclick');
 var imgEays = document.getElementById('openEays');
 // Ввойти в форму входа 
 // Открытие
-document.getElementById('open-end').addEventListener('click', function () {
-    var popup = document.querySelector('.pop-up');
-    popup.style.display = 'flex';
-    if (formreg.style.display == 'flex')
-    {
-        formreg.style.display = 'none';
-        formwind.style.display = 'flex';
-        ClearForm();
-    }
-    document.body.style.overflow = 'hidden';
-    popup.classList.add('openPop');
+document.querySelectorAll('#open-end').forEach(function(element) {
+    element.addEventListener('click', function() {
+        var popup = document.querySelector('.pop-up');
+        popup.style.display = 'flex';
+        if (formreg.style.display == 'flex')
+        {
+            formreg.style.display = 'none';
+            formwind.style.display = 'flex';
+            ClearForm();
+        }
+        document.body.style.overflow = 'hidden';
+        popup.classList.add('openPop');
+    });
 });
     // Перейти к форме регистрации
 document.getElementById('open-regist').addEventListener('click', function (){
@@ -267,10 +269,12 @@ function ClearForm(){
         formreg.number.value = '';
         formreg.email.value = '';
         formreg.pass.value = '';
+        formreg.repepass.value = '';
         er_fio.style.display = 'none';
         er_number.style.display = 'none';
         er_emailreg.style.display = 'none';
         er_passreg.style.display = 'none';
+        er_repepassreg.style.display = 'none';
     }
 }
 
