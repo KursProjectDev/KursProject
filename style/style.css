@@ -710,6 +710,10 @@
   fill: #EBEBEB;
   transition: all 0.4s;
 }
+.main-body .catalogue .cat-block .cat-content-block .ci-line .cat-item #flig {
+  fill: #EBEBEB;
+  transition: all 0.4s;
+}
 .main-body .catalogue .cat-block .cat-content-block .ci-line .cat-item .ci-body-box {
   display: flex;
   flex-direction: column;
@@ -742,6 +746,7 @@
 }
 .main-body .catalogue .cat-block .cat-content-block .ci-line #ci-light:hover,
 .main-body .catalogue .cat-block .cat-content-block .ci-line #ci-light:hover #star,
+.main-body .catalogue .cat-block .cat-content-block .ci-line #ci-light:hover #flig,
 .main-body .catalogue .cat-block .cat-content-block .ci-line #ci-light:hover #ci-fli {
   border: 4px solid #238af3;
   fill: #238af3;

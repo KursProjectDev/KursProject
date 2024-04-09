@@ -726,6 +726,10 @@ $regular: 1.2em;
             fill: #EBEBEB;
             transition: all 0.4s;
           }
+          #flig{
+            fill: #EBEBEB;
+            transition: all 0.4s;
+          }
           .ci-body-box{
             display: flex;
             flex-direction: column;
@@ -759,6 +763,7 @@ $regular: 1.2em;
         }
         #ci-light:hover,
         #ci-light:hover #star,
+        #ci-light:hover #flig,
         #ci-light:hover #ci-fli{
           border: 4px solid $blue;
           fill: $blue;
