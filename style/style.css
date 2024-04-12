@@ -752,85 +752,92 @@
   fill: #238af3;
 }
 .main-body .bigblock {
-  height: 50vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #252774;
-  padding: 10% 10%;
+  justify-content: center;
+  padding: 80px 0;
+  gap: 40px;
+  background: #F5F5F5;
 }
 .main-body .bigblock .blockorder {
-  width: 40%;
+  width: 20vw;
   display: flex;
+  height: -moz-max-content;
+  height: max-content;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 3vh;
+  background-color: #252774;
+  gap: 40px;
+  padding: 70px 40px;
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.377);
 }
-.main-body .bigblock .worlduor {
-  font-size: 2em;
-  font-weight: 600;
+.main-body .bigblock .blockorder .ordertext {
+  width: 100%;
+  display: flex;
+  font-size: 32px;
+  font-weight: 250;
 }
-.main-body .bigblock .blockfororder {
-  min-width: 15vw;
+.main-body .bigblock .blockorder .blockstrok {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 5%;
-  gap: 15px;
-  border: solid 3px #252774;
+  gap: 20px;
 }
-.main-body .bigblock .ordertext {
-  font-size: larger;
-  font-weight: 550;
-}
-.main-body .bigblock input[type=text] {
-  width: 92%;
-  padding: 3% 0% 3% 5%;
-  border-radius: 5px;
-  border: solid 2px #252774;
-}
-.main-body .bigblock .blockinput {
+.main-body .bigblock .blockorder .blockstrok .blockinput {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-weight: 550;
 }
-.main-body .bigblock .blockbuttonorder {
-  border: none;
-  padding: 15px 0px;
-  font-size: large;
+.main-body .bigblock .blockorder .blockstrok .blockinput .blockinputtext {
+  font-size: 16px;
+  font-weight: 300;
+}
+.main-body .bigblock .blockorder .blockstrok .blockinput input {
+  padding: 8px;
+  color: black;
+}
+.main-body .bigblock .blockorder .blockstrok .blockcheck {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-body .bigblock .blockorder .blockstrok .blockcheck #checkbox {
+  display: flex;
+}
+.main-body .bigblock .blockorder .blockstrok .blockcheck P {
+  font-size: 12px;
+}
+.main-body .bigblock .blockorder .blockaplicate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #238af3;
+  padding: 20px 0;
   color: white;
-  background-color: #238af3;
-  cursor: pointer;
-  margin: 2px;
-  transition: background-color 0.3s;
-  transition: color 0.3s;
+  transition: all 0.4s;
+  font-size: 16px;
+  font-weight: 500;
 }
-.main-body .bigblock .blockbuttonorder:hover {
-  background-color: white;
+.main-body .bigblock .blockorder .blockaplicate:hover {
+  background: white;
   color: #238af3;
-  border: inset 2px #238af3;
-  margin: 0px;
-}
-.main-body .bigblock .blockminitextorder {
-  font-size: small;
 }
 .main-body .blockquestions {
+  width: 30vw;
   display: flex;
   flex-direction: column;
-  width: 50%;
   overflow-y: hidden;
-  gap: 3vh;
+  gap: 35px;
 }
 .main-body .quests {
-  font-size: 2em;
-  font-weight: 600;
-  text-align: center;
+  font-size: 32px;
+  color: #303030;
+  font-weight: 500;
 }
 .main-body .tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 15px;
 }
 .main-body .tab {
   width: 100%;
@@ -839,9 +846,9 @@
 .main-body .tab-label {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
-  background: #ddd;
-  font-weight: bold;
+  padding: 30px 20px;
+  background: #ffffff;
+  color: #303030;
   cursor: pointer;
 }
 .main-body .tab-label img {
@@ -967,7 +974,6 @@
 }
 
 .contacts-body {
-  margin-top: -75vh;
   max-width: 30vw;
   position: relative;
   bottom: -800px;
@@ -1033,8 +1039,4 @@ footer .f-main .f-list-mid {
   text-align: center;
   justify-content: center;
   gap: 10px;
-}
-
-.bigblock * {
-  color: #252774;
 }/*# sourceMappingURL=style.css.map */
