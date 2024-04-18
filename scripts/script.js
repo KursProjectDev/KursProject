@@ -294,14 +294,14 @@ tabChecks.forEach(tabCheck => {
       const checkImg = tabCheck.closest('.tab').querySelector('.check-img');
 
       // Do something with the checkImg
-      checkImg.src = '/img/minus-icon.svg';
+      checkImg.src = '../img/minus-icon.svg';
 
     }
     else{
         const checkImg = tabCheck.closest('.tab').querySelector('.check-img');
 
         // Do something with the checkImg
-        checkImg.src = '/img/plus-icon.svg';
+        checkImg.src = '../img/plus-icon.svg';
     }
 
   });
