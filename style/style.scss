@@ -782,11 +782,7 @@ $regular: 1.2em;
                             justify-content: flex-end;
                         }
                     }
-                    #ci-light:hover,
-                    #ci-light:hover #star,
-                    #ci-light:hover #flig,
-                    #ci-light:hover #ci-fli {
-                        border: 4px solid $blue;
+                    #star:hover{
                         fill: $blue;
                     }
                 }
