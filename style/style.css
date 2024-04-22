@@ -742,9 +742,9 @@
 }
 .main-body .catalogue .cat-block .cat-content-block .ci-line .cat-item .ci-body-box .item-img {
   width: 300px;
+  height: 300px;
   background-position: center;
   background-size: cover;
-  background-color: rgba(204, 204, 204, 0.7254901961);
 }
 .main-body .catalogue .cat-block .cat-content-block .ci-line .cat-item .ci-body-box .ci-name {
   display: flex;
@@ -945,6 +945,7 @@
   padding: 30px 20px;
   background: #ffffff;
   color: #303030;
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.377);
   cursor: pointer;
 }
 .main-body .tab-label img {
@@ -956,6 +957,7 @@
   padding: 0 1em;
   transition: all 0.35s;
   color: black;
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.377);
 }
 .main-body .tab-close {
   display: flex;
@@ -1045,4 +1047,80 @@ footer .f-main .f-list-mid {
 }
 footer .f-main .item {
   color: #d0d0d0;
+}
+
+.navigator-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #252774;
+  width: 100%;
+}
+.navigator-block .about-navigator {
+  display: flex;
+  width: 75vw;
+  padding: 30px 0;
+  justify-content: space-between;
+}
+.navigator-block .about-navigator p {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s;
+}
+.navigator-block .about-navigator p:hover {
+  color: #238af3;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about-content p {
+  color: #303030;
+}
+.about-content a {
+  color: #303030;
+}
+.about-content .about-info-block {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  gap: 30px;
+}
+.about-content .about-info-block .about-text-navig {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about-content .about-info-block .about-text-navig #text-nav {
+  color: #858585;
+}
+.about-content .about-info-block .about-text-navig #text-zag {
+  color: black;
+  font-weight: 650;
+  font-size: 32px;
+}
+.about-content .about-info-block .about-block {
+  display: flex;
+  gap: 30px;
+}
+.about-content .about-info-block .about-block .about-block-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about-content .about-info-block .about-block .about-block-left .about-block-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-content .about-info-block .about-block .about-block-left .about-block-top .about-block-img {
+  display: flex;
+  flex-direction: column;
+  background: #A8A8A8;
+  padding: 80px;
 }/*# sourceMappingURL=style.css.map */

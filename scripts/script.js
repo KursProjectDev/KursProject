@@ -100,7 +100,7 @@ var clickEays = document.getElementById('Eaysclick');
 var imgEays = document.getElementById('openEays');
 // Ввойти в форму входа 
 // Открытие
-document.querySelectorAll('#open-end').forEach(function(element) {
+document.querySelectorAll('#open-end, #star').forEach(function(element) {
     element.addEventListener('click', function() {
         var popup = document.querySelector('.pop-up');
         popup.style.display = 'flex';
@@ -130,10 +130,10 @@ document.getElementById('form-end').addEventListener('click', function() {
 clickEays.addEventListener('click', function(){
     if(formreg.pass.type == 'password'){
         formreg.pass.type = 'text';
-        imgEays.src = 'img/Eyse.svg'
+        imgEays.src = '../img/Eyse.svg'
     } else{
         formreg.pass.type = 'password';
-        imgEays.src = 'img/eaysclouse.svg'
+        imgEays.src = '../img/eaysclouse.svg'
     }
 });
 // Закрытие
