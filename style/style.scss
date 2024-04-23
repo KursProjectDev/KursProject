@@ -1074,7 +1074,7 @@ footer {
         }
     }
 }
-// Страница "О нас"
+// Синий header
 .navigator-block{
     width: 100%;
     display: flex;
@@ -1082,7 +1082,7 @@ footer {
     align-items: center;
     background: $dark-blue;
     width: 100%;
-    .about-navigator{
+    .blue-navigator{
         display: flex;
         width: 75vw;
         padding: 30px 0;
@@ -1098,6 +1098,39 @@ footer {
         }
     }
 }
+// Блок "Наши партнеры"
+.partner-info{
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 0 200px;
+    p{
+        font-size: 36px;
+        color: black;
+    }
+    .partner-block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 3px #EBEBEB;
+        border-top: solid 3px #EBEBEB;
+        padding: 80px 0;
+        .part-block{
+            width: 280px;
+            height: 150px;
+            box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.322);
+            border-radius: 5px;
+            background: url(../img/partner.svg);
+            background-position: center;    
+            background-size: cover;
+        }
+        #two-stril-part{
+            transform: rotate(180deg);
+        }
+    }
+}
+// Страница "О нас"
 .about-content{
     display: flex;
     align-items: center;
@@ -1158,12 +1191,21 @@ footer {
                     }
                 }
                 .about-block-bottom{
-                    width: 17%;
+                    width: 18%;
                     display: flex;
+                    align-items: center;
                     justify-content: space-between;
+                    #adout-navi-block{
+                        transition: all 0.3s;
+                    }
                     p{
                         color: black;
+                        transition: all 0.3s;
                     }
+                }
+                .about-block-bottom:hover #adout-navi-block{
+                    stroke: $blue;
+                    color: $blue;
                 }
             }
             .about-block-right{
@@ -1187,29 +1229,47 @@ footer {
             }
         }
     }
-    .about-part-info{
+}
+.block-back{
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    #stril-back{
+        transition: all 0.3s;
+    }
+    p{
+        color: black;
+        transition: all 0.3s;
+    }
+}
+.block-back:hover #stril-back{
+    stroke: $blue;
+    color: $blue;
+} 
+// Страница "Карточка товара"
+.product-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    .product-card-block{
         width: 75vw;
         display: flex;
         flex-direction: column;
-        gap: 25px;
-        padding: 20px 0 120px;
-        p{
-            font-size: 36px;
-            color: black;
-        }
-        .about-partner{
+        padding: 40px 0;
+        gap: 30px;
+        .product-text-navig{
             display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: solid 3px #EBEBEB;
-            border-top: solid 3px #EBEBEB;
-            padding: 80px;
-            .part-block{
-                width: 280px;
-                height: 150px;
-                background: url(../img/partner.svg);
-                background-position: center;    
-                background-size: cover;
+            flex-direction: column;
+            gap: 30px;
+            #text-nav{
+            color: #858585;
+            }
+            #text-zag{
+                color: black;
+                font-weight: 500;
+                font-size: 32px;
             }
         }
     }
