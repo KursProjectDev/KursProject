@@ -1077,12 +1077,7 @@ footer .f-main .item {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-.about-content p {
-  color: #303030;
-}
-.about-content a {
-  color: #303030;
+  gap: 40px;
 }
 .about-content .about-info-block {
   width: 75vw;
@@ -1106,21 +1101,91 @@ footer .f-main .item {
 }
 .about-content .about-info-block .about-block {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 .about-content .about-info-block .about-block .about-block-left {
+  width: 75%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 60px;
 }
 .about-content .about-info-block .about-block .about-block-left .about-block-top {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
 }
 .about-content .about-info-block .about-block .about-block-left .about-block-top .about-block-img {
   display: flex;
   flex-direction: column;
-  background: #A8A8A8;
+  background-color: rgba(255, 255, 255, 0.6862745098);
+  background: url(../img/Bolder.svg);
+  background-position: right center;
+  background-size: cover;
   padding: 80px;
+}
+.about-content .about-info-block .about-block .about-block-left .about-block-top .about-block-img .ab-text-big {
+  font-size: 96px;
+  font-weight: 250;
+  color: white;
+}
+.about-content .about-info-block .about-block .about-block-left .about-block-top .about-block-img .ab-text-min {
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+}
+.about-content .about-info-block .about-block .about-block-left .about-block-top p {
+  color: black;
+}
+.about-content .about-info-block .about-block .about-block-left .about-block-bottom {
+  width: 17%;
+  display: flex;
+  justify-content: space-between;
+}
+.about-content .about-info-block .about-block .about-block-left .about-block-bottom p {
+  color: black;
+}
+.about-content .about-info-block .about-block .about-block-right {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: solid 3px #EBEBEB;
+  padding-right: 30px;
+  gap: 25px;
+}
+.about-content .about-info-block .about-block .about-block-right .about-slid-block {
+  padding: 25px;
+  background: #EBEBEB;
+  color: black;
+  transition: all 0.3s;
+}
+.about-content .about-info-block .about-block .about-block-right .about-slid-block:hover {
+  color: white;
+  background: #238af3;
+}
+.about-content .about-part-info {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 0 120px;
+}
+.about-content .about-part-info p {
+  font-size: 36px;
+  color: black;
+}
+.about-content .about-part-info .about-partner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 3px #EBEBEB;
+  border-top: solid 3px #EBEBEB;
+  padding: 80px;
+}
+.about-content .about-part-info .about-partner .part-block {
+  width: 280px;
+  height: 150px;
+  background: url(../img/partner.svg);
+  background-position: center;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */

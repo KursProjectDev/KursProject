@@ -1102,12 +1102,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    p{
-        color: #303030; //  Убрать
-    }
-    a{
-        color: #303030; //  Убрать
-    }
+    gap: 40px;
     .about-info-block{
         width: 75vw;
         display: flex;
@@ -1129,22 +1124,92 @@ footer {
         }
         .about-block{
             display: flex;
-            gap: 30px;
+            gap: 40px;
             .about-block-left{
+                width: 75%;
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                gap: 60px;
                 .about-block-top{
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 40px;
                     .about-block-img{
                         display: flex;
                         flex-direction: column;
-                        background: #A8A8A8;
+                        background-color: #ffffffaf;
+                        background: url(../img/Bolder.svg); // Заменить
+                        background-position: right center;    
+                        background-size: cover;
                         padding: 80px;
+                        .ab-text-big{
+                            font-size: 96px;
+                            font-weight: 250;
+                            color: white;
+                        }
+                        .ab-text-min{
+                            font-size: 32px;
+                            font-weight: 400;
+                            color: white;
+                        }
+                    }
+                    p{
+                        color: black;
                     }
                 }
+                .about-block-bottom{
+                    width: 17%;
+                    display: flex;
+                    justify-content: space-between;
+                    p{
+                        color: black;
+                    }
+                }
+            }
+            .about-block-right{
+                width: 25%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                border-right: solid 3px #EBEBEB;
+                padding-right: 30px;
+                gap: 25px;
+                .about-slid-block{
+                    padding: 25px;
+                    background: #EBEBEB;
+                    color: black;
+                    transition: all 0.3s;
+                }
+                .about-slid-block:hover{
+                    color: white;
+                    background: $blue;
+                }
+            }
+        }
+    }
+    .about-part-info{
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px 0 120px;
+        p{
+            font-size: 36px;
+            color: black;
+        }
+        .about-partner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: solid 3px #EBEBEB;
+            border-top: solid 3px #EBEBEB;
+            padding: 80px;
+            .part-block{
+                width: 280px;
+                height: 150px;
+                background: url(../img/partner.svg);
+                background-position: center;    
+                background-size: cover;
             }
         }
     }
