@@ -1191,7 +1191,7 @@ footer {
                     }
                 }
                 .about-block-bottom{
-                    width: 18%;
+                    width: 17.5%;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -1231,7 +1231,7 @@ footer {
     }
 }
 .block-back{
-    width: 18%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1270,6 +1270,206 @@ footer {
                 color: black;
                 font-weight: 500;
                 font-size: 32px;
+            }
+        }
+        .product-card{
+            width: 75vw;
+            display: flex;
+            gap: 40px;
+            .product-card-left{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                .product-block-star{
+                    width: 100%;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    #star{
+                        fill: #EBEBEB;
+                        transition: all 0.4s;
+                    }
+                    #star:hover{
+                        fill: $blue;
+                    }
+                }
+                .product-img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    #img-product{
+                        width: 90%;
+                        height: 90%;
+                    }
+                }
+            }
+            .product-card-right{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .product-table{
+                    display: flex;
+                    flex-direction: column;
+                    .product-line{
+                        width: 100%;
+                        height: 45px;
+                        display: flex;
+                        align-items: center;
+                        .left-line,
+                        .right-line{
+                            padding: 0 10px;
+                            width: 50%;
+                            font-weight: 350;
+                        }
+                    }
+                    #db-line{
+                        background: $dark-blue;
+                    }
+                    #lg-line{
+                        .left-line,
+                        .right-line{
+                            color: black;
+                        }
+                    }
+                    #dg-line{
+                        background: #EBEBEB;
+                        .left-line,
+                        .right-line{
+                            color: black;
+                        }
+                    }
+                }
+                .product-buttom{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 25px;
+                    #prod-but{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 20px 0;
+                        font-size: 20px;
+                        font-weight: 350;
+                    }
+                    .blue-but{
+                        background: $blue;
+                    }
+                    .gray-but{
+                        background: #EBEBEB;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .similar-product{
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+        .similar-text{
+            font-size: 36px;
+            font-weight: 500;
+            color: black;
+        }
+        .cat-cat {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 30px;
+            .cat {
+                font-size: $regular;
+                font-weight: 500;
+                #cat-but1 {
+                    font-size: 20px;
+                    padding: 20px 80px;
+                }
+                #cat-but2 {
+                    font-size: 20px;
+                    padding: 20px 60px;
+                }
+                .cat-label {
+                    color: #303030;
+                    font-weight: 400;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    background: #EBEBEB;
+                }
+                input[type="radio"] {
+                    display: none;
+                }
+                input[type="radio"]:checked+.cat-label {
+                    background: #0080ff;
+                    color: white;
+                }
+            }
+        }
+        .ci-line {
+            max-width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 30px;
+            .cat-item {
+                width: min-content; // Подстаривается под блок
+                height: max-content; // Подстаривается под блок
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 4px solid #EBEBEB;
+                padding: 20px 0px 20px 0px;
+                transition: all 0.4s;
+                .ci-title {
+                    width: 85%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                #star {
+                    fill: #EBEBEB;
+                    transition: all 0.4s;
+                }
+                #flig {
+                    fill: #EBEBEB;
+                    transition: all 0.4s;
+                }
+                .ci-body-box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0px 20px;
+                    .item-img {
+                        width: 300px;
+                        height: 300px;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .ci-name {
+                        display: flex;
+                        flex-direction: column;
+                        #ci-text-dark {
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: $dark-blue;
+                        }
+                        #ci-text-light {
+                            font-size: 16px;
+                            color: $dark-blue;
+                        }
+                    }
+                }
+                .ci-info {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+            #star:hover{
+                fill: $blue;
             }
         }
     }

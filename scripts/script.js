@@ -84,6 +84,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
      // WIND
 let formwind = document.getElementById('windform');
 let er_email = document.getElementById('er_email');
