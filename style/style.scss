@@ -1254,7 +1254,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 80px;
     .product-card-block{
         width: 75vw;
         display: flex;
@@ -1416,7 +1416,11 @@ footer {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            align-items: center;
             gap: 30px;
+            #two-stril-part{
+                transform: rotate(180deg);
+            }
             .cat-item {
                 width: min-content; // Подстаривается под блок
                 height: max-content; // Подстаривается под блок
@@ -1472,6 +1476,86 @@ footer {
             }
             #star:hover{
                 fill: $blue;
+            }
+        }
+    }
+}
+// Страница "Преимущество"
+.quality{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .quality-info-block{
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+        gap: 40px;
+        .quality-navig{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            #text-nav{
+            color: #858585;
+            }
+            #text-zag{
+                color: black;
+                font-weight: 500;
+                font-size: 32px;
+            }
+        }
+        .quality-block{
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            .q-down {
+                gap: 60px;
+                display: flex;
+                justify-content: center;
+                .q-block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 40px 60px;
+                    border-radius: 12px;
+                    background: #e0e0e0;
+                    .q-max {
+                        height: 270px;
+                        font-size: 250px;
+                        color: $dark-blue;
+                    }
+                    .q-min {
+                        text-align: center;
+                        font-size: 36px;
+                        font-weight: 600;
+                        font-family: Montserrat;
+                        color: $dark-blue;
+                    }
+                }
+                .q-text-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .q-max-text {
+                        font-size: 36px;
+                        font-weight: 600;
+                        font-family: Montserrat;
+                        color: $dark-blue;
+                    }
+                    .q-text-bottom {
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .q-min-text {
+                            font-size: 24px;
+                            font-weight: 400;
+                            font-family: Montserrat;
+                            color: black;
+                        }
+                    }
+                }
             }
         }
     }
