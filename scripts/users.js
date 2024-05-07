@@ -10,3 +10,7 @@ const result = await pool.query("SELECT * FROM users")
 console.log(result)
 const role = await pool.query("SELECT Role FROM users WHERe id = ?", [4])
 console.log(role)
+const loginButton = document.getElementById('open-regist')
+if (role >= 1) {
+  
+}

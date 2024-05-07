@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="img/icon-logo.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="img/icon-logo.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Главная</title>
-</head>
+  </head>
+  <body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
-<body>
+      ym(97211673, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/97211673"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
     <div class="main-body">
-        <a class="scroll-btn" href="#" onclick="smoothScrollToTop()">
-            <svg width="30" height="30" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a class="scroll-btn" href="#" onclick="smoothScrollToTop()">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 5 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M1 1L4 4.5L1 8"
             stroke="#a1a1a1"
@@ -24,193 +73,279 @@
             stroke-linejoin="round"
           />
         </svg>
-        </a>
-        <!-- Главное -->
-        <div class="top">
-            <div class="t-header">
-                <div class="t-logo">
-                    <a href="tel:8 927 211 66 50">
-                        <p class="number">8 927 211 66 50</p>
-                    </a>
-                    <img class="logo" src="img/logo.svg" alt="" />
-                    <a class="ent" href="#entrance" id="open-end" type="button">
-                        <p>ВОЙТИ</p>
-                    </a>
+      </a>
+      <!-- Главное -->
+      <div class="top">
+        <div class="t-header">
+          <div class="t-logo">
+            <a href="tel:8 927 211 66 50">
+              <p class="number">8 927 211 66 50</p>
+            </a>
+            <img class="logo" src="img/logo.svg" alt="" />
+            <a class="ent" href="#entrance" id="open-end" type="button">
+              <p>ВОЙТИ</p>
+            </a>
+          </div>
+          <!-- Блок входа и регистрации -->
+          <div class="pop-up">
+            <!-- Вход -->
+            <form action="" class="wind" id="windform">
+              <div class="t-but">
+                <p>Войти в систему<br /></p>
+                <a href="#close" class="clous-end"
+                  ><img src="img/cross.svg" alt=""
+                /></a>
+              </div>
+              <div class="bottomform">
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Введите Email или телефон"
+                  />
+                  <p class="error" id="er_email"></p>
                 </div>
-                <!-- Блок входа и регистрации -->
-                <div class="pop-up">
-                    <!-- Вход -->
-                    <form action="" class="wind" id="windform">
-                        <div class="t-but">
-                            <p>Войти в систему<br/></p>
-                            <a href="#close" class="clous-end"><img src="img/cross.svg" alt="" /></a>
-                        </div>
-                        <div class="bottomform">
-                            <div class="poli">
-                                <input class="input" type="text" name="email" id="email" placeholder="Введите Email или телефон" />
-                                <p class="error" id="er_email"></p>
-                            </div>
-                            <div class="poli">
-                                <input class="input" type="password" name="pass" id="pass" placeholder="Введите ваш пароль" />
-                                <p class="error" id="er_pass"></p>
-                            </div>
-                            <p class="forgot">
-                                <a class="forgot" id="forgform" href="">Забыли пароль?</a> Ничего страшного мы поможем его<br>востановить!
-                            </p>
-                            <a href="#entrance" class="ent-button" id="endbut">
-                                <p>Войти</p>
-                            </a>
-                            <div class="reg-button">
-                                <a href="#registrarion" id="open-regist" type="button">
-                                    <p>Регистрация</p>
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- Регистрация -->
-                    <form action="" class="regist" id="regform">
-                        <div class="t-but">
-                            <p>Регистрация</p>
-                            <a href="#close" class="clous-end"><img src="img/cross.svg" alt="" /></a>
-                        </div>
-                        <div class="collom">
-                            <div class="poli">
-                                <input class="input" type="text" name="FIO" id="FIO" placeholder="Введите ФИО" />
-                                <p class="error" id="er_fio"></p>
-                            </div>
-                            <div class="poli">
-                                <input class="input" type="text" name="number" id="number" placeholder="Введите номер телефона" />
-                                <p class="error" id="er_number"></p>
-                            </div>
-                            <div class="poli">
-                                <input class="input" type="text" name="email" id="email" placeholder="Введите Email" />
-                                <p class="error" id="er_emailreg"></p>
-                            </div>
-                            <div class="poli">
-                                <div class="password-input">
-                                    <input class="pass" type="password" name="pass" id="pass" placeholder="Введите пароль" />
-                                    <a href="#" id="Eaysclick"><img class="eays" id="openEays" src="img/eaysclouse.svg" alt="" /></a>
-                                </div>
-                                <p class="error" id="er_passreg"></p>
-                            </div>
-                            <div class="poli">
-                                <input class="input" type="password" name="repepass" id="repepass" placeholder="Повторите ваш пароля" />
-                                <p class="error" id="er_repepassreg"></p>
-                            </div>
-                        </div>
-                        <div class="bottomform">
-                            <a href="#entrance" class="reg-button" id="regbut">
-                                <p>Зарегистрироваться</p>
-                            </a>
-                            <div class="ent-button">
-                                <a href="#entrance" id="form-end">
-                                    <p>Войти</p>
-                                </a>
-                            </div>
-                        </div>
-                    </form>
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    placeholder="Введите ваш пароль"
+                  />
+                  <p class="error" id="er_pass"></p>
                 </div>
-                <div class="navigator">
-                    <a href="#top" onclick="smoothScroll('top')">
-                        <p>Главное</p>
-                    </a>
-                    <a href="#aboutus" onclick="smoothScroll('aboutus')">
-                        <p>О нас</p>
-                    </a>
-                    <a href="#new" onclick="smoothScroll('new')">
-                        <p>Новости</p>
-                    </a>
-                    <a href="#catalogue" onclick="smoothScroll('catalogue')">
-                        <p>Каталог</p>
-                    </a>
-                    <a href="#entrance" id="open-end">
-                        <p>Закладки</p>
-                    </a>
-                    <a href="#quality" onclick="smoothScroll('quality')">
-                        <p>Преимущество</p>
-                    </a>
-                    <a href="#f-main" onclick="smoothScroll('f-main')">
-                        <p>Контакты</p>
-                    </a>
+                <p class="forgot">
+                  <a class="forgot" id="forgform" href="">Забыли пароль?</a>
+                  Ничего страшного мы поможем его<br />востановить!
+                </p>
+                <a href="#entrance" class="ent-button" id="endbut">
+                  <p>Войти</p>
+                </a>
+                <div class="reg-button">
+                  <a href="#registrarion" id="open-regist" type="button">
+                    <p>Регистрация</p>
+                  </a>
                 </div>
-            </div>
-            <a id="top"></a>
-            <div class="t-body">
-                <div class="t-dark">
-                    <div class="t-text">
-                        <p class="te1">Покрытия от коррозии и переработка краски</p>
-                        <p class="te2">
-                            Длительная защита от коррозии покрытием тонкого слоя Zinc-Aluminium Corundum
-                        </p>
-                    </div>
-                    <div class="buts">
-                        <a class="but-1" href="#bigblock" onclick="smoothScroll('bigblock')">
-                            <p>Оставить заявку</p>
-                        </a>
-                        <a class="but-2" href="#f-main" onclick="smoothScroll('f-main')">
-                            <p>Контакты</p>
-                        </a>
-                    </div>
+              </div>
+            </form>
+            <!-- Регистрация -->
+            <form action="" class="regist" id="regform">
+              <div class="t-but">
+                <p>Регистрация</p>
+                <a href="#close" class="clous-end"
+                  ><img src="img/cross.svg" alt=""
+                /></a>
+              </div>
+              <div class="collom">
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="text"
+                    name="FIO"
+                    id="FIO"
+                    placeholder="Введите ФИО"
+                  />
+                  <p class="error" id="er_fio"></p>
                 </div>
-            </div>
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="text"
+                    name="number"
+                    id="number"
+                    placeholder="Введите номер телефона"
+                  />
+                  <p class="error" id="er_number"></p>
+                </div>
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Введите Email"
+                  />
+                  <p class="error" id="er_emailreg"></p>
+                </div>
+                <div class="poli">
+                  <div class="password-input">
+                    <input
+                      class="pass"
+                      type="password"
+                      name="pass"
+                      id="pass"
+                      placeholder="Введите пароль"
+                    />
+                    <a href="#" id="Eaysclick"
+                      ><img
+                        class="eays"
+                        id="openEays"
+                        src="img/eaysclouse.svg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <p class="error" id="er_passreg"></p>
+                </div>
+                <div class="poli">
+                  <input
+                    class="input"
+                    type="password"
+                    name="repepass"
+                    id="repepass"
+                    placeholder="Повторите ваш пароля"
+                  />
+                  <p class="error" id="er_repepassreg"></p>
+                </div>
+              </div>
+              <div class="bottomform">
+                <a href="#entrance" class="reg-button" id="regbut">
+                  <p>Зарегистрироваться</p>
+                </a>
+                <div class="ent-button">
+                  <a href="#entrance" id="form-end">
+                    <p>Войти</p>
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="navigator">
+            <a href="#top" onclick="smoothScroll('top')">
+              <p>Главное</p>
+            </a>
+            <a href="#aboutus" onclick="smoothScroll('aboutus')">
+              <p>О нас</p>
+            </a>
+            <a href="#new" onclick="smoothScroll('new')">
+              <p>Новости</p>
+            </a>
+            <a href="#catalogue" onclick="smoothScroll('catalogue')">
+              <p>Каталог</p>
+            </a>
+            <a href="#entrance" id="open-end">
+              <p>Закладки</p>
+            </a>
+            <a href="#quality" onclick="smoothScroll('quality')">
+              <p>Преимущество</p>
+            </a>
+            <a href="#f-main" onclick="smoothScroll('f-main')">
+              <p>Контакты</p>
+            </a>
+          </div>
         </div>
-        <!-- О нас -->
-        <a id="aboutus"></a>
-        <div class="about">
-            <div class="a-body">
-                <div class="a-image">
-                    <img src="img/ImgNEW-2.svg" alt="" />
-                </div>
-                <div class="a-block">
-                    <p class="aboutus">О НАШЕЙ КОМПАНИИ</p>
-                    <p class="a-text">
-                        «ГРАНДПРОМ» - промышленно-коммерческое предприятие в Поволжском регионе. С 2014 года основания занимается развитием автомобильной промышленности в РФ. Клиентами предприятия являются практически все автосборочные предприятия расположенные в РФ.
-                    </p>
-                    <a class="a-button" href="Blocks/about.html">
-                        <p>УЗНАТЬ ПОДРОБНЕЕ</p>
-                    </a>
-                </div>
+        <a id="top"></a>
+        <div class="t-body">
+          <div class="t-dark">
+            <div class="t-text">
+              <p class="te1">Покрытия от коррозии и переработка краски</p>
+              <p class="te2">
+                Длительная защита от коррозии покрытием тонкого слоя
+                Zinc-Aluminium Corundum
+              </p>
             </div>
-        </div>
-        <div class="aboutus-2">
-            <div class="about-2">
-                <div class="text-1">
-                    <p class="t-1">МЫ ГОТОВЫ К СОТРУДНИЧЕСТВУ</p>
-                    <p class="t-2">Заключив с нами сделку вы получите выгодные предложения!</p>
-                    <p class="t-3">
-                        “ГРАНДПРОМ” - промышленно-коммерческое предприятие в Поволжском регионе. Мы сотрудничаем с такими гигантами как “EFFCO” продовая их товар на территории РФ.
-                        <br>Присоединяясь к нам вы гарантировано получаете выгодные предложения, которые легко обговариваются. Из интересных услуг вам предоставляется:
-                    </p>
-                    <p class="t-3">• Бесплатный станок MD 300</p>
-                    <p class="t-3">• Покрытие черного цвета от компании EFFCO</p>
-                    <p class="t-3">• Бесплатная доставка оборудования в районе Самары</p>
-                    <p class="t-3">• Услуги по покрытию мелких металических деталей методом цинтричного цинкования </p>
-                    <p class="t-3">
-                        Мы радостно приветвуем новых друзей нашей компании и щедро дарим некоторые наши услуги. По всем интересующим вопросам обращайтесь на горячую линию. Мы ответим в любое рабочее время или оставте заявку на нашей главной странице.
-                    </p>
-                </div>
-                <div class="text-2">
-                    <a class="but-1" href="#bigblock" onclick="smoothScroll('bigblock')">
-                        <p>ОСТАВИТЬ ЗАЯВКУ</p>
-                    </a>
-                    <a class="but-2" href="#bigblock" onclick="smoothScroll('f-main')">
-                        <p>СДЕЛАТЬ ЗВОНОК</p>
-                    </a>
-                </div>
+            <div class="buts">
+              <a
+                class="but-1"
+                href="#bigblock"
+                onclick="smoothScroll('bigblock')"
+              >
+                <p>Оставить заявку</p>
+              </a>
+              <a class="but-2" href="#f-main" onclick="smoothScroll('f-main')">
+                <p>Контакты</p>
+              </a>
             </div>
+          </div>
         </div>
-        <!-- Новости -->
-        <a id="new"></a>
-        <section class="new">
-            <div class="new-top">
-                <div class="left-new">
-                    <p class="min-new">НОВОСТИ</p>
-                    <p class="max-new">События компании</p>
-                </div>
-                <a href="Blocks/index.html">
-                    <div id="morenews" class="right-new">
-                        <p class="min-new">Все новости</p>
-                        <svg width="8" height="10" id="stril-icon" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+      </div>
+      <!-- О нас -->
+      <a id="aboutus"></a>
+      <div class="about">
+        <div class="a-body">
+          <div class="a-image">
+            <img src="img/ImgNEW-2.svg" alt="" />
+          </div>
+          <div class="a-block">
+            <p class="aboutus">О НАШЕЙ КОМПАНИИ</p>
+            <p class="a-text">
+              «ГРАНДПРОМ» - промышленно-коммерческое предприятие в Поволжском
+              регионе. С 2014 года основания занимается развитием автомобильной
+              промышленности в РФ. Клиентами предприятия являются практически
+              все автосборочные предприятия расположенные в РФ.
+            </p>
+            <a class="a-button" href="Blocks/about.html">
+              <p>УЗНАТЬ ПОДРОБНЕЕ</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="aboutus-2">
+        <div class="about-2">
+          <div class="text-1">
+            <p class="t-1">МЫ ГОТОВЫ К СОТРУДНИЧЕСТВУ</p>
+            <p class="t-2">
+              Заключив с нами сделку вы получите выгодные предложения!
+            </p>
+            <p class="t-3">
+              “ГРАНДПРОМ” - промышленно-коммерческое предприятие в Поволжском
+              регионе. Мы сотрудничаем с такими гигантами как “EFFCO” продовая
+              их товар на территории РФ.
+              <br />Присоединяясь к нам вы гарантировано получаете выгодные
+              предложения, которые легко обговариваются. Из интересных услуг вам
+              предоставляется:
+            </p>
+            <p class="t-3">• Бесплатный станок MD 300</p>
+            <p class="t-3">• Покрытие черного цвета от компании EFFCO</p>
+            <p class="t-3">
+              • Бесплатная доставка оборудования в районе Самары
+            </p>
+            <p class="t-3">
+              • Услуги по покрытию мелких металических деталей методом
+              цинтричного цинкования
+            </p>
+            <p class="t-3">
+              Мы радостно приветвуем новых друзей нашей компании и щедро дарим
+              некоторые наши услуги. По всем интересующим вопросам обращайтесь
+              на горячую линию. Мы ответим в любое рабочее время или оставте
+              заявку на нашей главной странице.
+            </p>
+          </div>
+          <div class="text-2">
+            <a
+              class="but-1"
+              href="#bigblock"
+              onclick="smoothScroll('bigblock')"
+            >
+              <p>ОСТАВИТЬ ЗАЯВКУ</p>
+            </a>
+            <a class="but-2" href="#bigblock" onclick="smoothScroll('f-main')">
+              <p>СДЕЛАТЬ ЗВОНОК</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Новости -->
+      <a id="new"></a>
+      <section class="new">
+        <div class="new-top">
+          <div class="left-new">
+            <p class="min-new">НОВОСТИ</p>
+            <p class="max-new">События компании</p>
+          </div>
+          <a href="Blocks/index.html">
+            <div id="morenews" class="right-new">
+              <p class="min-new">Все новости</p>
+              <svg
+                width="8"
+                height="10"
+                id="stril-icon"
+                viewBox="0 0 5 9"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M1 1L4 4.5L1 8"
                   stroke=""
@@ -219,831 +354,1377 @@
                   stroke-linejoin="round"
                 />
               </svg>
+            </div>
+          </a>
+        </div>
+        <div class="new-bottom">
+          <div class="new-box">
+            <div class="name-new">
+              <div class="n-img" id="n-img_one"></div>
+              <div class="text-new">
+                <p class="up-text-new">Мы открылись! Посети наш магазин</p>
+                <p class="down-text-new">
+                  Приветствуем вас в нашей компании. Посети каталог продукции,
+                  ты удивишься как много нового
+                </p>
+              </div>
+            </div>
+            <div class="date-new">
+              <p class="min-new">7 марта 2023</p>
+              <a id="arrowblock" class="left-date-tx" href="">
+                <p class="text-date">Подробнее</p>
+                <svg
+                  width="8"
+                  height="10"
+                  id="detalarrow"
+                  viewBox="0 0 5 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L4 4.5L1 8"
+                    stroke=""
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="new-box">
+            <div class="name-new">
+              <div class="n-img" id="n-img_two"></div>
+              <div class="text-new">
+                <p class="up-text-new">Мы открылись! Посети наш магазин</p>
+                <p class="down-text-new">
+                  Приветствуем вас в нашей компании. Посети каталог продукции,
+                  ты удивишься как много нового
+                </p>
+              </div>
+            </div>
+            <div class="date-new">
+              <p class="min-new">7 марта 2023</p>
+              <a id="arrowblock" class="left-date-tx" href="">
+                <p class="text-date">Подробнее</p>
+                <svg
+                  width="8"
+                  height="10"
+                  id="detalarrow"
+                  viewBox="0 0 5 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L4 4.5L1 8"
+                    stroke=""
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="new-box">
+            <div class="name-new">
+              <div class="n-img" id="n-img_tree"></div>
+              <div class="text-new">
+                <p class="up-text-new">Мы открылись! Посети наш магазин</p>
+                <p class="down-text-new">
+                  Приветствуем вас в нашей компании. Посети каталог продукции,
+                  ты удивишься как много нового
+                </p>
+              </div>
+            </div>
+            <div class="date-new">
+              <p class="min-new">7 марта 2023</p>
+              <a id="arrowblock" class="left-date-tx" href="">
+                <p class="text-date">Подробнее</p>
+                <svg
+                  width="8"
+                  height="10"
+                  id="detalarrow"
+                  viewBox="0 0 5 9"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L4 4.5L1 8"
+                    stroke=""
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Каталог -->
+      <a id="catalogue"></a>
+      <section class="catalogue">
+        <div class="cat-block">
+          <div class="cat-title-block">
+            <a href="" class="cat-title">Каталог товаров</a>
+            <div class="cat-cat">
+              <div class="cat">
+                <input type="radio" name="cat-check" id="cat1" />
+                <label class="cat-label" id="cat-but1" for="cat1">СТАНКИ</label>
+              </div>
+              <div class="cat">
+                <input type="radio" name="cat-check" id="cat2" />
+                <label class="cat-label" id="cat-but2" for="cat2"
+                  >ПОКРЫТИЕ</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="cat-content-block">
+            <div class="ci-line equipment">
+              <!-- Первая -->
+              <div class="ci-line">
+                <a
+                  href="Blocks/product-card.html"
+                  class="cat-item"
+                  id="ci-light"
+                >
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
                     </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
                 </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <!-- Вторая -->
+              <div class="ci-line">
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <!-- Треться -->
+              <div class="ci-line">
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <!-- Товар -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="new-bottom">
-                <div class="new-box">
-                    <div class="name-new">
-                        <div class="n-img" id="n-img_one"></div>
-                        <div class="text-new">
-                            <p class="up-text-new">Мы открылись! Посети наш магазин</p>
-                            <p class="down-text-new">
-                                Приветствуем вас в нашей компании. Посети каталог продукции, ты удивишься как много нового
-                            </p>
-                        </div>
+            <div class="ci-line equipment2">
+              <!-- Первая -->
+              <div class="ci-line">
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/dye.svg" alt="" class="item-img" />
+                    <!-- Пример (исправить) -->
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
                     </div>
-                    <div class="date-new">
-                        <p class="min-new">7 марта 2023</p>
-                        <a id="arrowblock" class="left-date-tx" href="">
-                            <p class="text-date">Подробнее</p>
-                            <svg width="8" height="10" id="detalarrow" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1 1L4 4.5L1 8"
-                      stroke=""
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                </svg>
-                        </a>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
                     </div>
-                </div>
-                <div class="new-box">
-                    <div class="name-new">
-                        <div class="n-img" id="n-img_two"></div>
-                        <div class="text-new">
-                            <p class="up-text-new">Мы открылись! Посети наш магазин</p>
-                            <p class="down-text-new">
-                                Приветствуем вас в нашей компании. Посети каталог продукции, ты удивишься как много нового
-                            </p>
-                        </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
                     </div>
-                    <div class="date-new">
-                        <p class="min-new">7 марта 2023</p>
-                        <a id="arrowblock" class="left-date-tx" href="">
-                            <p class="text-date">Подробнее</p>
-                            <svg width="8" height="10" id="detalarrow" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1 1L4 4.5L1 8"
-                      stroke=""
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                </svg>
-                        </a>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <!-- Вторая -->
+              <div class="ci-line">
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
                     </div>
-                </div>
-                <div class="new-box">
-                    <div class="name-new">
-                        <div class="n-img" id="n-img_tree"></div>
-                        <div class="text-new">
-                            <p class="up-text-new">Мы открылись! Посети наш магазин</p>
-                            <p class="down-text-new">
-                                Приветствуем вас в нашей компании. Посети каталог продукции, ты удивишься как много нового
-                            </p>
-                        </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
                     </div>
-                    <div class="date-new">
-                        <p class="min-new">7 марта 2023</p>
-                        <a id="arrowblock" class="left-date-tx" href="">
-                            <p class="text-date">Подробнее</p>
-                            <svg width="8" height="10" id="detalarrow" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1 1L4 4.5L1 8"
-                      stroke=""
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                </svg>
-                        </a>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
                     </div>
-                </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <!-- Треться -->
+              <div class="ci-line">
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+                <a href="#catolog" class="cat-item" id="ci-light">
+                  <div class="ci-title">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 40 38"
+                      fill=""
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="star"
+                        href="#entrance"
+                        d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="ci-body-box">
+                    <img src="img/DS200.png" alt="" class="item-img" />
+                    <div class="ci-name">
+                      <p id="ci-text-dark">
+                        Модель - Dip Spin Coating Machine DST 300
+                      </p>
+                      <p id="ci-text-light">
+                        Машина для нанесения покрытий погружением в центрифугу
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ci-info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="25"
+                      viewBox="0 0 32 25"
+                    >
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #ff0000;
+                            stroke: #fff;
+                            stroke-width: 0px;
+                            fill-rule: evenodd;
+                          }
+                        </style>
+                      </defs>
+                      <path
+                        id="flig"
+                        data-name="flig"
+                        class="flig"
+                        d="M0,0H32V25H0L10,12Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </div>
             </div>
-        </section>
-        <!-- Каталог -->
-        <a id="catalogue"></a>
-        <section class="catalogue">
-            <div class="cat-block">
-                <div class="cat-title-block">
-                    <a href="" class="cat-title">Каталог товаров</a>
-                    <div class="cat-cat">
-                        <div class="cat">
-                            <input type="radio" name="cat-check" id="cat1" />
-                            <label class="cat-label" id="cat-but1" for="cat1">СТАНКИ</label>
-                        </div>
-                        <div class="cat">
-                            <input type="radio" name="cat-check" id="cat2" />
-                            <label class="cat-label" id="cat-but2" for="cat2">ПОКРЫТИЕ</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="cat-content-block">
-                    <div class="ci-line equipment">
-                        <!-- Первая -->
-                        <div class="ci-line">
-                            <a href="Blocks/product-card.html" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Вторая -->
-                        <div class="ci-line">
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Треться -->
-                        <div class="ci-line">
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" /> <!-- Товар -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ci-line equipment2">
-                        <!-- Первая -->
-                        <div class="ci-line">
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/dye.svg" alt="" class="item-img" /> <!-- Пример (исправить) -->
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" />
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" />
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Вторая -->
-                        <div class="ci-line">
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" />
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" />
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" />
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Треться -->
-                        <div class="ci-line">
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" />
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" />
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="#catolog" class="cat-item" id="ci-light">
-                                <div class="ci-title">
-                                    <svg width="31" height="31" viewBox="0 0 40 38" fill="" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="star" href="#entrance" d="M20 30.54L32.36 38L29.08 23.94L40 14.48L25.62 13.26L20 0L14.38 13.26L0 14.48L10.92 23.94L7.64 38L20 30.54Z" fill="black"/>
-                                    </svg>
-                                </div>
-                                <div class="ci-body-box">
-                                    <img src="img/DS200.png" alt="" class="item-img" />
-                                    <div class="ci-name">
-                                        <p id="ci-text-dark">Модель - Dip Spin Coating Machine DST 300</p>
-                                        <p id="ci-text-light">Машина для нанесения покрытий погружением в центрифугу</p>
-                                    </div>
-                                </div>
-                                <div class="ci-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 32 25">
-                                        <defs>
-                                            <style>
-                                                .cls-1 {
-                                                    fill: #ff0000;
-                                                    stroke: #fff;
-                                                    stroke-width: 0px;
-                                                    fill-rule: evenodd;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path id="flig" data-name="flig" class="flig" d="M0,0H32V25H0L10,12Z"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Качество -->
-        <a id="quality"></a>
-        <div class="q-scroller" id="q-block">
-            <section class="q-slide">
-                <div class="q-up">
-                    <p>КАЧЕСТВО</p>
-                </div>
-                <div class="q-down">
-                    <div class="q-block">
-                        <p class="q-max" id="q-number">1</p>
-                        <p class="q-min" id="">Мы<br>гарантируем</p>
-                    </div>
-                    <div class="q-text-info">
-                        <p class="q-max-text">Хорошие модели станков без дефектов</p>
-                        <div class="q-text-bottom">
-                            <p class="q-min-text">Наша организация, используя собственный опыт и технические наработки предлагает услуги по нанесению цинк-ламельных покрытий методом центрифугирования.</p>
-                            <p class="q-min-text">Технология нанесения покрытия исключает наводораживание поверхности.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          </div>
         </div>
-        <!-- Заявка -->
-        <a id="bigblock"></a>
-        <div class="bigblock">
-            <div class="blockorder">
-                <div class="ordertext">Оставьте заявку</div>
-                <div class="blockstrok">
-                    <div class="blockinput">
-                        <div class="blockinputtext">Введите имя</div>
-                        <input type="text" placeholder="" id="blockname" />
-                    </div>
-                    <div class="blockinput">
-                        <div class="blockinputtext">Введите E-mail</div>
-                        <input type="text" placeholder="" id="blockemail" />
-                    </div>
-                    <div class="blockcheck">
-                        <input type="checkbox" id="checkbox">
-                        <p>Заполняя эти поля вы соглашаетесь на обработку ваших персональных данных</p>
-                    </div>
-                </div>
-                <a href="#all" class="blockaplicate">Оставить заявку</a>
+      </section>
+      <!-- Качество -->
+      <a id="quality"></a>
+      <div class="q-scroller" id="q-block">
+        <section class="q-slide">
+          <div class="q-up">
+            <p>КАЧЕСТВО</p>
+          </div>
+          <div class="q-down">
+            <div class="q-block">
+              <p class="q-max" id="q-number">1</p>
+              <p class="q-min" id="">Мы<br />гарантируем</p>
             </div>
-            <!-- Вопросы -->
-            <div class="blockquestions">
-                <div class="quests">Отвечаем на ваши вопросы</div>
-                <div class="tabs">
-                    <div class="tab">
-                        <input class="tab-check" type="checkbox" id="chck1" />
-                        <label class="tab-label" for="chck1">Какой станок больше подойдёт для покрытия болтов для железных мостов?
-                        <img class="check-img" src="img/plus-icon.svg" alt=""/></label>
-                        <div class="tab-content">
-                            1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                    </div>
-                    <div class="tab">
-                        <input class="tab-check" type="checkbox" id="chck2" />
-                        <label class="tab-label" for="chck2">Какой станок больше подойдёт для покрытия болтов для железных мостов?<img class="check-img" src="img/plus-icon.svg" alt=""
-              /></label>
-                        <div class="tab-content">
-                            2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                    </div>
-                    <div class="tab">
-                        <input class="tab-check" type="checkbox" id="chck3" />
-                        <label class="tab-label" for="chck3">Какой станок больше подойдёт для покрытия болтов для железных мостов?
-                <img class="check-img" src="img/plus-icon.svg" alt=""
-              /></label>
-                        <div class="tab-content">
-                            3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                    </div>
-                    <div class="tab">
-                        <input class="tab-check" type="checkbox" id="chck4" />
-                        <label class="tab-label" for="chck4">Какой станок больше подойдёт для покрытия болтов для железных мостов?<img class="check-img" src="img/plus-icon.svg" alt=""
-              /></label>
-                        <div class="tab-content">
-                            4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                    </div>
-                </div>
+            <div class="q-text-info">
+              <p class="q-max-text">Хорошие модели станков без дефектов</p>
+              <div class="q-text-bottom">
+                <p class="q-min-text">
+                  Наша организация, используя собственный опыт и технические
+                  наработки предлагает услуги по нанесению цинк-ламельных
+                  покрытий методом центрифугирования.
+                </p>
+                <p class="q-min-text">
+                  Технология нанесения покрытия исключает наводораживание
+                  поверхности.
+                </p>
+              </div>
             </div>
+          </div>
+        </section>
+      </div>
+      <!-- Заявка -->
+      <a id="bigblock"></a>
+      <div class="bigblock">
+        <div class="blockorder">
+          <div class="ordertext">Оставьте заявку</div>
+          <div class="blockstrok">
+            <div class="blockinput">
+              <div class="blockinputtext">Введите имя</div>
+              <input type="text" placeholder="" id="blockname" />
+            </div>
+            <div class="blockinput">
+              <div class="blockinputtext">Введите E-mail</div>
+              <input type="text" placeholder="" id="blockemail" />
+            </div>
+            <div class="blockcheck">
+              <input type="checkbox" id="checkbox" />
+              <p>
+                Заполняя эти поля вы соглашаетесь на обработку ваших
+                персональных данных
+              </p>
+            </div>
+          </div>
+          <a href="#all" class="blockaplicate">Оставить заявку</a>
         </div>
-    <!-- Контакты -->
-    <a id="f-main"></a>
-    <div class="contacts">
+        <!-- Вопросы -->
+        <div class="blockquestions">
+          <div class="quests">Отвечаем на ваши вопросы</div>
+          <div class="tabs">
+            <div class="tab">
+              <input class="tab-check" type="checkbox" id="chck1" />
+              <label class="tab-label" for="chck1"
+                >Какой станок больше подойдёт для покрытия болтов для железных
+                мостов? <img class="check-img" src="img/plus-icon.svg" alt=""
+              /></label>
+              <div class="tab-content">
+                1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+              </div>
+            </div>
+            <div class="tab">
+              <input class="tab-check" type="checkbox" id="chck2" />
+              <label class="tab-label" for="chck2"
+                >Какой станок больше подойдёт для покрытия болтов для железных
+                мостов?<img class="check-img" src="img/plus-icon.svg" alt=""
+              /></label>
+              <div class="tab-content">
+                2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+              </div>
+            </div>
+            <div class="tab">
+              <input class="tab-check" type="checkbox" id="chck3" />
+              <label class="tab-label" for="chck3"
+                >Какой станок больше подойдёт для покрытия болтов для железных
+                мостов? <img class="check-img" src="img/plus-icon.svg" alt=""
+              /></label>
+              <div class="tab-content">
+                3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+              </div>
+            </div>
+            <div class="tab">
+              <input class="tab-check" type="checkbox" id="chck4" />
+              <label class="tab-label" for="chck4"
+                >Какой станок больше подойдёт для покрытия болтов для железных
+                мостов?<img class="check-img" src="img/plus-icon.svg" alt=""
+              /></label>
+              <div class="tab-content">
+                4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Контакты -->
+      <a id="f-main"></a>
+      <div class="contacts">
         <footer class="contacts-foot">
-            <p>Наши контакты</p>
-            <div class="contact-block">
-                <div class="contact-slid">
-                    <p class="contact-block-name">По вопросам сотрудничества:</p>
-                    <div class="contact-strock">
-                        <img class="con-icon" src="img/phone.png" alt="">
-                        <a class="con-text" href="tel:+7 960 841-81-88">+7 960 841-81-88</a>
-                    </div>
-                    <div class="contact-strock">
-                        <img class="con-icon" src="img/mail.png" alt=""/>
-                        <a class="con-text" href="mailto:Grandprom.tlt@gmail.com">Grandprom.tlt@gmail.com</a>
-                    </div>
-                </div>
-                <div class="contact-slid">
-                    <p class="contact-block-name">По общим вопросам:</p>
-                    <div class="contact-strock">
-                        <img class="con-icon" src="img/phone.png" alt="">
-                        <a class="con-text" href="tel:+7 927 211-66-50">+7 927 211-66-50</a>
-                    </div>
-                    <div class="contact-strock">
-                        <img class="con-icon" src="img/mail.png" alt=""/>
-                        <a class="con-text" href="mailto:Grandprom.office@gmail.com">Grandprom.office@gmail.com</a>
-                    </div>
-                    <div class="contact-strock">
-                        <img class="con-icon" src="img/location.png" alt=""/>
-                        Россия, Самарская область, г. Тольятти, ул.Ленинградская, 15
-                    </div>
-                </div>
-                <div class="contact-slid">
-                    <p class="contact-block-name">Режим работы:</p>
-                    <div class="contact-strock">
-                        <img class="con-icon" src="img/clock.svg" alt=""/>
-                        <div class="con-block-text">
-                            <p class="con-text">Пн-Пт: с 8:00 до 18:00</p>
-                            <p class="con-text">Сб-Вс: выходной</p>
-                        </div>
-                    </div>
-                </div>
+          <p>Наши контакты</p>
+          <div class="contact-block">
+            <div class="contact-slid">
+              <p class="contact-block-name">По вопросам сотрудничества:</p>
+              <div class="contact-strock">
+                <img class="con-icon" src="img/phone.png" alt="" />
+                <a class="con-text" href="tel:+7 960 841-81-88"
+                  >+7 960 841-81-88</a
+                >
+              </div>
+              <div class="contact-strock">
+                <img class="con-icon" src="img/mail.png" alt="" />
+                <a class="con-text" href="mailto:Grandprom.tlt@gmail.com"
+                  >Grandprom.tlt@gmail.com</a
+                >
+              </div>
             </div>
+            <div class="contact-slid">
+              <p class="contact-block-name">По общим вопросам:</p>
+              <div class="contact-strock">
+                <img class="con-icon" src="img/phone.png" alt="" />
+                <a class="con-text" href="tel:+7 927 211-66-50"
+                  >+7 927 211-66-50</a
+                >
+              </div>
+              <div class="contact-strock">
+                <img class="con-icon" src="img/mail.png" alt="" />
+                <a class="con-text" href="mailto:Grandprom.office@gmail.com"
+                  >Grandprom.office@gmail.com</a
+                >
+              </div>
+              <div class="contact-strock">
+                <img class="con-icon" src="img/location.png" alt="" />
+                Россия, Самарская область, г. Тольятти, ул.Ленинградская, 15
+              </div>
+            </div>
+            <div class="contact-slid">
+              <p class="contact-block-name">Режим работы:</p>
+              <div class="contact-strock">
+                <img class="con-icon" src="img/clock.svg" alt="" />
+                <div class="con-block-text">
+                  <p class="con-text">Пн-Пт: с 8:00 до 18:00</p>
+                  <p class="con-text">Сб-Вс: выходной</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </footer>
         <div class="contacts-map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad4999f91e13814a985930c00c22b66078abad8ed0bd10c6fb83b5569450a821a&amp;width=100vw25&amp;height=800&amp;lang=ru_RU&amp;scroll=false"></script>
+          <script
+            type="text/javascript"
+            charset="utf-8"
+            async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad4999f91e13814a985930c00c22b66078abad8ed0bd10c6fb83b5569450a821a&amp;width=100vw25&amp;height=800&amp;lang=ru_RU&amp;scroll=false"
+          ></script>
         </div>
-    </div>
-    <!-- Футер -->
-    <footer>
+      </div>
+      <!-- Футер -->
+      <footer>
         <div class="f-main">
-            <div class="f">
-                <ul class="f-list">
-                    <li class="items">
-                        <a href="#top" onclick="smoothScroll('top')">Главная</a>
-                    </li>
-                    <li class="items">
-                        <a href="#aboutus" onclick="smoothScroll('aboutus')">О нас</a>
-                    </li>
-                    <li class="items">
-                        <a href="#new" onclick="smoothScroll('new')">Новости</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="f-mid">
-                <ul class="f-list-mid">
-                    <li class="item">©2024 ООО “ГРАНДПРОМ”</li>
-                    <li class="item">EFFCO Finishes & Technologies Pvt Ltd</li>
-                    <li class="item">Политика конфиденциальности</li>
-                </ul>
-            </div>
-            <div class="f">
-                <ul class="f-list">
-                    <li class="items">
-                        <a href="#catalogue" onclick="smoothScroll('catalogue')">Каталог</a>
-                    </li>
-                    <li class="items">
-                        <a href="#quality" onclick="smoothScroll('quality')">Преимущество</a>
-                    </li>
-                    <li class="items">
-                        <a href="#f-main" onclick="smoothScroll('f-main')">Контакты</a>
-                    </li>
-                </ul>
-            </div>
+          <div class="f">
+            <ul class="f-list">
+              <li class="items">
+                <a href="#top" onclick="smoothScroll('top')">Главная</a>
+              </li>
+              <li class="items">
+                <a href="#aboutus" onclick="smoothScroll('aboutus')">О нас</a>
+              </li>
+              <li class="items">
+                <a href="#new" onclick="smoothScroll('new')">Новости</a>
+              </li>
+            </ul>
+          </div>
+          <div class="f-mid">
+            <ul class="f-list-mid">
+              <li class="item">©2024 ООО “ГРАНДПРОМ”</li>
+              <li class="item">EFFCO Finishes & Technologies Pvt Ltd</li>
+              <li class="item">Политика конфиденциальности</li>
+            </ul>
+          </div>
+          <div class="f">
+            <ul class="f-list">
+              <li class="items">
+                <a href="#catalogue" onclick="smoothScroll('catalogue')"
+                  >Каталог</a
+                >
+              </li>
+              <li class="items">
+                <a href="#quality" onclick="smoothScroll('quality')"
+                  >Преимущество</a
+                >
+              </li>
+              <li class="items">
+                <a href="#f-main" onclick="smoothScroll('f-main')">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </footer>
+      </footer>
     </div>
-    
-</body>
-<script src="scripts/script.js"></script>
-
+  </body>
+  <script src="scripts/script.js"></script>
 </html>
