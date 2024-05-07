@@ -73,14 +73,12 @@ window.addEventListener('scroll', function() {
     var fixbox = document.querySelector('.q-slide');
     var textnum = document.getElementById('q-number');
     
-    if (rect.top <= 0 && rect.bottom >= window.innerHeight){ // Порабоать над условием
+    if (rect.top <= 0){ // Порабоать над условием
         fixbox.style.position = 'fixed';
-        fixbox.style.top = 0;
-        textnum.textContent = "2";
-    } else {
-        fixbox.style.position = 'absolute';
-        fixbox.style.bottom = 0;
         textnum.textContent = "1";
+    } else if (rect.top < window.innerHeight || window.innerHeight >= rect.bottom){
+        textnum.textContent = "3";
+        fixbox.style.position = 'absolute';
     }
 });
 

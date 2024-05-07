@@ -769,6 +769,7 @@
 }
 .main-body .q-scroller {
   display: flex;
+  overflow: hidden;
   position: relative;
   width: 100%;
   height: 300vh;
@@ -783,6 +784,7 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
+  top: 0;
   z-index: 2;
   width: 100%;
   height: 100vh;
@@ -1228,7 +1230,7 @@ footer .f-main .item {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 80px;
 }
 .product-content .product-card-block {
   width: 75vw;
@@ -1390,7 +1392,11 @@ footer .f-main .item {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   gap: 30px;
+}
+.product-content .similar-product .ci-line #two-stril-part {
+  transform: rotate(180deg);
 }
 .product-content .similar-product .ci-line .cat-item {
   width: -moz-min-content;
@@ -1449,4 +1455,84 @@ footer .f-main .item {
 }
 .product-content .similar-product .ci-line #star:hover {
   fill: #238af3;
+}
+
+.quality {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.quality .quality-info-block {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  gap: 40px;
+}
+.quality .quality-info-block .quality-navig {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.quality .quality-info-block .quality-navig #text-nav {
+  color: #858585;
+}
+.quality .quality-info-block .quality-navig #text-zag {
+  color: black;
+  font-weight: 500;
+  font-size: 32px;
+}
+.quality .quality-info-block .quality-block {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.quality .quality-info-block .quality-block .q-down {
+  gap: 60px;
+  display: flex;
+  justify-content: center;
+}
+.quality .quality-info-block .quality-block .q-down .q-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px;
+  border-radius: 12px;
+  background: #e0e0e0;
+}
+.quality .quality-info-block .quality-block .q-down .q-block .q-max {
+  height: 270px;
+  font-size: 250px;
+  color: #252774;
+}
+.quality .quality-info-block .quality-block .q-down .q-block .q-min {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: Montserrat;
+  color: #252774;
+}
+.quality .quality-info-block .quality-block .q-down .q-text-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quality .quality-info-block .quality-block .q-down .q-text-info .q-max-text {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: Montserrat;
+  color: #252774;
+}
+.quality .quality-info-block .quality-block .q-down .q-text-info .q-text-bottom {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quality .quality-info-block .quality-block .q-down .q-text-info .q-text-bottom .q-min-text {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Montserrat;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
