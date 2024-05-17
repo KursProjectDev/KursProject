@@ -68,17 +68,18 @@ function smoothScrollToTop() {
     window.requestAnimationFrame(step);
 }
 window.addEventListener('scroll', function() {
-    var trig = document.getElementById('q-block');
-    var rect = trig.getBoundingClientRect();
-    var fixbox = document.querySelector('.q-slide');
-    var textnum = document.getElementById('q-number');
+    var trig = document.getElementById('q-block'); // Тригер контенд
+    var fixbox = document.querySelector('.q-slide'); // Фиксированый контенд
+    var trigblock = trig.getBoundingClientRect();
+    var fixboxBlock = fixbox.getBoundingClientRect();
+    var textnum = document.getElementById('q-number'); // Замена содержимого
     
-    if (rect.top <= 0){ // Порабоать над условием
-        fixbox.style.position = 'fixed';
-        textnum.textContent = "1";
-    } else if (rect.top < window.innerHeight || window.innerHeight >= rect.bottom){
-        textnum.textContent = "3";
-        fixbox.style.position = 'absolute';
+    if (trigblock.top < 0 && trigblock.bottom > fixbox.offsetTop + fixbox.clientHeight) {
+        fixbox.classList.add('fixed');
+        fixbox.style.bottom = '0'; // Зафиксировать к нижнему краю блока
+    } else {
+        fixbox.classList.remove('fixed');
+        fixbox.style.bottom = 'auto'; // Убрать фиксацию к нижнему краю
     }
 });
 

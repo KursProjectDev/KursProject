@@ -535,7 +535,7 @@ $regular: 1.2em;
             font-weight: 500;
         }
         .new-top {
-            width: 70vw;
+            width: 1345px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -575,14 +575,12 @@ $regular: 1.2em;
             }
         }
         .new-bottom {
-            width: 70vw;
+            width: 1345px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             gap: 35px;
             .new-box {
                 display: flex;
-                flex: 1 0 17rem;
                 justify-content: space-between;
                 flex-direction: column;
                 background: white;
@@ -805,9 +803,6 @@ $regular: 1.2em;
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: absolute;
-            top: 0;
-            z-index: 2;
             width: 100%;
             height: 100vh;
             .q-up {
@@ -869,6 +864,10 @@ $regular: 1.2em;
                     }
                 }
             }
+        }
+        .q-slide.fixed {
+            position: fixed;
+            bottom: 0;
         }
     }   
     // Заявка
