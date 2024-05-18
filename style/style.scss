@@ -783,93 +783,118 @@ $regular: 1.2em;
                     #star:hover{
                         fill: $blue;
                     }
+                    .cat-item:hover{
+                        border: 4px solid $blue;
+                    }
                 }
             }
         }
     }
     // Качество
     .q-scroller {
-        display: flex;
-        overflow: hidden;
         position: relative;
         width: 100%;
         height: 300vh;
-        flex-direction: column;
         background: url(../img/fon_quality.png);
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
-        .q-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            height: 100vh;
-            .q-up {
-                display: flex;
-                height: 13%;
-                align-items: flex-end;
-                justify-content: center;
-                p {
-                    font-size: 36px;
-                    font-weight: 550;
-                    font-family: Montserrat;
-                }
-            }
-            .q-down {
-                width: 90vw;
-                height: 87%;
-                gap: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .q-block {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: flex-end;
-                    padding: 25px;
-                    border-radius: 12px;
-                    border: solid 6px #e0e0e0;
-                    .q-max {
-                        height: 250px;
-                        font-size: 250px;
-                    }
-                    .q-min {
-                        text-align: center;
-                        font-size: 36px;
-                        font-weight: 500;
-                        font-family: Montserrat;
-                    }
-                }
-                .q-text-info {
-                    width: 48%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 40px;
-                    .q-max-text {
-                        font-size: 36px;
-                        font-weight: 500;
-                        font-family: Montserrat;
-                    }
-                    .q-text-bottom {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 30px;
-                        .q-min-text {
-                            font-size: 24px;
-                            font-weight: 200;
-                            font-family: Montserrat;
-                        }
-                    }
-                }
-            }
-        }
-        .q-slide.fixed {
-            position: fixed;
-            bottom: 0;
-        }
-    }   
+    }
+    .q-slide {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 0.4s, transform 0.4s;
+    }
+    #q-slider-two{
+        display: none;
+    }
+    #q-slider-three{
+        display: none;
+    }
+    .q-slide.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .q-slide.bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(0);
+        transition: opacity 0.4s;
+    }
+    .q-up, .q-down {
+        width: 90vw;
+    }
+    .q-up {
+        display: flex;
+        height: 13%;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .q-up p {
+        font-size: 36px;
+        font-weight: 550;
+        font-family: Montserrat;
+    }
+    .q-down {
+        height: 87%;
+        gap: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .q-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 25px;
+        border-radius: 12px;
+        border: solid 6px #e0e0e0;
+    }
+    .q-max {
+        height: 250px;
+        font-size: 250px;
+    }
+    .q-min {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        font-family: Montserrat;
+    }
+    .q-text-info {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .q-max-text {
+        font-size: 36px;
+        font-weight: 500;
+        font-family: Montserrat;
+    }
+    .q-text-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .q-min-text {
+        font-size: 24px;
+        font-weight: 200;
+        font-family: Montserrat;
+    }    
     // Заявка
     .bigblock {
         display: flex;
@@ -1295,6 +1320,7 @@ footer {
                     #star:hover{
                         fill: $blue;
                     }
+                    
                 }
                 .product-img{
                     display: flex;
@@ -1475,6 +1501,9 @@ footer {
             }
             #star:hover{
                 fill: $blue;
+            }
+            .cat-item:hover{
+                border: 4px solid $blue;
             }
         }
     }

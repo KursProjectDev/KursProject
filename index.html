@@ -81,7 +81,7 @@
             <a href="tel:8 927 211 66 50">
               <p class="number">8 927 211 66 50</p>
             </a>
-            <img class="logo" src="img/logo.svg" alt="" />
+            <a href="index.html"><img class="logo" src="img/logo.svg" alt="" /></a>
             <a class="ent" href="#entrance" id="open-end" type="button">
               <p>ВОЙТИ</p>
             </a>
@@ -214,7 +214,7 @@
           </div>
           <div class="navigator">
             <a href="#top" onclick="smoothScroll('top')">
-              <p>Главное</p>
+              <p>Главная</p>
             </a>
             <a href="#aboutus" onclick="smoothScroll('aboutus')">
               <p>О нас</p>
@@ -1495,33 +1495,62 @@
       </section>
       <!-- Качество -->
       <a id="quality"></a>
-      <div class="q-scroller" id="q-block">
-        <section class="q-slide">
+      <div class="q-scroller" id="q-scroller">
+        <section class="q-slide" data-number="1" id="q-slider-one">
+            <div class="q-up">
+                <p>КАЧЕСТВО</p>
+            </div>
+            <div class="q-down">
+                <div class="q-block">
+                    <p class="q-max" id="q-number">1</p>
+                    <p class="q-min">Мы<br />гарантируем</p>
+                </div>
+                <div class="q-text-info">
+                    <p class="q-max-text">Хорошие модели станков без дефектов</p>
+                    <div class="q-text-bottom">
+                        <p class="q-min-text">Наша организация, используя собственный опыт и технические наработки предлагает услуги по нанесению цинк-ламельных покрытий методом центрифугирования.</p>
+                        <p class="q-min-text">Технология нанесения покрытия исключает наводораживание поверхности.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="q-slide" data-number="2" id="q-slider-two">
           <div class="q-up">
-            <p>КАЧЕСТВО</p>
+              <p>КАЧЕСТВО</p>
           </div>
           <div class="q-down">
+              <div class="q-block">
+                  <p class="q-max" id="q-number">2</p>
+                  <p class="q-min">Мы<br />отличаемся</p>
+              </div>
+              <div class="q-text-info">
+                  <p class="q-max-text">Отличным качеством холодного цинкования.</p>
+                  <div class="q-text-bottom">
+                      <p class="q-min-text">Цинк-ламельное покрытие EFFCO защищает от коррозии минимум 50 лет в активной атмосфере приморского города.</p>
+                      <p class="q-min-text">Покрытие устойчиво при контакте с жидкостями, применяемыми в автомобилях: бензину, моторному маслу, жидкостям для стеклоочистителя и охлаждения. </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="q-slide" data-number="3" id="q-slider-three">
+        <div class="q-up">
+            <p>КАЧЕСТВО</p>
+        </div>
+        <div class="q-down">
             <div class="q-block">
-              <p class="q-max" id="q-number">1</p>
-              <p class="q-min" id="">Мы<br />гарантируем</p>
+                <p class="q-max" id="q-number">1</p>
+                <p class="q-min">Мы<br />проверяем</p>
             </div>
             <div class="q-text-info">
-              <p class="q-max-text">Хорошие модели станков без дефектов</p>
-              <div class="q-text-bottom">
-                <p class="q-min-text">
-                  Наша организация, используя собственный опыт и технические
-                  наработки предлагает услуги по нанесению цинк-ламельных
-                  покрытий методом центрифугирования.
-                </p>
-                <p class="q-min-text">
-                  Технология нанесения покрытия исключает наводораживание
-                  поверхности.
-                </p>
-              </div>
+                <p class="q-max-text">Каждую нашу продукцию</p>
+                <div class="q-text-bottom">
+                    <p class="q-min-text">Мы постоянно улучшаем качество выпускаемой продукции и результативность бизнес-процессов предприятия. Наши отношения с поставщиками строятся на основе взаимной выгоды.</p>
+                    <p class="q-min-text">Выпускаемое нами сырье, отвечает ожиданиям и требованиям потребителей. Нас рекомендуют, потому что доверяют.</p>
+                </div>
             </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
+    </div>    
       <!-- Заявка -->
       <a id="bigblock"></a>
       <div class="bigblock">

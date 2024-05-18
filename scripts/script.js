@@ -1,3 +1,5 @@
+// 
+
 // СКРОЛИНГ
 function smoothScroll(targetId) {
     const target = document.getElementById(targetId);
@@ -67,22 +69,31 @@ function smoothScrollToTop() {
 
     window.requestAnimationFrame(step);
 }
+// КАЧЕСТВО
 window.addEventListener('scroll', function() {
-    var trig = document.getElementById('q-block'); // Тригер контенд
-    var fixbox = document.querySelector('.q-slide'); // Фиксированый контенд
-    var trigblock = trig.getBoundingClientRect();
-    var fixboxBlock = fixbox.getBoundingClientRect();
-    var textnum = document.getElementById('q-number'); // Замена содержимого
-    
-    if (trigblock.top < 0 && trigblock.bottom > fixbox.offsetTop + fixbox.clientHeight) {
-        fixbox.classList.add('fixed');
-        fixbox.style.bottom = '0'; // Зафиксировать к нижнему краю блока
-    } else {
-        fixbox.classList.remove('fixed');
-        fixbox.style.bottom = 'auto'; // Убрать фиксацию к нижнему краю
-    }
-});
+    const scroller = document.getElementById('q-scroller');
+    const slides = document.querySelectorAll('.q-slide');
+    const windowHeight = window.innerHeight;
+    const scrollerRect = scroller.getBoundingClientRect();
 
+    slides.forEach(slide => {
+        const slideRect = slide.getBoundingClientRect();
+
+        if (scrollerRect.top < 0 && scrollerRect.bottom > windowHeight) {
+            slide.classList.add('fixed');
+            slide.classList.remove('bottom');
+            slide.style.opacity = 1; // Отменяем затухание
+        } else if (scrollerRect.bottom <= windowHeight) {
+            slide.classList.remove('fixed');
+            slide.classList.add('bottom');
+            slide.style.opacity = 0; // Применяем затухание
+        } else {
+            slide.classList.remove('fixed');
+            slide.classList.remove('bottom');
+            slide.style.opacity = 0; // Применяем затухание
+        }
+    });
+});
 
      // WIND
 let formwind = document.getElementById('windform');
