@@ -1001,6 +1001,25 @@
   padding: 1em;
 }
 
+.videocont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #F5F5F5;
+  gap: 20px;
+  padding-bottom: 120px;
+}
+.videocont P {
+  font-size: 36px;
+  font-weight: 300;
+  color: black;
+}
+.videocont .video-block {
+  width: 1345px;
+  height: 762px;
+}
+
 .contacts-foot {
   display: flex;
   justify-content: center;

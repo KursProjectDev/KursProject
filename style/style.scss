@@ -1024,6 +1024,26 @@ $regular: 1.2em;
         padding: 1em;
     }
 }
+ 
+// Видео
+.videocont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #F5F5F5;
+    gap: 20px;
+    padding-bottom: 120px;
+    P{
+        font-size: 36px;
+        font-weight: 300;
+        color: black;
+    }
+    .video-block{
+        width: 1345px;
+        height: 762px;
+    }
+}
 
 // Контакты
 .contacts-foot{
