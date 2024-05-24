@@ -876,11 +876,15 @@
   display: flex;
   justify-content: center;
   padding: 120px 0;
-  gap: 40px;
   background: #F5F5F5;
 }
+.main-body .bigblock .block-quest-tab {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
 .main-body .bigblock .blockorder {
-  width: 20vw;
+  width: 30%;
   display: flex;
   height: -moz-max-content;
   height: max-content;
@@ -888,7 +892,7 @@
   align-items: center;
   background-color: #252774;
   gap: 40px;
-  padding: 70px 40px;
+  padding: 90px 60px;
   box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.377);
 }
 .main-body .bigblock .blockorder .ordertext {
@@ -936,7 +940,7 @@
   padding: 20px 0;
   color: white;
   transition: all 0.4s;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 }
 .main-body .bigblock .blockorder .blockaplicate:hover {
@@ -944,10 +948,9 @@
   color: #238af3;
 }
 .main-body .blockquestions {
-  width: 30vw;
+  width: 55%;
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
   gap: 35px;
 }
 .main-body .quests {
@@ -957,48 +960,39 @@
 }
 .main-body .tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  flex-direction: column;
+  gap: 25px;
 }
-.main-body .tab {
-  width: 100%;
-  overflow: hidden;
-}
-.main-body .tab-label {
+.main-body .expandable {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 30px 20px;
-  background: #ffffff;
-  color: #303030;
-  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.377);
-  cursor: pointer;
-}
-.main-body .tab-label img {
-  width: 50px;
-}
-.main-body .tab-content {
-  background: #ffffff;
-  max-height: 0;
-  padding: 0 1em;
-  transition: all 0.35s;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: -5px 4px 20px 0px rgba(15, 15, 15, 0.151);
+  padding: 22px;
   color: black;
-  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.377);
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
 }
-.main-body .tab-close {
-  display: flex;
-  justify-content: center;
-  padding: 0.5em;
-}
-.main-body input[type=checkbox] {
+.main-body .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  box-shadow: -5px 4px 20px 0px rgba(15, 15, 15, 0.151);
+  background-color: #ffffff;
+  border-top: none;
+  padding: 0 20px;
   display: none;
 }
-.main-body input[type=checkbox]:checked + .tab-label {
-  background: #fff;
+.main-body .content p {
+  color: black;
+  font-weight: 300;
 }
-.main-body input[type=checkbox]:checked ~ .tab-content {
-  max-height: 100vh;
-  padding: 1em;
+.main-body .content.show {
+  display: block;
+  max-height: 200px;
+  padding: 40px 20px;
 }
 
 .videocont {
@@ -1007,8 +1001,8 @@
   align-items: center;
   flex-direction: column;
   background: #F5F5F5;
-  gap: 20px;
-  padding-bottom: 120px;
+  gap: 40px;
+  padding-bottom: 160px;
 }
 .videocont P {
   font-size: 36px;

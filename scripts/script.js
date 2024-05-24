@@ -79,7 +79,7 @@ window.addEventListener('scroll', function() {
     slides.forEach(slide => {
         const slideRect = slide.getBoundingClientRect();
 
-        if (scrollerRect.top < 0 && scrollerRect.bottom > windowHeight) {
+        if (scrollerRect.top <= 0 && scrollerRect.bottom > windowHeight) {
             slide.classList.add('fixed');
             slide.classList.remove('bottom');
             slide.style.opacity = 1; // Отменяем затухание
@@ -289,42 +289,35 @@ function ClearForm(){
     }
 }
 
-// Get all tab checkboxes
-const tabChecks = document.querySelectorAll('.tab-check');
-
-// Loop through each one
-tabChecks.forEach(tabCheck => {
-
-  // Add click event listener
-  tabCheck.addEventListener('click', () => {
-
-    // If checked
-    if(tabCheck.checked) {
-
-      // Get the .check-img inside this tab 
-      const checkImg = tabCheck.closest('.tab').querySelector('.check-img');
-
-      // Do something with the checkImg
-      checkImg.src = 'img/minus-icon.svg';
-
-    }
-    else{
-        const checkImg = tabCheck.closest('.tab').querySelector('.check-img');
-
-        // Do something with the checkImg
-        checkImg.src = 'img/plus-icon.svg';
-    }
-
-  });
-
+// Вопрос 
+document.querySelectorAll('.expandable').forEach(function(expandable) {
+    expandable.addEventListener('click', function() {
+        var content = this.nextElementSibling;
+        var icon = this.querySelector('.button-icon-plus');
+        document.querySelectorAll('.content').forEach(function(otherContent) {
+            if (otherContent !== content && otherContent.classList.contains('show')) {
+                otherContent.classList.remove('show');
+                setTimeout(() => {
+                    otherContent.style.display = 'none';
+                }, 500); 
+                otherContent.previousElementSibling.querySelector('.button-icon-plus').src = '/img/plus-icon.svg';
+            }
+        });
+        if (content.classList.contains('show')) {
+            content.classList.remove('show');
+            icon.src = '/img/plus-icon.svg';
+            setTimeout(() => {
+                content.style.display = 'none';
+            }, 500); // Duration matches the CSS transition
+        } else {
+            content.style.display = 'block';
+            setTimeout(() => {
+                content.classList.add('show');
+            }, 10); // Small delay to ensure display change takes effect
+            icon.src = '/img/minus-icon.svg';
+        }
+    });
 });
-const tabs = document.querySelectorAll('.tab');
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tab.classList.toggle('open');
-  })
-})
 
 const cat1 = document.getElementById('cat1');
 const cat2 = document.getElementById('cat2');
