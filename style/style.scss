@@ -836,7 +836,14 @@ $regular: 1.2em;
     }
     .q-up, .q-down {
         width: 90vw;
+        transform: translateY(20px);
     }
+    .q-up, .q-down {
+        transition: transform 1s ease-in-out;
+    }   
+    .q-up.active, .q-down.active {
+        transform: translateY(0);
+      }   
     .q-up {
         display: flex;
         height: 13%;
@@ -894,7 +901,19 @@ $regular: 1.2em;
         font-size: 24px;
         font-weight: 200;
         font-family: Montserrat;
-    }    
+    }
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
     // Заявка
     .bigblock {
         display: flex;

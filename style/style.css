@@ -813,6 +813,13 @@
 }
 .main-body .q-up, .main-body .q-down {
   width: 90vw;
+  transform: translateY(20px);
+}
+.main-body .q-up, .main-body .q-down {
+  transition: transform 1s ease-in-out;
+}
+.main-body .q-up.active, .main-body .q-down.active {
+  transform: translateY(0);
 }
 .main-body .q-up {
   display: flex;
@@ -871,6 +878,18 @@
   font-size: 24px;
   font-weight: 200;
   font-family: Montserrat;
+}
+.main-body .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.main-body .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .main-body .bigblock {
   display: flex;
