@@ -306,7 +306,7 @@ document.querySelectorAll('.expandable').forEach(function(expandable) {
         });
         if (content.classList.contains('show')) {
             content.classList.remove('show');
-            icon.src = '/img/plus-icon.svg';
+            icon.src = 'img/plus-icon.svg';
             setTimeout(() => {
                 content.style.display = 'none';
             }, 500); // Duration matches the CSS transition
@@ -315,7 +315,7 @@ document.querySelectorAll('.expandable').forEach(function(expandable) {
             setTimeout(() => {
                 content.classList.add('show');
             }, 10); // Small delay to ensure display change takes effect
-            icon.src = '/img/minus-icon.svg';
+            icon.src = 'img/minus-icon.svg';
         }
     });
 });
