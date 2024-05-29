@@ -75,6 +75,7 @@ window.addEventListener('scroll', function() {
     const slides = document.querySelectorAll('.q-slide');
     const windowHeight = window.innerHeight;
     const scrollerRect = scroller.getBoundingClientRect();
+    const triggerHeight = windowHeight / 2;
 
     slides.forEach(slide => {
         const slideRect = slide.getBoundingClientRect();
@@ -90,7 +91,7 @@ window.addEventListener('scroll', function() {
         } else {
             slide.classList.remove('fixed');
             slide.classList.remove('bottom');
-            slide.style.opacity = 0; // Применяем затухание
+            slide.style.opacity = 0; // Применяем затухание 
         }
     });
 });
