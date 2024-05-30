@@ -32,7 +32,8 @@
   display: flex;
   flex-direction: column;
   max-width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .main-body .scroll-btn {
   display: flex;
@@ -765,8 +766,10 @@
 .main-body .catalogue .cat-block .cat-content-block .ci-line #star:hover {
   fill: #238af3;
 }
-.main-body .catalogue .cat-block .cat-content-block .ci-line .cat-item:hover {
+.main-body .catalogue .cat-block .cat-content-block .ci-line .cat-item:hover,
+.main-body .catalogue .cat-block .cat-content-block .ci-line .cat-item:hover #flig {
   border: 4px solid #238af3;
+  fill: #238af3;
 }
 .main-body .q-scroller {
   position: relative;
@@ -789,12 +792,6 @@
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.4s, transform 0.4s;
-}
-.main-body #q-slider-two {
-  display: none;
-}
-.main-body #q-slider-three {
-  display: none;
 }
 .main-body .q-slide.fixed {
   position: fixed;
@@ -881,15 +878,15 @@
 }
 .main-body .fixed {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main-body .bottom {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main-body .bigblock {
   display: flex;
@@ -1594,4 +1591,293 @@ footer .f-main .item {
   font-weight: 400;
   font-family: Montserrat;
   color: black;
+}
+
+.user-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.user-page .user-content {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  gap: 80px;
+}
+.user-page .user-content .verh-user-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.user-page .user-content .verh-user-block .user-navig-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.user-page .user-content .verh-user-block .user-navig-block #text-nav {
+  color: #858585;
+}
+.user-page .user-content .verh-user-block .user-navig-block #text-zag {
+  color: black;
+  font-weight: 500;
+  font-size: 32px;
+}
+.user-page .user-content .verh-user-block .user-navig-block .user-block {
+  display: flex;
+  align-items: start;
+  border-bottom: 2px solid #dadada;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.user-page .user-content .verh-user-block .user-navig-block .user-block .user-cont-left {
+  display: flex;
+  gap: 40px;
+}
+.user-page .user-content .verh-user-block .user-navig-block .user-block .user-cont-left .user-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 3px solid #dadada;
+  border-radius: 100px;
+}
+.user-page .user-content .verh-user-block .user-navig-block .user-block .user-cont-left .user-text-name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.user-page .user-content .verh-user-block .user-navig-block .user-block .user-cont-left .user-text-name .name-user {
+  color: #303030;
+  font-size: 24px;
+  font-weight: 600;
+}
+.user-page .user-content .verh-user-block .user-navig-block .user-block .user-cont-left .user-text-name .states-user {
+  color: #bebebe;
+  font-size: 20px;
+  font-weight: 400;
+}
+.user-page .user-content .verh-user-block .user-navig-block .user-block .button-user-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 2px solid #dadada;
+  padding: 5px;
+}
+.user-page .user-content .verh-user-block .user-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.user-page .user-content .verh-user-block .user-settings .settings-text {
+  color: #bebebe;
+  font-size: 20px;
+  font-weight: 400;
+}
+.user-page .user-content .verh-user-block .user-settings .mailing-block,
+.user-page .user-content .verh-user-block .user-settings .distribution-block {
+  display: flex;
+  justify-content: space-between;
+}
+.user-page .user-content .verh-user-block .user-settings .mailing-block p,
+.user-page .user-content .verh-user-block .user-settings .distribution-block p {
+  color: #303030;
+  font-size: 20px;
+  font-weight: 450;
+}
+.user-page .user-content .verh-user-block .user-settings .mailing-block .switch,
+.user-page .user-content .verh-user-block .user-settings .distribution-block .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.user-page .user-content .verh-user-block .user-settings .mailing-block .switch input,
+.user-page .user-content .verh-user-block .user-settings .distribution-block .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.user-page .user-content .verh-user-block .user-settings .mailing-block .slider,
+.user-page .user-content .verh-user-block .user-settings .distribution-block .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.user-page .user-content .verh-user-block .user-settings .mailing-block .slider:before,
+.user-page .user-content .verh-user-block .user-settings .distribution-block .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.user-page .user-content .verh-user-block .user-settings .mailing-block input:checked + .slider,
+.user-page .user-content .verh-user-block .user-settings .distribution-block input:checked + .slider {
+  background-color: #2196F3;
+}
+.user-page .user-content .verh-user-block .user-settings .mailing-block input:checked + .slider:before,
+.user-page .user-content .verh-user-block .user-settings .distribution-block input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.user-page .bookmarks {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  padding-bottom: 80px;
+}
+.user-page .bookmarks .bookmarks-text {
+  font-size: 36px;
+  font-weight: 500;
+  color: black;
+}
+.user-page .bookmarks .cat-cat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+}
+.user-page .bookmarks .cat-cat .cat {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.user-page .bookmarks .cat-cat .cat #cat-but1 {
+  font-size: 20px;
+  padding: 20px 80px;
+}
+.user-page .bookmarks .cat-cat .cat #cat-but2 {
+  font-size: 20px;
+  padding: 20px 60px;
+}
+.user-page .bookmarks .cat-cat .cat .cat-label {
+  color: #303030;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #EBEBEB;
+}
+.user-page .bookmarks .cat-cat .cat input[type=radio] {
+  display: none;
+}
+.user-page .bookmarks .cat-cat .cat input[type=radio]:checked + .cat-label {
+  background: #0080ff;
+  color: white;
+}
+.user-page .bookmarks .cat-content-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.user-page .bookmarks .cat-content-block .ci-line {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item {
+  width: -moz-min-content;
+  width: min-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid #EBEBEB;
+  padding: 20px 0px 20px 0px;
+  transition: all 0.4s;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item .ci-title {
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item #star {
+  fill: #EBEBEB;
+  transition: all 0.4s;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item #flig {
+  fill: #EBEBEB;
+  transition: all 0.4s;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item .ci-body-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item .ci-body-box .item-img {
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item .ci-body-box .ci-name {
+  display: flex;
+  flex-direction: column;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item .ci-body-box .ci-name #ci-text-dark {
+  font-size: 20px;
+  font-weight: 600;
+  color: #252774;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item .ci-body-box .ci-name #ci-text-light {
+  font-size: 16px;
+  color: #252774;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item .ci-info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.user-page .bookmarks .cat-content-block .ci-line #star:hover {
+  fill: #238af3;
+}
+.user-page .bookmarks .cat-content-block .ci-line .cat-item:hover,
+.user-page .bookmarks .cat-content-block .ci-line .cat-item:hover #flig {
+  border: 4px solid #238af3;
+  fill: #238af3;
+}
+.user-page .bookmarks .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+.user-page .bookmarks .pagination li {
+  margin: 0 5px;
+}
+.user-page .bookmarks .pagination a {
+  text-decoration: none;
+  color: #999;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.user-page .bookmarks .pagination a:hover {
+  background-color: #ddd;
+}
+.user-page .bookmarks .pagination .active a {
+  background-color: #2196F3;
+  color: white;
+}
+.user-page .bookmarks .pagination .disabled a {
+  color: #ccc;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
