@@ -110,6 +110,22 @@ $regular: 1.2em;
                 .ent:hover {
                     background: #238af3;
                 }
+                .out {
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    background: $dark-blue;
+                    gap: 20px;
+                    padding: 15px 30px;
+                    transition: all 0.3s;
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+                .out:hover {
+                    background: #238af3;
+                }
                 .t-button {
                     display: flex;
                     align-items: center;
@@ -1130,6 +1146,37 @@ footer {
         }
     }
 }
+
+// Кнопка выйти 
+.out {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: $dark-blue;
+    gap: 20px;
+    padding: 15px 30px;
+    transition: all 0.3s;
+    p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+.out:hover {
+    background: #238af3;
+}
+
+// Доступ к закладками
+#open-user {
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s;
+}
+#open-user:hover {
+    color: $blue;
+}
+
 // Синий header
 .navigator-block{
     width: 100%;

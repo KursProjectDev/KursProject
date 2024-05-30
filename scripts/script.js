@@ -362,3 +362,4 @@ cat2.addEventListener('change', toggleDisplay);
 
 // Call on initial page load
 toggleDisplay(); 
+

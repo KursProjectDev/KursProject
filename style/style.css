@@ -102,6 +102,22 @@
 .main-body .top .t-header .t-logo .ent:hover {
   background: #238af3;
 }
+.main-body .top .t-header .t-logo .out {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #252774;
+  gap: 20px;
+  padding: 15px 30px;
+  transition: all 0.3s;
+}
+.main-body .top .t-header .t-logo .out p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.main-body .top .t-header .t-logo .out:hover {
+  background: #238af3;
+}
 .main-body .top .t-header .t-logo .t-button {
   display: flex;
   align-items: center;
@@ -1102,6 +1118,36 @@ footer .f-main .f-list-mid {
 }
 footer .f-main .item {
   color: #d0d0d0;
+}
+
+.out {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #252774;
+  gap: 20px;
+  padding: 15px 30px;
+  transition: all 0.3s;
+}
+.out p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.out:hover {
+  background: #238af3;
+}
+
+#open-user {
+  display: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s;
+}
+
+#open-user:hover {
+  color: #238af3;
 }
 
 .navigator-block {
