@@ -111,6 +111,17 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkSlide);
     checkSlide(); // Check slide on page load
   });
+
+// ВИДЕО
+document.addEventListener('DOMContentLoaded', function() {
+    var iframe = document.getElementById('myVideo');
+    var src = iframe.src;
+    // Обновляем src, чтобы убрать autoplay, если он есть
+    if (src.includes('autoplay=1')) {
+      src = src.replace('autoplay=1', 'autoplay=0');
+      iframe.src = src;
+    }
+  });
   
      // WIND
 let formwind = document.getElementById('windform');
