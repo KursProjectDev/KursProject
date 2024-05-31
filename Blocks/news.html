@@ -1,154 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Главная</title>
-  </head>
+    <link rel="icon" href="../img/icon-logo.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <title>Новости</title>
+</head>
 
-  <body>
-    <a id="new"></a>
-    <section class="new">
-      <div class="new-top">
-        <div class="left-new">
-          <p class="min-new">НОВОСТИ</p>
-          <p class="max-new">События компании</p>
-        </div>
-        <a href="/Blocks/index.html">
-          <div class="right-new">
-            <p class="min-new">Все новости</p>
-            <svg
-              width="8"
-              height="10"
-              viewBox="0 0 5 9"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L4 4.5L1 8"
-                stroke="#b4b4b4"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
+<body>
+    <div class="main-body">
+        <a class="scroll-btn" href="#" onclick="smoothScrollToTop()">
+            <svg width="30" height="30" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1 1L4 4.5L1 8"
+            stroke="#a1a1a1"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
         </a>
-      </div>
-      <div class="new-bottom">
-        <div class="new-box">
-          <div class="name-new">
-            <div class="n-img"></div>
-            <div class="text-new">
-              <p class="up-text-new">Мы открылись! Посети наш магазин</p>
-              <p class="down-text-new">
-                Приветствуем вас в нашей компании. Посети каталог продукции, ты
-                удивишься как много нового
-              </p>
+        <!-- Главное -->
+        <div class="top">
+            <div class="t-header">
+                <div class="t-logo">
+                    <a href="tel:8 927 211 66 50">
+                        <p class="number">8 927 211 66 50</p>
+                    </a>
+                    <a href="../index.html"><img class="logo" src="../img/logo.svg" alt="" /></a>
+                    <a class="ent" href="#entrance" id="open-end" type="button">
+                        <p>ВОЙТИ</p>
+                    </a>
+                    <a class="out" href="#entrance" id="" type="button">
+                        <p>ВЫЙТИ</p>
+                        <img src="img/stril-out.svg" alt="">
+                      </a>
+                </div>
+                <div class="navigator-block">
+                    <div class="blue-navigator">
+                        <a href="../index.html" onclick="smoothScroll('top')">
+                            <p>Главная</p>
+                        </a>
+                        <a href="#aboutus" onclick="smoothScroll('aboutus')">
+                            <p>О нас</p>
+                        </a>
+                        <a href="/Blocks/news.html" onclick="smoothScroll('new')">
+                            <p>Новости</p>
+                        </a>
+                        <a href="/Blocks/catalogue.html" onclick="smoothScroll('catalogue')">
+                            <p>Каталог</p>
+                        </a>
+                        <a href="#entrance" id="open-end">
+                            <p>Закладки</p>
+                        </a>
+                        <a href="" id="open-user">
+                            <p>Закладки</p>
+                        </a>
+                        <a href="/Blocks/quality.html" onclick="smoothScroll('quality')">
+                            <p>Преимущество</p>
+                        </a>
+                        <a href="#f-main" onclick="smoothScroll('f-main')">
+                            <p>Контакты</p>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="date-new">
-            <p class="min-new">7 марта 2023</p>
-            <a class="left-date-tx" href="">
-              <p class="text-date">Подробнее</p>
-              <p class="stril">
-                <svg
-                  width="8"
-                  height="10"
-                  viewBox="0 0 5 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 1L4 4.5L1 8"
-                    stroke="#D4D4D4"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </p>
-            </a>
+        </div>
+        <!--Новости -->
+        <div class="news">
+          <div class="news-block">
+              <div class="product-text-navig">
+                  <p id="text-nav"><a id="text-nav" href="../index.html">Главная</a> / Новости</p>            
+                  <p id="text-zag">Новости</p>   
+                  <div class="section-title">Недавно</div>
+                  <div class="news-grid">
+                      <div class="news-card">
+                          <img src="#" alt="Картинка">
+                          <p>Мы открылись!</p>
+                          <p class="date">16.11.2023</p>
+                          <div class="more"><a href="#">Подробнее →</a></div>
+                      </div>
+                      <div class="news-card">
+                          <img src="#" alt="Картинка">
+                          <p>Мы открылись!</p>
+                          <p class="date">16.11.2023</p>
+                          <div class="more"><a href="#">Подробнее →</a></div>
+                      </div>
+                      <div class="news-card">
+                          <img src="#" alt="Картинка">
+                          <p>Мы открылись!</p>
+                          <p class="date">16.11.2023</p>
+                          <div class="more"><a href="#">Подробнее →</a></div>
+                      </div>
+                  </div>
+          
+                  <div class="section-title">В этом месяце</div>
+                  <div class="news-grid">
+                      <div class="news-card">
+                          <img src="#" alt="Картинка">
+                          <p>Мы открылись!</p>
+                          <p class="date">16.11.2023</p>
+                          <div class="more"><a href="#">Подробнее →</a></div>
+                      </div>
+                      <div class="news-card">
+                          <img src="#" alt="Картинка">
+                          <p>Мы открылись!</p>
+                          <p class="date">16.11.2023</p>
+                          <div class="more"><a href="#">Подробнее →</a></div>
+                      </div>
+                      <div class="news-card">
+                          <img src="#" alt="Картинка">
+                          <p>Мы открылись!</p>
+                          <p class="date">16.11.2023</p>
+                          <div class="more"><a href="#">Подробнее →</a></div>
+                      </div>
+                  </div>
+            <ul class="pagination">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
           </div>
         </div>
-        <div class="new-box">
-          <div class="name-new">
-            <div class="n-img"></div>
-            <div class="text-new">
-              <p class="up-text-new">Мы открылись! Посети наш магазин</p>
-              <p class="down-text-new">
-                Приветствуем вас в нашей компании. Посети каталог продукции, ты
-                удивишься как много нового
-              </p>
-            </div>
-          </div>
-          <div class="date-new">
-            <p class="min-new">7 марта 2023</p>
-            <a class="left-date-tx" href="">
-              <p class="text-date">Подробнее</p>
-              <p class="stril">
-                <svg
-                  width="8"
-                  height="10"
-                  viewBox="0 0 5 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 1L4 4.5L1 8"
-                    stroke="#D4D4D4"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </p>
-            </a>
-          </div>
-        </div>
-        <div class="new-box">
-          <div class="name-new">
-            <div class="n-img"></div>
-            <div class="text-new">
-              <p class="up-text-new">Мы открылись! Посети наш магазин</p>
-              <p class="down-text-new">
-                Приветствуем вас в нашей компании. Посети каталог продукции, ты
-                удивишься как много нового
-              </p>
-            </div>
-          </div>
-          <div class="date-new">
-            <p class="min-new">7 марта 2023</p>
-            <a class="left-date-tx" href="">
-              <p class="text-date">Подробнее</p>
-              <p class="stril">
-                <svg
-                  width="8"
-                  height="10"
-                  viewBox="0 0 5 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 1L4 4.5L1 8"
-                    stroke="#D4D4D4"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
   </body>
 </html>

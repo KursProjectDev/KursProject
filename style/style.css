@@ -1926,4 +1926,99 @@ footer .f-main .item {
 .user-page .bookmarks .pagination .disabled a {
   color: #ccc;
   pointer-events: none;
+}
+
+.news {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+}
+.news .news-block {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  gap: 30px;
+}
+.news .news-block .product-text-navig {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.news .news-block .product-text-navig #text-nav {
+  color: #858585;
+}
+.news .news-block .product-text-navig #text-zag {
+  color: black;
+  font-weight: 500;
+  font-size: 32px;
+}
+.news .news-block .section-title {
+  font-size: 16px;
+  font-weight: 550;
+  color: #A8A8A8;
+}
+.news .news-block .news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.news .news-block .news-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.news .news-block .news-card img {
+  width: 100%;
+  height: 150px;
+  background-color: #ccc;
+}
+.news .news-block .news-card p {
+  font-size: 20px;
+  color: #303030;
+  font-weight: 500;
+}
+.news .news-block .news-card .date {
+  color: #858585;
+  font-size: 16px;
+}
+.news .news-block .news-card .more {
+  text-align: right;
+}
+.news .news-block .news-card .more a {
+  color: #858585;
+}
+.news .news-block .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+.news .news-block .pagination li {
+  margin: 0 2px;
+}
+.news .news-block .pagination a {
+  text-decoration: none;
+  color: #999;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.news .news-block .pagination a:hover {
+  background-color: #ddd;
+}
+.news .news-block .pagination .active a {
+  background-color: #2196F3;
+  color: white;
+}
+.news .news-block .pagination .disabled a {
+  color: #ccc;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
