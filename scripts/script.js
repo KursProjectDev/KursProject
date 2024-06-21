@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var iframe = document.getElementById('myVideo');
     var src = iframe.src;
     // Обновляем src, чтобы убрать autoplay, если он есть
-    if (src.includes('autoplay=1')) {
-      src = src.replace('autoplay=1', 'autoplay=0');
+    if (src.includes('autoplay = ')) {
+      src = src.replace('autoplay = 1', 'autoplay = 0 ');
       iframe.src = src;
     }
   });
