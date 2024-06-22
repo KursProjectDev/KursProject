@@ -69,40 +69,14 @@ function smoothScrollToTop() {
 
     window.requestAnimationFrame(step);
 }
-// КАЧЕСТВО
-window.addEventListener('scroll', function() {
-    const scroller = document.getElementById('q-scroller');
-    const slides = document.querySelectorAll('.q-slide');
-    const windowHeight = window.innerHeight;
-    const scrollerRect = scroller.getBoundingClientRect();
-
-    // Анимация появления и затухание слайдов
-    slides.forEach(slide => {
-        const slideRect = slide.getBoundingClientRect();    
-
-        if (scrollerRect.top <= 0 && scrollerRect.bottom > windowHeight) {
-            slide.classList.add('fixed');
-            slide.classList.remove('bottom');
-            slide.style.opacity = 1; // Отменяем затухание
-        } else if (scrollerRect.bottom <= windowHeight) {
-            slide.classList.remove('fixed');
-            slide.classList.add('bottom');
-            slide.style.opacity = 0; // Применяем затухание
-        } else {
-            slide.classList.remove('fixed');
-            slide.classList.remove('bottom');
-            slide.style.opacity = 0; // Применяем затухание
-        }
-    });
-});
 
 // ВИДЕО
 document.addEventListener('DOMContentLoaded', function() {
     var iframe = document.getElementById('myVideo');
     var src = iframe.src;
     // Обновляем src, чтобы убрать autoplay, если он есть
-    if (src.includes('autoplay = ')) {
-      src = src.replace('autoplay = 1', 'autoplay = 0 ');
+    if (src.includes('autoplay = false')) {
+      src = src.replace('autoplay = true', 'autoplay = false ');
       iframe.src = src;
     }
   });
