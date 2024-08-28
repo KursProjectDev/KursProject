@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -363,22 +362,6 @@
 .main-body .top .t-body .t-dark .buts .but-2:hover p {
   color: #238af3;
 }
-@media only screen and (max-width: 600px) {
-  .main-body .top .t-header .t-logo {
-    width: 100%;
-    /* Измените ширину для маленьких экранов */
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .main-body .top .t-header .navigator {
-    width: 100%;
-    /* Измените ширину для маленьких экранов */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-}
 .main-body .about {
   width: 100%;
   height: 100vh;
@@ -489,6 +472,12 @@
   font-size: 22px;
   color: #238af3;
   transition: all 0.4s;
+}
+@media (max-width: 1600px) {
+  .main-body .a-block {
+    width: 1200px;
+    position: absolute;
+  }
 }
 .main-body .new {
   display: flex;
@@ -2257,3 +2246,77 @@ footer .f-main .item {
   border: 4px solid #238af3;
   fill: #238af3;
 }/*# sourceMappingURL=style.css.map */
+
+    @media (max-width: 1600px) {
+      .main-body .about .a-body .a-image img {
+        width: 600px;
+      }
+      .main-body .about .a-body .a-block{
+        width: 100%;
+        position: static;
+      }
+      .main-body .about .a-body .a-block .a-text{
+        width: 600px;
+      }
+      .main-body .aboutus-2 .about-2 {
+        width: 1280px;
+      }
+    }
+    @media (max-width: 1400px) {
+      .main-body .about .a-body {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+      }
+      .main-body .about .a-body .a-block {
+        align-items: center;
+        box-shadow: none;
+        background: none;
+      }
+      .main-body .about .a-body .a-block .a-text {
+        width: 80%;
+      }
+      .main-body .about .a-body .a-image img{
+        width: 100%;
+        height: 400px;
+      }
+      .main-body .about .a-body .a-block .a-button{
+        position: relative;
+        top: 80px;
+      }
+      .main-body .new .new-top {
+        width: 95%
+      }
+      .main-body .new .new-bottom {
+        width: 95%;
+      }
+      .main-body .aboutus-2 .about-2 {
+        width: 95%;
+      }
+      .main-body .bigblock .block-quest-tab{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+      }
+      .main-body .bigblock .block-quest-tab{
+        gap: 60px;
+        width: 95%;
+      }
+      .main-body .blockquestions {
+        width: 95%;
+      }
+      .main-body .bigblock .blockorder{
+        width: 75%;
+      }
+    }
+    @media (max-width: 1200px) {
+      .main-body .new .new-bottom{
+        overflow-y: scroll;
+      }
+      .main-body .new .new-bottom .new-box .name-new #n-img_one, #n-img_two, #n-img_tree{
+        width: 300px;
+      }
+      .main-body .catalogue .cat-block{
+        flex: 1 0 0;
+      }
+    }
